@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "version": 1,
+    "updated": "2025-09-17T00:00:00Z",
+    "description": "Source of truth for DayZ economy item parameters"
+  },
+  "defaults": {
+    "restock": { "global": 1800, "byCategory": {} },
+    "cost": { "global": 100, "byCategory": {} },
+    "lifetime": 3600,
+    "flags": { "count_in_map": 1, "deloot": 0 }
+  },
+  "items": {
+    "M4A1": {
+      "category": "Weapons",
+      "nominal": 20,
+      "min": 5,
+      "lifetime": 7200,
+      "restock": 1200,
+      "quantmin": -1,
+      "quantmax": -1,
+      "cost": 450,
+      "flags": { "count_in_map": 1, "deloot": 0 },
+      "tag": ["military"],
+      "usage": ["Military"],
+      "value": ["Tier4"],
+      "comment": "Rifle de assalto padrão, alta incidência militar"
+    },
+    "ACOGOptic": {
+      "category": "Optics",
+      "nominal": 10,
+      "min": 2,
+      "lifetime": 14400,
+      "restock": 3600,
+      "quantmin": -1,
+      "quantmax": -1,
+      "cost": 300,
+      "flags": { "count_in_map": 1, "deloot": 0 },
+      "tag": ["military"],
+      "usage": ["Hunting"],
+      "value": ["Tier3"],
+      "comment": "Mira ACOG — Use para long-range. lifetime maior por raridade."
+    }
+  }
+}

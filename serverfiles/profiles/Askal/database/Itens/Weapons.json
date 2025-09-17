@@ -131,6 +131,53 @@
                     "M4A1_Black": {},
                     "M4A1_Green": {}
                 }
+            },
+            "M4A1_Black": {
+                "ammo_types": [
+                    "Ammo_556x45",
+                    "Ammo_556x45Tracer"
+                ],
+                "attachments": {
+                    "bayonets": [
+                        "M9A1_Bayonet"
+                    ],
+                    "buttstocks": [
+                        "M4_OEBttstck",
+                        "M4_MPBttstck",
+                        "M4_CQBBttstck"
+                    ],
+                    "lights": [
+                        "UniversalLight"
+                    ],
+                    "optics": [
+                        "M4_CarryHandleOptic",
+                        "BUISOptic",
+                        "M68Optic",
+                        "Akol_Exps"
+                    ],
+                    "suppressors": [
+                        "ImprovisedSuppressor",
+                        "M4_Suppressor",
+                        "ASK_M4_SuppressorCovered"
+                    ]
+                },
+                "chamber_size": 1,
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "magazines": [
+                    "Mag_STANAG_30Rnd",
+                    "Mag_STANAG_60Rnd",
+                    "Mag_CMAG_30Rnd",
+                    "ASK_Mag_CMAGCoupled_60Rnd"
+                ],
+                "tier": 4,
+                "value": 5000,
+                "variants": {}
             }
         },
         "DMR's": {

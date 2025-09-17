@@ -1,0 +1,33 @@
+{
+  "categories": ["Weapons", "Optics", "Ammo", "Medical", "Food", "Tools"],
+  "tags": ["civilian", "military", "police", "coast", "farm"],
+  "usageflags": ["Military", "Hunting", "Police", "Village", "Town"],
+  "valueflags": ["Tier1", "Tier2", "Tier3", "Tier4"],
+  "lifetimePresets": [
+    { "label": "0", "seconds": 0 },
+    { "label": "5m", "seconds": 300 },
+    { "label": "30m", "seconds": 1800 },
+    { "label": "1h", "seconds": 3600 },
+    { "label": "2h", "seconds": 7200 },
+    { "label": "4h", "seconds": 14400 },
+    { "label": "1d", "seconds": 86400 },
+    { "label": "3d", "seconds": 259200 },
+    { "label": "7d", "seconds": 604800 },
+    { "label": "30d", "seconds": 2592000 }
+  ],
+  "paramHelp": {
+    "nominal": "Quantidade alvo que o economy tenta manter no mapa.",
+    "min": "Quantidade mínima antes de iniciar reposição.",
+    "lifetime": "Tempo máximo (segundos) que o item permanece se não interagido.",
+    "restock": "Intervalo mínimo entre reposições automáticas (segundos).",
+    "quantmin": "Quantidade mínima dentro de stack (para itens empilháveis).",
+    "quantmax": "Quantidade máxima dentro de stack (para itens empilháveis).",
+    "cost": "Peso relativo para cálculo em eventos de spawn / economia.",
+    "flags.count_in_map": "Sempre 1 (contabiliza para limite nominal).",
+    "flags.deloot": "Se 1, evita respawn rápido do mesmo tipo (anti-farm).",
+    "category": "Categoria macro do item.",
+    "tag": "Conjuntos de classificação utilizados em filtros de spawn.",
+    "usage": "Ambientes / zonas onde pode aparecer.",
+    "value": "Tier ou valor econômico do item."
+  }
+}
