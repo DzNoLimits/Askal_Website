@@ -12,11 +12,11 @@
                 ],
                 "tier": 4,
                 "value": 400,
-                "variants": [
-                    "Barrel_Blue",
-                    "Barrel_Red",
-                    "Barrel_Yellow"
-                ]
+                "variants": {
+                    "Barrel_Blue": {},
+                    "Barrel_Red": {},
+                    "Barrel_Yellow": {}
+                }
             },
             "Seachest": {
                 "flags": [
@@ -28,7 +28,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

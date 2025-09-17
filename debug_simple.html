@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debug - Askal Database Manager</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #e0e0e0; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .panel { background: #2a2a2a; border: 1px solid #444; padding: 15px; margin: 10px 0; border-radius: 5px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Debug - Askal Database Manager</h1>
+    
+    <div class="grid">
+      <div class="panel">
+        <h2>Datasets</h2>
+        <div id="dataset-chips">Loading...</div>
+        <div id="dataset-dirty-indicator"></div>
+      </div>
+      
+      <div class="panel">
+        <h2>Navigation</h2>
+        <div id="nav-pane">Loading...</div>
+      </div>
+      
+      <div class="panel">
+        <h2>Editor</h2>
+        <div id="editor-pane">Loading...</div>
+      </div>
+    </div>
+    
+    <div class="panel">
+      <h2>Console Output</h2>
+      <div id="console-output" style="background: #1a1a1a; padding: 10px; height: 200px; overflow-y: scroll; font-family: monospace; font-size: 12px;">
+      </div>
+    </div>
+  </div>
+
+  <script src="app_debug.js"></script>
+  
+  <script>
+    // Capture console output
+    var originalConsole = console.log;
+    var consoleOutput = document.getElementById('console-output');
+    
+    console.log = function() {
+      originalConsole.apply(console, arguments);
+      var message = Array.from(arguments).join(' ');
+      if (consoleOutput) {
+        consoleOutput.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+        consoleOutput.scrollTop = consoleOutput.scrollHeight;
+      }
+    };
+    
+    // Also capture errors
+    window.addEventListener('error', function(e) {
+      console.log('ERROR: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
+    });
+    
+    console.log('Debug page loaded');
+  </script>
+</body>
+</html>

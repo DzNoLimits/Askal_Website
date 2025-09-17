@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BarrelHoles_Green": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BarrelHoles_Red": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BarrelHoles_Yellow": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Candle": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Cauldron": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CookingStand": {
                 "flags": [
@@ -85,7 +85,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Fireplace": {
                 "flags": [
@@ -97,7 +97,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FryingPan": {
                 "flags": [
@@ -109,7 +109,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PetrolLighter": {
                 "flags": [
@@ -121,7 +121,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PortableGasLamp": {
                 "flags": [
@@ -133,7 +133,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PortableGasStove": {
                 "flags": [
@@ -145,7 +145,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pot": {
                 "flags": [
@@ -157,7 +157,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Tripod": {
                 "flags": [
@@ -169,7 +169,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

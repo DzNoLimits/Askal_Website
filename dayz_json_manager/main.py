@@ -55,7 +55,19 @@ def _extract_categories(raw: dict):
 
 
 def _normalize_for_frontend(raw: dict):
-    return {'Categories': _extract_categories(raw)}
+    cats = _extract_categories(raw)
+    # Normalize variants: if item.variants is a list, convert to mapping { name: {} }
+    if isinstance(cats, dict):
+        for cat, items in list(cats.items()):
+            if not isinstance(items, dict):
+                continue
+            for cls, it in list(items.items()):
+                if isinstance(it, dict) and 'variants' in it:
+                    v = it.get('variants')
+                    if isinstance(v, list):
+                        mapping = {str(name): {} for name in v}
+                        it['variants'] = mapping
+    return {'Categories': cats}
 
 
 def generic_get(path: Path, label: str):

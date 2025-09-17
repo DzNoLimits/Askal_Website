@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste de Variantes - DayZ Manager</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Funcionalidade - Edição de Variantes</h1>
+    
+    <div class="test-section">
+        <h2>1. Teste de Carregamento da API</h2>
+        <button onclick="testAPI()">Testar API</button>
+        <div id="api-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Teste de Variantes</h2>
+        <button onclick="testVariants()">Testar Variantes</button>
+        <div id="variants-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Teste de Edição de Variante</h2>
+        <button onclick="testVariantEdit()">Testar Edição</button>
+        <div id="edit-result"></div>
+    </div>
+
+    <script>
+        async function testAPI() {
+            const result = document.getElementById('api-result');
+            try {
+                result.innerHTML = '<div class="info">Testando API...</div>';
+                
+                const response = await axios.get('http://127.0.0.1:8000/api/weapons');
+                const data = response.data;
+                
+                if (data && data.Categories) {
+                    result.innerHTML = '<div class="success">✓ API funcionando! Datasets encontrados: ' + Object.keys(data.Categories).join(', ') + '</div>';
+                } else {
+                    result.innerHTML = '<div class="error">✗ Resposta da API inválida</div>';
+                }
+            } catch (error) {
+                result.innerHTML = '<div class="error">✗ Erro na API: ' + error.message + '</div>';
+            }
+        }
+
+        async function testVariants() {
+            const result = document.getElementById('variants-result');
+            try {
+                result.innerHTML = '<div class="info">Testando variantes...</div>';
+                
+                const response = await axios.get('http://127.0.0.1:8000/api/weapons');
+                const data = response.data;
+                
+                let variantsFound = [];
+                
+                for (const [cat, items] of Object.entries(data.Categories)) {
+                    for (const [cls, item] of Object.entries(items)) {
+                        if (item.variants && typeof item.variants === 'object' && Object.keys(item.variants).length > 0) {
+                            variantsFound.push(`${cat}/${cls}: ${Object.keys(item.variants).join(', ')}`);
+                        }
+                    }
+                }
+                
+                if (variantsFound.length > 0) {
+                    result.innerHTML = '<div class="success">✓ Variantes encontradas:</div>' +
+                        variantsFound.map(v => '<div>- ' + v + '</div>').join('');
+                } else {
+                    result.innerHTML = '<div class="error">✗ Nenhuma variante encontrada</div>';
+                }
+            } catch (error) {
+                result.innerHTML = '<div class="error">✗ Erro: ' + error.message + '</div>';
+            }
+        }
+
+        async function testVariantEdit() {
+            const result = document.getElementById('edit-result');
+            try {
+                result.innerHTML = '<div class="info">Testando edição de variante...</div>';
+                
+                // Buscar dados
+                const response = await axios.get('http://127.0.0.1:8000/api/weapons');
+                let data = response.data;
+                
+                // Encontrar primeiro item com variante
+                let targetItem = null;
+                let targetCategory = null;
+                let targetClass = null;
+                let targetVariant = null;
+                
+                for (const [cat, items] of Object.entries(data.Categories)) {
+                    for (const [cls, item] of Object.entries(items)) {
+                        if (item.variants && typeof item.variants === 'object') {
+                            const varNames = Object.keys(item.variants);
+                            if (varNames.length > 0) {
+                                targetItem = item;
+                                targetCategory = cat;
+                                targetClass = cls;
+                                targetVariant = varNames[0];
+                                break;
+                            }
+                        }
+                    }
+                    if (targetItem) break;
+                }
+                
+                if (!targetItem) {
+                    result.innerHTML = '<div class="error">✗ Nenhum item com variante encontrado para teste</div>';
+                    return;
+                }
+                
+                // Testar edição da variante
+                const originalOverrides = JSON.parse(JSON.stringify(targetItem.variants[targetVariant]));
+                
+                // Adicionar um valor de teste
+                targetItem.variants[targetVariant].tier = 999;
+                targetItem.variants[targetVariant].testField = 'teste_' + Date.now();
+                
+                // Salvar
+                const saveResponse = await axios.put('http://127.0.0.1:8000/api/weapons', { data: data });
+                
+                if (saveResponse.status === 200) {
+                    // Verificar se foi salvo
+                    const verifyResponse = await axios.get('http://127.0.0.1:8000/api/weapons');
+                    const verifyData = verifyResponse.data;
+                    const verifyItem = verifyData.Categories[targetCategory][targetClass];
+                    
+                    if (verifyItem.variants[targetVariant].tier === 999) {
+                        // Restaurar estado original
+                        verifyItem.variants[targetVariant] = originalOverrides;
+                        await axios.put('http://127.0.0.1:8000/api/weapons', { data: verifyData });
+                        
+                        result.innerHTML = '<div class="success">✓ Edição de variante funcionando! Teste feito em: ' + 
+                            targetCategory + '/' + targetClass + '/' + targetVariant + '</div>';
+                    } else {
+                        result.innerHTML = '<div class="error">✗ Variante não foi salva corretamente</div>';
+                    }
+                } else {
+                    result.innerHTML = '<div class="error">✗ Erro ao salvar: ' + saveResponse.status + '</div>';
+                }
+                
+            } catch (error) {
+                result.innerHTML = '<div class="error">✗ Erro no teste: ' + error.message + '</div>';
+            }
+        }
+    </script>
+</body>
+</html>

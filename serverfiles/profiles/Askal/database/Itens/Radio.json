@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Megaphone": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PersonalRadio": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

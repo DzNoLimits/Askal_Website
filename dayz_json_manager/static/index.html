@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Askal Database Manager</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Fallback check for axios
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof axios === 'undefined') {
+        console.error('Axios not loaded! Check CDN connection.');
+        alert('Erro: Axios não carregou. Verifique sua conexão com a internet.');
+      } else {
+        console.log('Axios loaded successfully');
+      }
+    });
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <style>
     .pill{display:inline-flex;align-items:center;background:#3a3a3a;border-radius:4px;padding:2px 6px;font-size:11px;margin:0 4px 4px 0}
@@ -55,7 +66,8 @@
         <button id="btn-save-all" class="px-3 py-2 bg-green-700 text-white rounded">Salvar Tudo</button>
         <button id="btn-add-item" class="px-3 py-2 bg-indigo-500 text-white rounded">Novo Item</button>
         <button id="btn-add-category" class="px-3 py-2 bg-purple-500 text-white rounded">Nova Categoria</button>
-        <button id="btn-toggle-pending" class="px-3 py-2 bg-yellow-600 text-white rounded">Pendentes</button>
+  <button id="btn-toggle-pending" class="px-3 py-2 bg-yellow-600 text-white rounded">Pendentes</button>
+  <button id="btn-toggle-trash" class="px-3 py-2 bg-gray-700 text-white rounded">Lixeira</button>
       </div>
     </header>
     <div class="p-3 bg-gray-50 flex gap-3 items-center text-sm">
@@ -64,10 +76,13 @@
     </div>
     <div class="px-3 py-2 bg-gray-50 border-t flex items-center gap-3 overflow-x-auto">
       <div id="dataset-chips" class="flex items-center gap-2"></div>
-      <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">+ Novo .json</button>
+      <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">NOVO</button>
     </div>
     <div class="flex flex-1 overflow-hidden">
-      <aside class="w-64 bg-white border-r overflow-y-auto" id="nav-pane"></aside>
+      <div class="relative w-64">
+        <aside class="bg-white border-r overflow-y-auto h-full" id="nav-pane"></aside>
+        <button id="btn-add-category-fab" title="Nova Categoria" class="absolute bottom-3 right-3 rounded-full w-10 h-10 bg-purple-600 text-white text-xl leading-10 text-center shadow hover:bg-purple-500">+</button>
+      </div>
       <main class="flex-1 overflow-y-auto p-4" id="editor-pane">
         <p class="text-sm text-gray-500">Selecione um item à esquerda para editar.</p>
       </main>
@@ -83,10 +98,15 @@
           <div class="p-3 text-xs text-gray-500 border-t">Arraste e solte no editor ou clique para adicionar.</div>
         </div>
         <!-- Pending tab content -->
-        <div id="pending-pane" class="flex-1 flex-col hidden relative">
+  <div id="pending-pane" class="flex-1 flex-col hidden relative droppable" data-drop-type="pending-target">
           <div id="pending-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);"></div>
           <button id="btn-pending-add" class="absolute bottom-3 right-3 px-2 py-1 bg-indigo-600 text-white text-xs rounded shadow">+ Adicionar</button>
           <div class="p-2 text-xs text-gray-500 border-t">Arraste para uma categoria à esquerda para criar o item.</div>
+        </div>
+        <!-- Trash tab content -->
+        <div id="trash-pane" class="flex-1 flex-col hidden relative">
+          <div id="trash-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);"></div>
+          <div class="p-2 text-xs text-gray-500 border-t">Arraste da lixeira para uma categoria à esquerda para restaurar/criar.</div>
         </div>
       </aside>
     </div>

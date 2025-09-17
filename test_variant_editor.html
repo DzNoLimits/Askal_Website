@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste Simples - Variantes</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      background: #1a1a1a; 
+      color: #e0e0e0; 
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .item-card { 
+      background: #2a2a2a; 
+      border: 1px solid #444; 
+      border-radius: 8px; 
+      padding: 16px; 
+      margin: 10px 0; 
+    }
+    .variant-card { 
+      background: #333; 
+      border-radius: 6px; 
+      padding: 12px; 
+      margin: 8px 0; 
+      border-left: 4px solid #4a90e2; 
+    }
+    input { 
+      background: #1a1a1a; 
+      color: #e0e0e0; 
+      border: 1px solid #555; 
+      padding: 8px; 
+      border-radius: 4px; 
+      width: 100px; 
+      margin: 4px; 
+    }
+    button { 
+      background: #4a90e2; 
+      color: white; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 4px; 
+      cursor: pointer; 
+      margin: 4px; 
+    }
+    button:hover { background: #357abd; }
+    .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+    .success { background: #2d5a2d; color: #90ee90; }
+    .error { background: #5a2d2d; color: #ff9090; }
+    .info { background: #2d4a5a; color: #90d0ee; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teste de Edição de Variantes - DayZ Manager</h1>
+    
+    <div class="status info" id="status">
+      Carregando dados...
+    </div>
+
+    <button onclick="loadData()">Recarregar Dados</button>
+    <button onclick="saveData()">Salvar Alterações</button>
+    
+    <div id="items-container">
+      <!-- Items with variants will be loaded here -->
+    </div>
+  </div>
+
+  <script>
+    let weaponsData = null;
+    let originalData = null;
+
+    function showStatus(message, type = 'info') {
+      const status = document.getElementById('status');
+      status.textContent = message;
+      status.className = `status ${type}`;
+    }
+
+    async function loadData() {
+      try {
+        showStatus('Carregando dados da API...', 'info');
+        
+        const response = await axios.get('http://127.0.0.1:8000/api/weapons');
+        weaponsData = response.data;
+        originalData = JSON.parse(JSON.stringify(weaponsData)); // Deep clone for comparison
+        
+        showStatus('Dados carregados com sucesso!', 'success');
+        renderItems();
+        
+      } catch (error) {
+        showStatus('Erro ao carregar dados: ' + error.message, 'error');
+        console.error(error);
+      }
+    }
+
+    function renderItems() {
+      const container = document.getElementById('items-container');
+      let html = '';
+      
+      if (!weaponsData || !weaponsData.Categories) {
+        container.innerHTML = '<p>Nenhum dado carregado</p>';
+        return;
+      }
+
+      // Find items with variants
+      for (const [categoryName, items] of Object.entries(weaponsData.Categories)) {
+        for (const [itemName, item] of Object.entries(items)) {
+          if (item.variants && typeof item.variants === 'object') {
+            const variantNames = Object.keys(item.variants);
+            if (variantNames.length > 0) {
+              html += renderItemCard(categoryName, itemName, item);
+            }
+          }
+        }
+      }
+      
+      if (html === '') {
+        html = '<p>Nenhum item com variantes encontrado</p>';
+      }
+      
+      container.innerHTML = html;
+    }
+
+    function renderItemCard(categoryName, itemName, item) {
+      let html = `
+        <div class="item-card">
+          <h2>${categoryName} / ${itemName}</h2>
+          <div class="grid">
+            <div>
+              <label>Tier Base:</label><br>
+              <input type="number" value="${item.tier || ''}" 
+                     onchange="updateBaseField('${categoryName}', '${itemName}', 'tier', this.value)">
+            </div>
+            <div>
+              <label>Value Base:</label><br>
+              <input type="number" value="${item.value || ''}" 
+                     onchange="updateBaseField('${categoryName}', '${itemName}', 'value', this.value)">
+            </div>
+          </div>
+          <h3>Variantes:</h3>
+      `;
+
+      const variantNames = Object.keys(item.variants);
+      variantNames.forEach(variantName => {
+        const variant = item.variants[variantName] || {};
+        html += `
+          <div class="variant-card">
+            <h4>${variantName}</h4>
+            <div class="grid">
+              <div>
+                <label>Tier Override:</label><br>
+                <input type="number" value="${variant.tier || ''}" 
+                       onchange="updateVariantField('${categoryName}', '${itemName}', '${variantName}', 'tier', this.value)" 
+                       placeholder="(usa base)">
+              </div>
+              <div>
+                <label>Value Override:</label><br>
+                <input type="number" value="${variant.value || ''}" 
+                       onchange="updateVariantField('${categoryName}', '${itemName}', '${variantName}', 'value', this.value)" 
+                       placeholder="(usa base)">
+              </div>
+              <div>
+                <label>Chamber Size Override:</label><br>
+                <input type="number" value="${variant.chamber_size || ''}" 
+                       onchange="updateVariantField('${categoryName}', '${itemName}', '${variantName}', 'chamber_size', this.value)" 
+                       placeholder="(usa base)">
+              </div>
+            </div>
+            <div>
+              <label>Current Override JSON:</label><br>
+              <pre style="font-size: 10px; background: #1a1a1a; padding: 4px; margin: 4px 0; border-radius: 2px;">${JSON.stringify(variant, null, 2)}</pre>
+            </div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      return html;
+    }
+
+    function updateBaseField(categoryName, itemName, field, value) {
+      if (!weaponsData || !weaponsData.Categories[categoryName] || !weaponsData.Categories[categoryName][itemName]) {
+        showStatus('Item não encontrado para atualização', 'error');
+        return;
+      }
+
+      const item = weaponsData.Categories[categoryName][itemName];
+      
+      if (value === '' || value === null) {
+        item[field] = null;
+      } else {
+        const numValue = Number(value);
+        item[field] = isNaN(numValue) ? value : numValue;
+      }
+      
+      showStatus(`Atualizado ${categoryName}/${itemName}.${field} = ${item[field]}`, 'info');
+    }
+
+    function updateVariantField(categoryName, itemName, variantName, field, value) {
+      if (!weaponsData || !weaponsData.Categories[categoryName] || !weaponsData.Categories[categoryName][itemName]) {
+        showStatus('Item não encontrado para atualização', 'error');
+        return;
+      }
+
+      const item = weaponsData.Categories[categoryName][itemName];
+      
+      // Ensure variants object exists
+      if (!item.variants || typeof item.variants !== 'object') {
+        item.variants = {};
+      }
+      
+      // Ensure this variant exists
+      if (!item.variants[variantName]) {
+        item.variants[variantName] = {};
+      }
+
+      const variant = item.variants[variantName];
+      
+      if (value === '' || value === null) {
+        delete variant[field]; // Remove override, will use base value
+      } else {
+        const numValue = Number(value);
+        variant[field] = isNaN(numValue) ? value : numValue;
+      }
+      
+      showStatus(`Atualizado ${categoryName}/${itemName}/${variantName}.${field} = ${variant[field] || '(removed)'}`, 'info');
+      
+      // Re-render this item to show updated JSON
+      renderItems();
+    }
+
+    async function saveData() {
+      if (!weaponsData) {
+        showStatus('Nenhum dado para salvar', 'error');
+        return;
+      }
+
+      try {
+        showStatus('Salvando alterações...', 'info');
+        
+        const payload = { data: weaponsData };
+        const response = await axios.put('http://127.0.0.1:8000/api/weapons', payload);
+        
+        if (response.status === 200) {
+          showStatus('Alterações salvas com sucesso!', 'success');
+          originalData = JSON.parse(JSON.stringify(weaponsData)); // Update our comparison baseline
+        } else {
+          showStatus('Resposta inesperada do servidor: ' + response.status, 'error');
+        }
+        
+      } catch (error) {
+        showStatus('Erro ao salvar: ' + error.message, 'error');
+        console.error(error);
+      }
+    }
+
+    // Initialize
+    loadData();
+  </script>
+</body>
+</html>

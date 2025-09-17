@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug - DayZ App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Debug da Aplicação DayZ</h1>
+    
+    <div id="debug-log" style="background: #f0f0f0; padding: 10px; margin: 10px 0; height: 200px; overflow-y: scroll;">
+        <strong>Log de Debug:</strong><br>
+    </div>
+    
+    <button onclick="testMainApp()">Testar App Principal</button>
+    <button onclick="clearLog()">Limpar Log</button>
+    
+    <script>
+        function log(message) {
+            const debugLog = document.getElementById('debug-log');
+            debugLog.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+            debugLog.scrollTop = debugLog.scrollHeight;
+            console.log(message);
+        }
+        
+        function clearLog() {
+            document.getElementById('debug-log').innerHTML = '<strong>Log de Debug:</strong><br>';
+        }
+        
+        async function testMainApp() {
+            log('Iniciando teste da aplicação principal...');
+            
+            try {
+                // 1. Testar se a página principal carrega
+                log('1. Testando carregamento da página...');
+                const pageResponse = await fetch('http://127.0.0.1:8000');
+                if (pageResponse.ok) {
+                    log('✓ Página principal carrega (HTTP ' + pageResponse.status + ')');
+                } else {
+                    log('✗ Erro no carregamento da página: ' + pageResponse.status);
+                    return;
+                }
+                
+                // 2. Testar se o JavaScript carrega
+                log('2. Testando JavaScript...');
+                const jsResponse = await fetch('http://127.0.0.1:8000/app.js');
+                if (jsResponse.ok) {
+                    const jsContent = await jsResponse.text();
+                    log('✓ JavaScript carrega (' + jsContent.length + ' caracteres)');
+                    
+                    // Verificar se tem as funções importantes
+                    if (jsContent.includes('renderEditor')) {
+                        log('✓ Função renderEditor encontrada');
+                    } else {
+                        log('✗ Função renderEditor NÃO encontrada');
+                    }
+                    
+                    if (jsContent.includes('vNumInput')) {
+                        log('✓ Função vNumInput (variantes) encontrada');
+                    } else {
+                        log('✗ Função vNumInput (variantes) NÃO encontrada');
+                    }
+                    
+                    if (jsContent.includes('DOMContentLoaded')) {
+                        log('✓ Listener DOMContentLoaded encontrado');
+                    } else {
+                        log('✗ Listener DOMContentLoaded NÃO encontrado');
+                    }
+                    
+                } else {
+                    log('✗ Erro ao carregar JavaScript: ' + jsResponse.status);
+                    return;
+                }
+                
+                // 3. Testar API
+                log('3. Testando APIs...');
+                const datasetsResponse = await axios.get('http://127.0.0.1:8000/api/datasets');
+                log('✓ API datasets: ' + datasetsResponse.data.length + ' datasets encontrados');
+                
+                const weaponsResponse = await axios.get('http://127.0.0.1:8000/api/weapons');
+                if (weaponsResponse.data && weaponsResponse.data.Categories) {
+                    log('✓ API weapons: ' + Object.keys(weaponsResponse.data.Categories).length + ' categorias');
+                    
+                    // Contar itens com variantes
+                    let variantCount = 0;
+                    for (const [cat, items] of Object.entries(weaponsResponse.data.Categories)) {
+                        for (const [cls, item] of Object.entries(items)) {
+                            if (item.variants && typeof item.variants === 'object' && Object.keys(item.variants).length > 0) {
+                                variantCount++;
+                            }
+                        }
+                    }
+                    log('✓ Itens com variantes: ' + variantCount);
+                } else {
+                    log('✗ Dados de weapons inválidos');
+                }
+                
+                // 4. Testar carregamento em iframe
+                log('4. Testando carregamento da app em iframe...');
+                const iframe = document.createElement('iframe');
+                iframe.src = 'http://127.0.0.1:8000';
+                iframe.style.width = '100%';
+                iframe.style.height = '400px';
+                iframe.style.border = '1px solid #ccc';
+                iframe.style.marginTop = '10px';
+                
+                iframe.onload = function() {
+                    log('✓ App carregou no iframe');
+                    
+                    // Tentar acessar elementos do DOM da app
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        
+                        const navPane = iframeDoc.getElementById('nav-pane');
+                        if (navPane) {
+                            log('✓ Elemento nav-pane encontrado');
+                            log('  Conteúdo do nav-pane: ' + navPane.innerHTML.substring(0, 100) + '...');
+                        } else {
+                            log('✗ Elemento nav-pane NÃO encontrado');
+                        }
+                        
+                        const editorPane = iframeDoc.getElementById('editor-pane');
+                        if (editorPane) {
+                            log('✓ Elemento editor-pane encontrado');
+                            log('  Conteúdo do editor-pane: ' + editorPane.innerHTML.substring(0, 100) + '...');
+                        } else {
+                            log('✗ Elemento editor-pane NÃO encontrado');
+                        }
+                        
+                        // Verificar se há erros no console da app
+                        const appWindow = iframe.contentWindow;
+                        if (appWindow && appWindow.console) {
+                            log('✓ Console da app acessível');
+                        }
+                        
+                    } catch (error) {
+                        log('✗ Erro ao acessar DOM da app: ' + error.message);
+                    }
+                };
+                
+                iframe.onerror = function() {
+                    log('✗ Erro ao carregar app no iframe');
+                };
+                
+                document.body.appendChild(iframe);
+                
+                log('Teste concluído. Verifique o iframe abaixo.');
+                
+            } catch (error) {
+                log('✗ Erro durante teste: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

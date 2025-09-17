@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChernarusMap_Open": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChernarusMap_Open_Test": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Compass": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GPSReceiver": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "OrienteeringCompass": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

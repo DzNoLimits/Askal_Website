@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste de Clique em Variante</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      background: #1a1a1a; 
+      color: #e0e0e0; 
+    }
+    .nav-variant {
+      margin-left: 24px;
+      padding-left: 8px;
+      border-left: 1px solid #555;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #ccc;
+      cursor: pointer;
+      padding: 4px;
+      margin: 2px 0;
+    }
+    .nav-variant:hover {
+      background: rgba(55, 55, 55, 0.5);
+    }
+    .nav-variant.active {
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.3);
+    }
+    .container { 
+      display: grid; 
+      grid-template-columns: 300px 1fr; 
+      gap: 20px; 
+      max-width: 1200px; 
+    }
+    .nav-panel, .editor-panel { 
+      background: #2a2a2a; 
+      border: 1px solid #444; 
+      padding: 15px; 
+      border-radius: 5px; 
+    }
+    .log { 
+      background: #1a1a1a; 
+      padding: 10px; 
+      margin: 10px 0; 
+      font-family: monospace; 
+      font-size: 12px; 
+      max-height: 200px; 
+      overflow-y: auto; 
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teste de Clique em Variante</h1>
+  
+  <div class="log" id="log">
+    <strong>Log de eventos:</strong><br>
+  </div>
+  
+  <div class="container">
+    <div class="nav-panel">
+      <h2>Navegação (Simulada)</h2>
+      <div id="nav-content">
+        Carregando...
+      </div>
+    </div>
+    
+    <div class="editor-panel">
+      <h2>Editor</h2>
+      <div id="editor-content">
+        Selecione um item ou variante à esquerda.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Estado simplificado
+    var testState = {
+      active: 'weapons',
+      selected: { weapons: null },
+      selectedVariant: { weapons: null }
+    };
+
+    function log(message) {
+      const logEl = document.getElementById('log');
+      logEl.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+      logEl.scrollTop = logEl.scrollHeight;
+      console.log(message);
+    }
+
+    function renderNav() {
+      log('renderNav() chamado');
+      const nav = document.getElementById('nav-content');
+      
+      // Simular alguns itens com variantes
+      const mockData = {
+        "AR's": {
+          "AK101": {
+            variants: {
+              "AK101_Black": { tier: 42, value: 1000 },
+              "AK101_Green": {}
+            }
+          },
+          "M4A1": {
+            variants: {
+              "M4A1_Black": {},
+              "M4A1_Green": { tier: 5 }
+            }
+          }
+        }
+      };
+      
+      let html = '';
+      
+      for (const [catName, items] of Object.entries(mockData)) {
+        html += `<h3>${catName}</h3>`;
+        
+        for (const [itemName, item] of Object.entries(items)) {
+          const isItemSelected = testState.selected.weapons && 
+                                testState.selected.weapons.classname === itemName;
+          
+          html += `<div style="padding: 4px; margin: 2px 0; cursor: pointer; ${isItemSelected ? 'background: rgba(59, 130, 246, 0.2);' : ''}" 
+                       data-action="select-item" 
+                       data-category="${catName}" 
+                       data-classname="${itemName}">
+                     ${itemName}
+                   </div>`;
+          
+          // Renderizar variantes
+          if (item.variants) {
+            for (const [variantName, variantData] of Object.entries(item.variants)) {
+              const hasOverrides = Object.keys(variantData).length > 0;
+              const isVariantSelected = testState.selected.weapons && 
+                                      testState.selected.weapons.classname === itemName &&
+                                      testState.selectedVariant.weapons === variantName;
+              
+              html += `<div class="nav-variant ${isVariantSelected ? 'active' : ''}" 
+                           data-category="${catName}" 
+                           data-classname="${itemName}" 
+                           data-variant="${variantName}">
+                         <span>${variantName}${hasOverrides ? ' ●' : ''}</span>
+                       </div>`;
+            }
+          }
+        }
+      }
+      
+      nav.innerHTML = html;
+      log('Nav renderizado com ' + document.querySelectorAll('.nav-variant').length + ' variantes');
+    }
+
+    function renderEditor() {
+      log('renderEditor() chamado');
+      const editor = document.getElementById('editor-content');
+      
+      const sel = testState.selected.weapons;
+      const variant = testState.selectedVariant.weapons;
+      
+      if (!sel) {
+        editor.innerHTML = '<p>Nenhum item selecionado</p>';
+        return;
+      }
+      
+      if (variant) {
+        editor.innerHTML = `
+          <div style="background: rgba(59, 130, 246, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3>🎯 Editando Variante: ${variant}</h3>
+            <p>Base: ${sel.classname} | Categoria: ${sel.category}</p>
+            <button onclick="clearVariantSelection()" style="margin-top: 5px; padding: 5px 10px; background: #666;">← Voltar ao Item Base</button>
+          </div>
+          <div>
+            <h4>Campos de Override:</h4>
+            <p>Tier Override: <input type="number" placeholder="(usa base)"></p>
+            <p>Value Override: <input type="number" placeholder="(usa base)"></p>
+            <p>Flags Override: <input type="text" placeholder="(usa base)"></p>
+          </div>
+        `;
+        log('Editor renderizado para variante: ' + variant);
+      } else {
+        editor.innerHTML = `
+          <h3>📝 Editando Item: ${sel.classname}</h3>
+          <p>Categoria: ${sel.category}</p>
+          <div>
+            <h4>Campos Base:</h4>
+            <p>Tier: <input type="number"></p>
+            <p>Value: <input type="number"></p>
+            <p>Flags: <input type="text"></p>
+          </div>
+        `;
+        log('Editor renderizado para item base: ' + sel.classname);
+      }
+    }
+
+    function clearVariantSelection() {
+      log('clearVariantSelection() chamado');
+      testState.selectedVariant.weapons = null;
+      renderNav();
+      renderEditor();
+    }
+
+    // Event handler principal
+    document.addEventListener('click', function(e) {
+      log('Click detectado em: ' + e.target.tagName + ' com classes: ' + e.target.className);
+      
+      // Buscar elemento com action
+      const actionEl = e.target.closest('[data-action]');
+      if (actionEl) {
+        const action = actionEl.dataset.action;
+        log('Action encontrado: ' + action);
+        
+        if (action === 'select-item') {
+          testState.selected.weapons = {
+            category: actionEl.dataset.category,
+            classname: actionEl.dataset.classname
+          };
+          testState.selectedVariant.weapons = null; // limpar variante
+          log('Item selecionado: ' + actionEl.dataset.classname);
+          renderNav();
+          renderEditor();
+          return;
+        }
+      }
+      
+      // Buscar variante clicada
+      const variantEl = e.target.closest('.nav-variant');
+      if (variantEl) {
+        log('Variante clicada detectada!');
+        const category = variantEl.dataset.category;
+        const classname = variantEl.dataset.classname;
+        const variant = variantEl.dataset.variant;
+        
+        log('Dados da variante: cat=' + category + ', cls=' + classname + ', var=' + variant);
+        
+        // Selecionar o item base e a variante
+        testState.selected.weapons = { category: category, classname: classname };
+        testState.selectedVariant.weapons = variant;
+        
+        log('Estado atualizado - selected: ' + JSON.stringify(testState.selected.weapons));
+        log('Estado atualizado - selectedVariant: ' + testState.selectedVariant.weapons);
+        
+        renderNav();
+        renderEditor();
+        return;
+      }
+      
+      log('Nenhuma ação identificada para este clique');
+    });
+
+    // Inicializar
+    log('Inicializando teste...');
+    renderNav();
+    renderEditor();
+  </script>
+</body>
+</html>

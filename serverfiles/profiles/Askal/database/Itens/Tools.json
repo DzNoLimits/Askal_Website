@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AlarmClock_Green": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AlarmClock_Red": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Anniversary_FireworksLauncher": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Blowtorch": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoneKnife": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Broom": {
                 "flags": [
@@ -85,7 +85,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Broom_Birch": {
                 "flags": [
@@ -97,7 +97,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CanOpener": {
                 "flags": [
@@ -109,7 +109,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Cassette": {
                 "flags": [
@@ -121,7 +121,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Crowbar": {
                 "flags": [
@@ -133,7 +133,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DoorTestCamera": {
                 "flags": [
@@ -145,7 +145,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ElectronicRepairKit": {
                 "flags": [
@@ -157,7 +157,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "EpoxyPutty": {
                 "flags": [
@@ -169,7 +169,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FarmingHoe": {
                 "flags": [
@@ -181,7 +181,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FieldShovel": {
                 "flags": [
@@ -193,7 +193,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FireExtinguisher": {
                 "flags": [
@@ -205,7 +205,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FireworksLauncher": {
                 "flags": [
@@ -217,7 +217,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FishingRod": {
                 "flags": [
@@ -229,7 +229,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Flashlight": {
                 "flags": [
@@ -241,7 +241,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Hacksaw": {
                 "flags": [
@@ -253,7 +253,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Hammer": {
                 "flags": [
@@ -265,7 +265,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HandSaw": {
                 "flags": [
@@ -277,7 +277,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HandcuffKeys": {
                 "flags": [
@@ -289,7 +289,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Handcuffs": {
                 "flags": [
@@ -301,7 +301,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HandcuffsLocked": {
                 "flags": [
@@ -313,7 +313,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HayHook": {
                 "flags": [
@@ -325,7 +325,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Heatpack": {
                 "flags": [
@@ -337,7 +337,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Iceaxe": {
                 "flags": [
@@ -349,7 +349,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ImprovisedFishingRod": {
                 "flags": [
@@ -361,7 +361,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "KitchenKnife": {
                 "flags": [
@@ -373,7 +373,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "KitchenTimer": {
                 "flags": [
@@ -385,7 +385,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LeatherSewingKit": {
                 "flags": [
@@ -397,7 +397,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Lockpick": {
                 "flags": [
@@ -409,7 +409,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LugWrench": {
                 "flags": [
@@ -421,7 +421,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Mace": {
                 "flags": [
@@ -433,7 +433,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MeatTenderizer": {
                 "flags": [
@@ -445,7 +445,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MessTin": {
                 "flags": [
@@ -457,7 +457,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ObsoleteFishingRod": {
                 "flags": [
@@ -469,7 +469,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Paddle": {
                 "flags": [
@@ -481,7 +481,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pen_Black": {
                 "flags": [
@@ -493,7 +493,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pen_Blue": {
                 "flags": [
@@ -505,7 +505,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pen_Green": {
                 "flags": [
@@ -517,7 +517,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pen_Red": {
                 "flags": [
@@ -529,7 +529,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pipe": {
                 "flags": [
@@ -541,7 +541,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pliers": {
                 "flags": [
@@ -553,7 +553,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Raycaster": {
                 "flags": [
@@ -565,7 +565,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RemoteDetonator": {
                 "flags": [
@@ -577,7 +577,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RemoteDetonatorReceiver": {
                 "flags": [
@@ -589,7 +589,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RemoteDetonatorTrigger": {
                 "flags": [
@@ -601,7 +601,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ScientificBriefcaseKeys": {
                 "flags": [
@@ -613,7 +613,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Screwdriver": {
                 "flags": [
@@ -625,7 +625,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SewingKit": {
                 "flags": [
@@ -637,7 +637,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ShippingContainerKeys_Blue": {
                 "flags": [
@@ -649,7 +649,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ShippingContainerKeys_Orange": {
                 "flags": [
@@ -661,7 +661,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ShippingContainerKeys_Red": {
                 "flags": [
@@ -673,7 +673,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ShippingContainerKeys_Yellow": {
                 "flags": [
@@ -685,7 +685,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Shovel": {
                 "flags": [
@@ -697,7 +697,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Sickle": {
                 "flags": [
@@ -709,7 +709,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SledgeHammer": {
                 "flags": [
@@ -721,7 +721,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SteakKnife": {
                 "flags": [
@@ -733,7 +733,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "StoneKnife": {
                 "flags": [
@@ -745,7 +745,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WeaponCleaningKit": {
                 "flags": [
@@ -757,7 +757,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Whetstone": {
                 "flags": [
@@ -769,7 +769,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Wrench": {
                 "flags": [
@@ -781,7 +781,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

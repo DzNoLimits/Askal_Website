@@ -7,91 +7,91 @@
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "BarbedWire": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "BarbedWireLocked": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "CamoNet": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "CamoNetShelter": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "CombinationLock": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "CombinationLock4": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Fence": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "FenceKit": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "SeaChest": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "UndergroundStash": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "UndergroundStashSnow": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Watchtower": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "WatchtowerKit": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "WoodenCrate": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             }
         },
         "Tents": {
@@ -99,55 +99,55 @@
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "LargeTent": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "MediumTent": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "MediumTent_Green": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "MediumTent_Orange": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "PartyTent": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "PartyTent_Blue": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "PartyTent_Brown": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "PartyTent_Lunapark": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             }
         },
         "Tools": {
@@ -155,97 +155,97 @@
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "CableReel": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Fabric": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "HescoBox": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "PowerGenerator": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Refridgerator": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterBase": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterFabric": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterKit": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterLeather": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterSite": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ShelterStick": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Spotlight": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "TerritoryFlag": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "TerritoryFlagKit": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "XmasLights": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             }
         },
         "flags": {
@@ -253,211 +253,211 @@
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Altis": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_BabyDeer": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Base": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Bear": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Bohemia": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_BrainZ": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_CDF": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_CHEL": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_CMC": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Cannibals": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Chedaki": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Chernarus": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Crook": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_DayZ": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_HunterZ": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Livonia": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_LivoniaArmy": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_LivoniaPolice": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_NAPA": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_NSahrani": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Pirates": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_RSTA": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Refuge": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Rex": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Rooster": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_SSahrani": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Snake": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_TEC": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_UEC": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_White": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Wolf": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Zagorky": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Flag_Zenit": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "StaticFlagPole": {
                 "flags": [],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             }
         }
     }

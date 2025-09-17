@@ -13,11 +13,11 @@
                 ],
                 "tier": 3,
                 "value": 2500,
-                "variants": [
-                    "AliceBag_Green",
-                    "AliceBag_Black",
-                    "AliceBag_Camo"
-                ]
+                "variants": {
+                    "AliceBag_Black": {},
+                    "AliceBag_Camo": {},
+                    "AliceBag_Green": {}
+                }
             }
         },
         "Belts": {
@@ -32,7 +32,7 @@
                 ],
                 "tier": 2,
                 "value": 250,
-                "variants": []
+                "variants": {}
             },
             "MilitaryBelt": {
                 "attachments": [],
@@ -45,7 +45,7 @@
                 ],
                 "tier": 3,
                 "value": 450,
-                "variants": []
+                "variants": {}
             },
             "RopeBelt": {
                 "attachments": [],
@@ -57,7 +57,7 @@
                 ],
                 "tier": 3,
                 "value": 30,
-                "variants": []
+                "variants": {}
             }
         },
         "Pants": {
@@ -72,12 +72,12 @@
                 ],
                 "tier": 3,
                 "value": 150,
-                "variants": [
-                    "CargoPants_Black",
-                    "CargoPants_Blue",
-                    "CargoPants_Green",
-                    "CargoPants_Grey"
-                ]
+                "variants": {
+                    "CargoPants_Black": {},
+                    "CargoPants_Blue": {},
+                    "CargoPants_Green": {},
+                    "CargoPants_Grey": {}
+                }
             }
         },
         "Shoes": {
@@ -92,12 +92,12 @@
                 ],
                 "tier": 4,
                 "value": 250,
-                "variants": [
-                    "JungleBoots_Black",
-                    "JungleBoots_Brown",
-                    "JungleBoots_Green",
-                    "JungleBoots_Olive"
-                ]
+                "variants": {
+                    "JungleBoots_Black": {},
+                    "JungleBoots_Brown": {},
+                    "JungleBoots_Green": {},
+                    "JungleBoots_Olive": {}
+                }
             }
         },
         "Tops": {
@@ -112,11 +112,11 @@
                 ],
                 "tier": 4,
                 "value": 250,
-                "variants": [
-                    "M65Jacket_Khaki",
-                    "M65Jacket_Tan",
-                    "M65Jacket_Olive"
-                ]
+                "variants": {
+                    "M65Jacket_Khaki": {},
+                    "M65Jacket_Olive": {},
+                    "M65Jacket_Tan": {}
+                }
             }
         },
         "Vests": {
@@ -142,12 +142,12 @@
                 ],
                 "tier": 3,
                 "value": 3800,
-                "variants": [
-                    "PlateCarrierVest_Camo",
-                    "PlateCarrierVest_Black",
-                    "PlateCarrierVest_Green",
-                    "PlateCarrierVest_Winter"
-                ]
+                "variants": {
+                    "PlateCarrierVest_Black": {},
+                    "PlateCarrierVest_Camo": {},
+                    "PlateCarrierVest_Green": {},
+                    "PlateCarrierVest_Winter": {}
+                }
             }
         }
     }

@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AmanitaMushroom": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Apple": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AuriculariaMushroom": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BakedBeansCan": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BakedBeansCan_Opened": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Banana": {
                 "flags": [
@@ -85,7 +85,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BearSteakMeat": {
                 "flags": [
@@ -97,7 +97,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Bitterlings": {
                 "flags": [
@@ -109,7 +109,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoarSteakMeat": {
                 "flags": [
@@ -121,7 +121,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoletusMushroom": {
                 "flags": [
@@ -133,7 +133,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoxCerealCrunchin": {
                 "flags": [
@@ -145,7 +145,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BrisketSpread": {
                 "flags": [
@@ -157,7 +157,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BrisketSpread_Opened": {
                 "flags": [
@@ -169,7 +169,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Candycane_Green": {
                 "flags": [
@@ -181,7 +181,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Candycane_Red": {
                 "flags": [
@@ -193,7 +193,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Candycane_RedGreen": {
                 "flags": [
@@ -205,7 +205,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Candycane_Yellow": {
                 "flags": [
@@ -217,7 +217,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CaninaBerry": {
                 "flags": [
@@ -229,7 +229,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Cannabis": {
                 "flags": [
@@ -241,7 +241,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Carp": {
                 "flags": [
@@ -253,7 +253,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CarpFilletMeat": {
                 "flags": [
@@ -265,7 +265,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CatFoodCan": {
                 "flags": [
@@ -277,7 +277,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CatFoodCan_Opened": {
                 "flags": [
@@ -289,7 +289,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChickenBreastMeat": {
                 "flags": [
@@ -301,7 +301,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chips": {
                 "flags": [
@@ -313,7 +313,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CowSteakMeat": {
                 "flags": [
@@ -325,7 +325,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CrabCan": {
                 "flags": [
@@ -337,7 +337,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CrabCan_Opened": {
                 "flags": [
@@ -349,7 +349,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Crackers": {
                 "flags": [
@@ -361,7 +361,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CraterellusMushroom": {
                 "flags": [
@@ -373,7 +373,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadChicken_Brown": {
                 "flags": [
@@ -385,7 +385,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadChicken_Spotted": {
                 "flags": [
@@ -397,7 +397,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadChicken_White": {
                 "flags": [
@@ -409,7 +409,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadFox": {
                 "flags": [
@@ -421,7 +421,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadRabbit": {
                 "flags": [
@@ -433,7 +433,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeadRooster": {
                 "flags": [
@@ -445,7 +445,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeerSteakMeat": {
                 "flags": [
@@ -457,7 +457,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DogFoodCan": {
                 "flags": [
@@ -469,7 +469,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DogFoodCan_Opened": {
                 "flags": [
@@ -481,7 +481,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FoxSteakMeat": {
                 "flags": [
@@ -493,7 +493,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GoatSteakMeat": {
                 "flags": [
@@ -505,7 +505,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GreenBellPepper": {
                 "flags": [
@@ -517,7 +517,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Guts": {
                 "flags": [
@@ -529,7 +529,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Honey": {
                 "flags": [
@@ -541,7 +541,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HumanSteakMeat": {
                 "flags": [
@@ -553,7 +553,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Kiwi": {
                 "flags": [
@@ -565,7 +565,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LactariusMushroom": {
                 "flags": [
@@ -577,7 +577,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Lard": {
                 "flags": [
@@ -589,7 +589,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Lunchmeat": {
                 "flags": [
@@ -601,7 +601,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Lunchmeat_Opened": {
                 "flags": [
@@ -613,7 +613,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Mackerel": {
                 "flags": [
@@ -625,7 +625,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MackerelFilletMeat": {
                 "flags": [
@@ -637,7 +637,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MacrolepiotaMushroom": {
                 "flags": [
@@ -649,7 +649,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Marmalade": {
                 "flags": [
@@ -661,7 +661,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MouflonSteakMeat": {
                 "flags": [
@@ -673,7 +673,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Orange": {
                 "flags": [
@@ -685,7 +685,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pajka": {
                 "flags": [
@@ -697,7 +697,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pajka_Opened": {
                 "flags": [
@@ -709,7 +709,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pate": {
                 "flags": [
@@ -721,7 +721,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pate_Opened": {
                 "flags": [
@@ -733,7 +733,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PeachesCan": {
                 "flags": [
@@ -745,7 +745,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PeachesCan_Opened": {
                 "flags": [
@@ -757,7 +757,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pear": {
                 "flags": [
@@ -769,7 +769,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PigSteakMeat": {
                 "flags": [
@@ -781,7 +781,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PleurotusMushroom": {
                 "flags": [
@@ -793,7 +793,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Plum": {
                 "flags": [
@@ -805,7 +805,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PorkCan": {
                 "flags": [
@@ -817,7 +817,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PorkCan_Opened": {
                 "flags": [
@@ -829,7 +829,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Potato": {
                 "flags": [
@@ -841,7 +841,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PowderedMilk": {
                 "flags": [
@@ -853,7 +853,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PsilocybeMushroom": {
                 "flags": [
@@ -865,7 +865,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pumpkin": {
                 "flags": [
@@ -877,7 +877,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RabbitLegMeat": {
                 "flags": [
@@ -889,7 +889,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RedCaviar": {
                 "flags": [
@@ -901,7 +901,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ReindeerSteakMeat": {
                 "flags": [
@@ -913,7 +913,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Rice": {
                 "flags": [
@@ -925,7 +925,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SaltySticks": {
                 "flags": [
@@ -937,7 +937,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SambucusBerry": {
                 "flags": [
@@ -949,7 +949,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Sardines": {
                 "flags": [
@@ -961,7 +961,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SardinesCan": {
                 "flags": [
@@ -973,7 +973,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SardinesCan_Opened": {
                 "flags": [
@@ -985,7 +985,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SheepSteakMeat": {
                 "flags": [
@@ -997,7 +997,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Shrimp": {
                 "flags": [
@@ -1009,7 +1009,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SlicedPumpkin": {
                 "flags": [
@@ -1021,7 +1021,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SmallGuts": {
                 "flags": [
@@ -1033,7 +1033,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SpaghettiCan": {
                 "flags": [
@@ -1045,7 +1045,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SpaghettiCan_Opened": {
                 "flags": [
@@ -1057,7 +1057,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SteelheadTrout": {
                 "flags": [
@@ -1069,7 +1069,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SteelheadTroutFilletMeat": {
                 "flags": [
@@ -1081,7 +1081,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TacticalBaconCan": {
                 "flags": [
@@ -1093,7 +1093,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TacticalBaconCan_Opened": {
                 "flags": [
@@ -1105,7 +1105,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Tomato": {
                 "flags": [
@@ -1117,7 +1117,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TunaCan": {
                 "flags": [
@@ -1129,7 +1129,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TunaCan_Opened": {
                 "flags": [
@@ -1141,7 +1141,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "UnknownFoodCan": {
                 "flags": [
@@ -1153,7 +1153,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "UnknownFoodCan_Opened": {
                 "flags": [
@@ -1165,7 +1165,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WalleyePollock": {
                 "flags": [
@@ -1177,7 +1177,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WalleyePollockFilletMeat": {
                 "flags": [
@@ -1189,7 +1189,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WolfSteakMeat": {
                 "flags": [
@@ -1201,7 +1201,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Worm": {
                 "flags": [
@@ -1213,7 +1213,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Zagorky": {
                 "flags": [
@@ -1225,7 +1225,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ZagorkyChocolate": {
                 "flags": [
@@ -1237,7 +1237,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ZagorkyPeanuts": {
                 "flags": [
@@ -1249,7 +1249,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Zucchini": {
                 "flags": [
@@ -1261,7 +1261,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

@@ -13,7 +13,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AliceBag_Camo": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AliceBag_FarBubble": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AliceBag_Green": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AliceBag_NearBubble": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ArmyPouch_Beige": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ArmyPouch_Black": {
                 "flags": [
@@ -85,7 +85,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ArmyPouch_Camo": {
                 "flags": [
@@ -97,7 +97,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ArmyPouch_Green": {
                 "flags": [
@@ -109,7 +109,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AssaultBag_Black": {
                 "flags": [
@@ -121,7 +121,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AssaultBag_Green": {
                 "flags": [
@@ -133,7 +133,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AssaultBag_Ttsko": {
                 "flags": [
@@ -145,7 +145,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "AssaultBag_Winter": {
                 "flags": [
@@ -157,7 +157,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CanvasBag_Medical": {
                 "flags": [
@@ -169,7 +169,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CanvasBag_Olive": {
                 "flags": [
@@ -181,7 +181,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChildBag_Blue": {
                 "flags": [
@@ -193,7 +193,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChildBag_Green": {
                 "flags": [
@@ -205,7 +205,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ChildBag_Red": {
                 "flags": [
@@ -217,7 +217,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CourierBag": {
                 "flags": [
@@ -229,7 +229,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CoyoteBag_Brown": {
                 "flags": [
@@ -241,7 +241,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CoyoteBag_Green": {
                 "flags": [
@@ -253,7 +253,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CoyoteBag_Winter": {
                 "flags": [
@@ -265,7 +265,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Black": {
                 "flags": [
@@ -277,7 +277,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Blue": {
                 "flags": [
@@ -289,7 +289,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Green": {
                 "flags": [
@@ -301,7 +301,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Orange": {
                 "flags": [
@@ -313,7 +313,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Red": {
                 "flags": [
@@ -325,7 +325,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DryBag_Yellow": {
                 "flags": [
@@ -337,7 +337,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DrysackBag_Green": {
                 "flags": [
@@ -349,7 +349,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DrysackBag_Orange": {
                 "flags": [
@@ -361,7 +361,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DrysackBag_Yellow": {
                 "flags": [
@@ -373,7 +373,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DuffelBagSmall_Camo": {
                 "flags": [
@@ -385,7 +385,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DuffelBagSmall_Green": {
                 "flags": [
@@ -397,7 +397,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DuffelBagSmall_Medical": {
                 "flags": [
@@ -409,7 +409,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FurCourierBag": {
                 "flags": [
@@ -421,7 +421,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FurImprovisedBag": {
                 "flags": [
@@ -433,7 +433,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieBushrag_Mossy": {
                 "flags": [
@@ -445,7 +445,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieBushrag_Tan": {
                 "flags": [
@@ -457,7 +457,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieBushrag_Winter": {
                 "flags": [
@@ -469,7 +469,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieBushrag_Woodland": {
                 "flags": [
@@ -481,7 +481,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieSuit_Mossy": {
                 "flags": [
@@ -493,7 +493,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieSuit_Tan": {
                 "flags": [
@@ -505,7 +505,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieSuit_Winter": {
                 "flags": [
@@ -517,7 +517,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieSuit_Woodland": {
                 "flags": [
@@ -529,7 +529,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieTop_Mossy": {
                 "flags": [
@@ -541,7 +541,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieTop_Tan": {
                 "flags": [
@@ -553,7 +553,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieTop_Winter": {
                 "flags": [
@@ -565,7 +565,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GhillieTop_Woodland": {
                 "flags": [
@@ -577,7 +577,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HuntingBag": {
                 "flags": [
@@ -589,7 +589,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "HuntingBag_Hannah": {
                 "flags": [
@@ -601,7 +601,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ImprovisedBag": {
                 "flags": [
@@ -613,7 +613,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LargeTentBackPack": {
                 "flags": [
@@ -625,7 +625,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LeatherSack_Beige": {
                 "flags": [
@@ -637,7 +637,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LeatherSack_Black": {
                 "flags": [
@@ -649,7 +649,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LeatherSack_Brown": {
                 "flags": [
@@ -661,7 +661,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LeatherSack_Natural": {
                 "flags": [
@@ -673,7 +673,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MountainBag_Blue": {
                 "flags": [
@@ -685,7 +685,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MountainBag_Green": {
                 "flags": [
@@ -697,7 +697,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MountainBag_Orange": {
                 "flags": [
@@ -709,7 +709,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MountainBag_Red": {
                 "flags": [
@@ -721,7 +721,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SlingBag_Black": {
                 "flags": [
@@ -733,7 +733,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SlingBag_Brown": {
                 "flags": [
@@ -745,7 +745,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SlingBag_Gray": {
                 "flags": [
@@ -757,7 +757,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SmershBag": {
                 "flags": [
@@ -769,7 +769,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TaloonBag_Blue": {
                 "flags": [
@@ -781,7 +781,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TaloonBag_Green": {
                 "flags": [
@@ -793,7 +793,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TaloonBag_Orange": {
                 "flags": [
@@ -805,7 +805,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TaloonBag_Violet": {
                 "flags": [
@@ -817,7 +817,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TortillaBag": {
                 "flags": [
@@ -829,7 +829,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TortillaBag_Winter": {
                 "flags": [
@@ -841,7 +841,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

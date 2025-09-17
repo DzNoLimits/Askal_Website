@@ -689,7 +689,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Bark_Birch": {
                 "flags": [
@@ -701,7 +701,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Bark_Oak": {
                 "flags": [
@@ -713,7 +713,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Battery9V": {
                 "flags": [
@@ -725,7 +725,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BearPelt": {
                 "flags": [
@@ -737,7 +737,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Bone": {
                 "flags": [
@@ -749,7 +749,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoneBait": {
                 "flags": [
@@ -761,7 +761,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BoneHook": {
                 "flags": [
@@ -773,7 +773,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "BurlapStrip": {
                 "flags": [
@@ -785,7 +785,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ButaneCanister": {
                 "flags": [
@@ -797,7 +797,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chemlight_Blue": {
                 "flags": [
@@ -809,7 +809,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chemlight_Green": {
                 "flags": [
@@ -821,7 +821,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chemlight_Red": {
                 "flags": [
@@ -833,7 +833,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chemlight_White": {
                 "flags": [
@@ -845,7 +845,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Chemlight_Yellow": {
                 "flags": [
@@ -857,7 +857,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "CowPelt": {
                 "flags": [
@@ -869,7 +869,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DeerPelt": {
                 "flags": [
@@ -881,7 +881,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "DuctTape": {
                 "flags": [
@@ -893,7 +893,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "EasterEgg": {
                 "flags": [
@@ -905,7 +905,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Firewood": {
                 "flags": [
@@ -917,7 +917,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "FoxPelt": {
                 "flags": [
@@ -929,7 +929,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GardenLime": {
                 "flags": [
@@ -941,7 +941,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GasMask_Filter": {
                 "flags": [
@@ -953,7 +953,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GiftWrapPaper": {
                 "flags": [
@@ -965,7 +965,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "GoatPelt": {
                 "flags": [
@@ -977,7 +977,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Hook": {
                 "flags": [
@@ -989,7 +989,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Jig": {
                 "flags": [
@@ -1001,7 +1001,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "LargeGasCanister": {
                 "flags": [
@@ -1013,7 +1013,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Matchbox": {
                 "flags": [
@@ -1025,7 +1025,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MediumGasCanister": {
                 "flags": [
@@ -1037,7 +1037,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MetalPlate": {
                 "flags": [
@@ -1049,7 +1049,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "MouflonPelt": {
                 "flags": [
@@ -1061,7 +1061,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Nail": {
                 "flags": [
@@ -1073,7 +1073,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "NailBox": {
                 "flags": [
@@ -1085,7 +1085,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Netting": {
                 "flags": [
@@ -1097,7 +1097,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Paper": {
                 "flags": [
@@ -1109,7 +1109,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Pelt_Base": {
                 "flags": [
@@ -1121,7 +1121,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PigPelt": {
                 "flags": [
@@ -1133,7 +1133,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PileOfWoodenPlanks": {
                 "flags": [
@@ -1145,7 +1145,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "PunchedCard": {
                 "flags": [
@@ -1157,7 +1157,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "RabbitPelt": {
                 "flags": [
@@ -1169,7 +1169,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Rag": {
                 "flags": [
@@ -1181,7 +1181,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "ReindeerPelt": {
                 "flags": [
@@ -1193,7 +1193,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Roadflare": {
                 "flags": [
@@ -1205,7 +1205,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SheepPelt": {
                 "flags": [
@@ -1217,7 +1217,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SmallGasCanister": {
                 "flags": [
@@ -1229,7 +1229,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "SmallStone": {
                 "flags": [
@@ -1241,7 +1241,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Spraycan_Black": {
                 "flags": [
@@ -1253,7 +1253,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Spraycan_Green": {
                 "flags": [
@@ -1265,7 +1265,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "Stone": {
                 "flags": [
@@ -1277,7 +1277,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "TannedLeather": {
                 "flags": [
@@ -1289,7 +1289,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WildboarPelt": {
                 "flags": [
@@ -1301,7 +1301,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WolfPelt": {
                 "flags": [
@@ -1313,7 +1313,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WoodenHook": {
                 "flags": [
@@ -1325,7 +1325,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WoodenLog": {
                 "flags": [
@@ -1337,7 +1337,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             },
             "WoodenPlank": {
                 "flags": [
@@ -1349,7 +1349,7 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": []
+                "variants": {}
             }
         }
     }

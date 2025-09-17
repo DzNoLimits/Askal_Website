@@ -13,7 +13,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "ChickenFeather": {
                 "flags": [
@@ -25,7 +25,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "GasMask_Filter_Improvised": {
                 "flags": [
@@ -37,7 +37,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "GorkaHelmetVisor": {
                 "flags": [
@@ -49,7 +49,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "HandDrillKit": {
                 "flags": [
@@ -61,7 +61,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "LongTorch": {
                 "flags": [
@@ -73,7 +73,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "LongWoodenStick": {
                 "flags": [
@@ -85,7 +85,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "MetalWire": {
                 "flags": [
@@ -97,7 +97,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "MetalWireLocked": {
                 "flags": [
@@ -109,7 +109,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Rope": {
                 "flags": [
@@ -121,7 +121,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "RopeLocked": {
                 "flags": [
@@ -133,7 +133,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "SharpWoodenStick": {
                 "flags": [
@@ -145,7 +145,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Spear": {
                 "flags": [
@@ -157,7 +157,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "SpearBone": {
                 "flags": [
@@ -169,7 +169,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "SpearStone": {
                 "flags": [
@@ -181,7 +181,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Torch": {
                 "flags": [
@@ -193,7 +193,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "Torch_Video": {
                 "flags": [
@@ -205,7 +205,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             },
             "WoodenStick": {
                 "flags": [
@@ -217,7 +217,7 @@
                 ],
                 "tier": 1,
                 "value": 100,
-                "variants": []
+                "variants": {}
             }
         }
     }
