@@ -33,10 +33,6 @@
                 "tier": 4,
                 "value": 4200,
                 "variants": {
-                    "AK101_Black": {
-                        "tier": 42,
-                        "value": 1000
-                    },
                     "AK101_Green": {}
                 }
             },
@@ -84,16 +80,6 @@
                 ],
                 "tier": 3,
                 "value": 3800,
-                "variants": {}
-            },
-            "BallisticHelmet_Desert": {
-                "ammo_types": [],
-                "attachments": {},
-                "chamber_size": 1,
-                "flags": [],
-                "magazines": [],
-                "tier": null,
-                "value": null,
                 "variants": {}
             },
             "M4A1": {

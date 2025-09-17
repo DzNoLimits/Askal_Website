@@ -1,6 +1,6 @@
 // Extracted application logic
 // Dynamic datasets: state stores dataset data under state[<datasetName>]
-var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{} };
+var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{} };
 // Helper to build endpoints for dynamic datasets
 function endpoint(kind){ return '/api/'+kind; }
 
@@ -52,12 +52,15 @@ function renderNav(){
       if(state.filters.flags.length){ var f=item.flags||[]; var ok=false; for(var i=0;i<state.filters.flags.length;i++){ if(f.indexOf(state.filters.flags[i])!==-1){ ok=true; break; } } if(!ok) return; }
       var isActive = false; if(kind==='_all'){ isActive = sel && sel.dataset===dsName && sel.category===cat && sel.classname===cls; } else { isActive = sel && sel.category===cat && sel.classname===cls; }
       var key = dsName+'|'+cat+'|'+cls; var vCollapsed = !!state.collapsedItems[key];
+      var isLocked = !!state.locked[key];
     html+='<div class="nav-item '+(isActive?'active':'')+'" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
       '<span class="flex items-center gap-1">'+
-      (variants && variants.length? '<span class="text-gray-400 text-xs">['+(variants.length)+' variantes]</span>' : '')+
       '<span>'+cls+'</span>'+
       '</span>'+
+      '<div class="flex items-center gap-1">'+
+      (isLocked? '<span class="text-yellow-400" title="Item travado (L para destravar)">🔒</span>' : '')+
       ((isActive && state.dirty[dsName])?'<span class="dirty-dot"></span>':'')+
+      '</div>'+
       '</div>';
       
       // Se este item está ativo e tem variantes, coletamos para mostrar no rodapé
@@ -93,6 +96,13 @@ function renderNav(){
 function getSelected(){ var k=state.active; var sel=state.selected[k]; if(!sel) return null; var variant = state.selectedVariant[k] || null; if(k==='_all'){ return Object.assign({}, sel, { variant: variant }); } return { dataset:k, category:sel.category, classname:sel.classname, variant: variant }; }
 
 function renderEditor(){ var pane=document.getElementById('editor-pane'); var sel=getSelected(); var kindActual = sel? sel.dataset : state.active; if(state.active==='_all' && !sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } if(!state[kindActual]){ pane.innerHTML='<p class="text-sm text-gray-500">Carregando...</p>'; return; } if(!sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } var category=sel.category, classname=sel.classname, selectedVariant=sel.variant; var item = state[kindActual].Categories[category][classname]; if(!item){ pane.innerHTML='<p class="text-sm text-red-500">Item não encontrado.</p>'; return; }
+  // Check if item is locked
+  var lockKey = kindActual+'|'+category+'|'+classname;
+  var isLocked = !!state.locked[lockKey];
+  if(isLocked){
+    pane.innerHTML='<div class="bg-yellow-900 bg-opacity-30 border border-yellow-600 rounded p-4 text-center"><h3 class="text-yellow-400 font-bold mb-2">🔒 Item Travado</h3><p class="text-yellow-200 mb-3">Este item está travado para edição.</p><p class="text-xs text-yellow-300">Pressione <kbd class="bg-yellow-800 px-1 rounded">L</kbd> para destravar</p></div>';
+    return;
+  }
   var isWeapon = kindActual==='weapons';
   function getVariantNames(it){ if(!it) return []; if(Array.isArray(it.variants)) return it.variants.slice(); if(it.variants && typeof it.variants==='object') return Object.keys(it.variants); return []; }
   function ensureVariantsObject(it){ if(!it) return {}; if(Array.isArray(it.variants)){ var obj={}; it.variants.forEach(function(n){ obj[n]={}; }); it.variants=obj; } else if(!it.variants || typeof it.variants!=='object'){ it.variants={}; } return it.variants; }
@@ -520,6 +530,60 @@ document.addEventListener('keydown', function(e){
   var inField = ae && (ae.tagName==='INPUT' || ae.tagName==='TEXTAREA' || ae.isContentEditable);
   if(e.ctrlKey && !inField && (key.toLowerCase()==='z') && !e.shiftKey){ e.preventDefault(); undo(); return; }
   if((e.ctrlKey && !inField && (key.toLowerCase()==='y')) || (e.ctrlKey && e.shiftKey && !inField && (key.toLowerCase()==='z'))){ e.preventDefault(); redo(); return; }
+  // Save shortcuts
+  if(e.ctrlKey && !inField && key.toLowerCase()==='s' && !e.shiftKey){ 
+    e.preventDefault(); 
+    // Save current dataset (Ctrl+S)
+    var ds = state.active;
+    if(ds && ds !== '_all' && state[ds] && state.dirty[ds]){
+      axios.post(endpoint(ds), state[ds]).then(function(){
+        state.dirty[ds] = false;
+        updateDirtyIndicator();
+        console.log('Dataset '+ds+' salvo com sucesso');
+      }).catch(function(err){
+        alert('Erro ao salvar '+ds+': '+(err.response?.data?.error || err.message));
+      });
+    } else {
+      alert('Nenhum dataset ativo ou nada para salvar');
+    }
+    return; 
+  }
+  if(e.ctrlKey && e.shiftKey && !inField && key.toLowerCase()==='s'){ 
+    e.preventDefault(); 
+    // Save all datasets (Ctrl+Shift+S)
+    var promises = [];
+    var hasChanges = false;
+    for(var k in state.dirty){
+      if(state.dirty[k] && state[k]){
+        hasChanges = true;
+        promises.push(
+          axios.post(endpoint(k), state[k]).then(function(){ return k; })
+        );
+      }
+    }
+    if(hasChanges){
+      Promise.all(promises).then(function(){
+        for(var k in state.dirty) state.dirty[k] = false;
+        updateDirtyIndicator();
+        console.log('Todos os datasets salvos com sucesso');
+      }).catch(function(err){
+        alert('Erro ao salvar alguns datasets: '+(err.response?.data?.error || err.message));
+      });
+    } else {
+      alert('Nenhuma alteração para salvar');
+    }
+    return; 
+  }
+  // Lock/Unlock with L key
+  if(!inField && key.toLowerCase()==='l'){ 
+    e.preventDefault(); 
+    var sel = getSelected();
+    if(!sel) return;
+    var lockKey = sel.dataset+'|'+sel.category+'|'+sel.classname;
+    state.locked[lockKey] = !state.locked[lockKey];
+    renderNav(); 
+    return; 
+  }
   if(key !== 'Delete') return;
   if(inField) return; // don't interfere with typing
   var sel = getSelected();
