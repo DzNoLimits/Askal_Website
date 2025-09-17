@@ -1283,30 +1283,6 @@
             }
         },
         "Lights": {
-            "Chemlight_Blue": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
             "Chemlight_Red": {
                 "flags": [
                     "Market",
@@ -1317,31 +1293,12 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "Chemlight_White": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_Yellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "Chemlight_Blue": {},
+                    "Chemlight_Green": {},
+                    "Chemlight_White": {},
+                    "Chemlight_Yellow": {}
+                }
             }
         }
     }

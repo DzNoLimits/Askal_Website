@@ -602,7 +602,19 @@ document.addEventListener('click', function(e){
   }
   
   if(!el) return; var action=el.dataset.action; var kind=state.active;
-  if(el.classList.contains('chip')){ if(el.dataset.type==='category'){ state.filters.category = (state.filters.category===el.dataset.category? '' : el.dataset.category); renderCategoryChips(); renderNav(); } else if(el.dataset.type==='flag'){ var flag=el.dataset.flag; var idx=state.filters.flags.indexOf(flag); if(idx===-1) state.filters.flags.push(flag); else state.filters.flags.splice(idx,1); renderFlagsChips(); renderNav(); } else if(el.dataset.type==='dataset'){ setActive(el.dataset.dataset); } return; }
+  if(el.classList.contains('chip')){
+    if(el.dataset.type==='category'){
+      state.filters.category = (state.filters.category===el.dataset.category? '' : el.dataset.category);
+      renderCategoryChips(); renderNav();
+    } else if(el.dataset.type==='category-all'){
+      state.filters.category=''; state.multiCategory={}; renderFoldersPane(); renderCategoryChips(); renderNav();
+    } else if(el.dataset.type==='flag'){
+      var flag=el.dataset.flag; var idx=state.filters.flags.indexOf(flag); if(idx===-1) state.filters.flags.push(flag); else state.filters.flags.splice(idx,1); renderFlagsChips(); renderNav();
+    } else if(el.dataset.type==='dataset'){
+      setActive(el.dataset.dataset);
+    }
+    return;
+  }
   if(el.id==='btn-toggle-pending'){ state.rightTab = (state.rightTab==='pending'?'attachments':'pending'); renderRightTab(); return; }
   if(el.id==='btn-toggle-trash'){ state.rightTab = (state.rightTab==='trash'?'attachments':'trash'); renderRightTab(); return; }
   if(el.id==='btn-pending-add'){ openPendingModal(); return; }
@@ -884,7 +896,7 @@ document.addEventListener('drop', function(e){
   }
   if(type==='category'){
     var mvInfo = _getDragObject(e,'move-item');
-    if(mvInfo){ e.preventDefault(); t.classList.remove('drag-over'); var targetCat=t.dataset.category; var targetDs=t.dataset.kind || mvInfo.dataset || state.active; moveItemToCategory(targetDs, mvInfo.category, mvInfo.classname, targetCat); return; }
+    if(mvInfo){ e.preventDefault(); t.classList.remove('drag-over'); var targetCat=t.dataset.category; var targetDs=t.dataset.kind || mvInfo.dataset || state.active; moveItemToCategory(targetDs, mvInfo.category, mvInfo.classname, targetCat); showToast('Item movido para '+targetCat, 'success'); return; }
     var targetCat2=t.dataset.category; var targetDs2=t.dataset.kind || state.active;
     var multiObj = _getDragObject(e,'pending-multi');
     if(multiObj){ e.preventDefault(); t.classList.remove('drag-over'); var arr=Array.isArray(multiObj)? multiObj : []; 
@@ -1114,7 +1126,21 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 // Helpers for flags and categories chips
-function renderCategoryChips(){ var host=document.getElementById('category-chips'); if(!host){ return; } if(state.active==='_all'){ host.innerHTML=''; return; } var ds=state[state.active]; if(!ds){ host.innerHTML=''; return; } var cats=Object.keys(ds.Categories||{}); var html=''; cats.forEach(function(c){ html+='<div class="chip'+(state.filters.category===c?' active':'')+' droppable" data-drop-type="category" data-type="category" data-category="'+c+'">'+c+'</div>'; }); host.innerHTML= html; }
+function renderCategoryChips(){
+  var host=document.getElementById('category-chips'); if(!host){ return; }
+  if(state.active==='_all'){ host.innerHTML=''; return; }
+  var ds=state[state.active]; if(!ds){ host.innerHTML=''; return; }
+  var cats=Object.keys(ds.Categories||{});
+  var multiSelected = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; }).length>0;
+  var html='';
+  // All chip (shows all categories) active when no specific category filter and no multiCategory selection
+  var allActive = !state.filters.category && !multiSelected;
+  html += '<div class="chip'+(allActive?' active':'')+'" data-type="category-all" title="Mostrar todas as categorias">All</div>';
+  cats.forEach(function(c){
+    html+='<div class="chip'+(state.filters.category===c?' active':'')+' droppable" data-drop-type="category" data-type="category" data-category="'+c+'">'+c+'</div>';
+  });
+  host.innerHTML= html;
+}
 function renderFlagsChips(){ var host=document.getElementById('flags-chips'); if(!host){ return; } var set={}; if(state.active==='_all'){
     state._datasets.forEach(function(dsName){ var ds=state[dsName]; if(ds && ds.Categories){ Object.values(ds.Categories).forEach(function(items){ Object.values(items).forEach(function(item){ (item.flags||[]).forEach(function(f){ set[f]=true; }); }); }); } });
   } else {
@@ -1161,6 +1187,22 @@ document.addEventListener('click', function(e){
   }
   if(e.target && e.target.id==='folders-clear'){
     state.multiCategory = {}; renderFoldersPane(); renderNav(); return;
+  }
+  if(e.target && e.target.dataset && e.target.dataset.action==='add-folder'){
+    if(state.active==='_all' || !state[state.active]){ alert('Selecione um dataset específico primeiro.'); return; }
+    var ds = state[state.active];
+    var name = (prompt('Nome da nova pasta:')||'').trim();
+    if(!name) return;
+    if(ds.Categories[name]){ alert('Já existe uma pasta com esse nome.'); return; }
+    pushHistory();
+    ds.Categories[name]={};
+    markDirty(state.active);
+    state.multiCategory[name]=true; // auto-select
+    renderFoldersPane();
+    renderCategoryChips();
+    renderNav();
+    showToast('Pasta criada: '+name,'success');
+    return;
   }
 });
 
@@ -1219,6 +1261,9 @@ function clearVariantSelection(){ var k=state.active; state.selectedVariant[k] =
 window.clearVariantSelection = clearVariantSelection;
 
 function moveItemToCategory(dsName, fromCategory, classname, toCategory){ if(fromCategory===toCategory) return; var ds=state[dsName]; if(!ds) return; if(!ds.Categories[toCategory]) ds.Categories[toCategory]={}; var items=ds.Categories; if(items[toCategory][classname]){ alert('Já existe item com este classname na categoria destino.'); return; } pushHistory(); items[toCategory][classname]=items[fromCategory][classname]; delete items[fromCategory][classname]; if(state.active==='_all'){ if(state.selected['_all'] && state.selected['_all'].classname===classname){ state.selected['_all']={ dataset: dsName, category: toCategory, classname: classname }; } } else if(state.active===dsName){ if(state.selected[dsName] && state.selected[dsName].classname===classname){ state.selected[dsName]={category:toCategory, classname:classname}; } }
+  // If user is filtering by multiCategory and destination isn't visible, include it so moved item remains visible
+  var activeFilters = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; });
+  if(activeFilters.length>0 && !state.multiCategory[toCategory]){ state.multiCategory[toCategory]=true; renderFoldersPane(); }
   markDirty(dsName); renderCategoryChips(); renderNav(); }
 
 function applyTheme(mode){ var b=document.body; b.classList.add('theme-dark'); }
