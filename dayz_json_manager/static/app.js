@@ -33,51 +33,87 @@ function setActive(tab){ state.active=tab; state.filters={ category:'', flags:[]
 
 function renderNav(){
   var kind=state.active; var host=document.getElementById('nav-pane'); var search=document.getElementById('search').value.trim().toLowerCase(); var html=''; var filterCat = state.filters.category; var sel=state.selected[kind];
-  var footerVariants = ''; // Para coletar variantes do item selecionado
-  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; Object.keys(cats).forEach(function(cat){ if(filterCat && kind!=="_all" && cat!==filterCat) return; var isColl = !!(state.collapsed[dsName] && state.collapsed[dsName][cat]); var headerLabel = (kind==='_all'? (dsName+' · '+cat):cat); html+='<div class="nav-category relative border border-gray-600 bg-gray-800 rounded px-2 py-1 droppable" data-drop-type="category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-        '<div class="absolute left-2 inset-y-0 flex items-center gap-2">'+
-          '<button class="text-gray-400 hover:text-gray-200" title="Expandir/Colapsar" data-action="toggle-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transform transition-transform '+(isColl?'rotate-180':'')+'">'+
-              '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
-            '</svg>'+
-          '</button>'+
-          '<button class="p-0.5 rounded hover:bg-gray-700" title="Excluir categoria" data-action="remove-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-            '<img src="/img/delete.png?v=1" alt="delete" class="w-4 h-4 opacity-90 hover:opacity-100" />'+
-          '</button>'+
+  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; Object.keys(cats).forEach(function(cat){ if(filterCat && kind!=="_all" && cat!==filterCat) return; var isColl = !!(state.collapsed[dsName] && state.collapsed[dsName][cat]); var headerLabel = (kind==='_all'? (dsName+' · '+cat):cat); 
+      // Enhanced category header with better visual hierarchy
+      html+='<div class="nav-category mb-3 border border-gray-600 bg-gradient-to-r from-gray-800 to-gray-750 rounded-lg shadow-sm droppable" data-drop-type="category" data-category="'+cat+'" data-kind="'+dsName+'">'+
+        '<div class="flex items-center justify-between p-3">'+
+          '<div class="flex items-center gap-3">'+
+            '<button class="flex-shrink-0 text-gray-400 hover:text-blue-400 transition-colors duration-200" title="Expandir/Colapsar" data-action="toggle-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transform transition-transform duration-200 '+(isColl?'-rotate-90':'rotate-0')+'">'+
+                '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
+              '</svg>'+
+            '</button>'+
+            '<div class="flex items-center gap-2">'+
+              '<span class="text-blue-400 text-lg">📂</span>'+
+              '<button class="text-gray-100 font-semibold text-sm hover:text-blue-300 transition-colors" data-action="rename-category" data-category="'+cat+'" data-kind="'+dsName+'">'+headerLabel+'</button>'+
+            '</div>'+
+          '</div>'+
+          '<div class="flex items-center gap-2">'+
+            '<span class="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full">'+Object.keys(cats[cat]||{}).length+' items</span>'+
+            '<button class="p-1.5 rounded-md hover:bg-red-600 hover:bg-opacity-20 transition-colors" title="Excluir categoria" data-action="remove-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-red-400 hover:text-red-300">'+
+                '<path fill-rule="evenodd" d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z" clip-rule="evenodd" />'+
+              '</svg>'+
+            '</button>'+
+          '</div>'+
         '</div>'+
-        '<div class="text-center text-gray-200 font-semibold tracking-wide"><button class="hover:underline" data-action="rename-category" data-category="'+cat+'" data-kind="'+dsName+'">'+headerLabel+'</button></div>'+
-      '</div>'; var items=cats[cat]; if(isColl) return; Object.keys(items).forEach(function(cls){ var item=items[cls]||{}; var variants = Array.isArray(item.variants)? item.variants: (item.variants && typeof item.variants==='object'? Object.keys(item.variants):[]);
+      '</div>';
+      
+      var items=cats[cat]; if(isColl) return; 
+      
+      Object.keys(items).forEach(function(cls){ var item=items[cls]||{}; var variants = Array.isArray(item.variants)? item.variants: (item.variants && typeof item.variants==='object'? Object.keys(item.variants):[]);
       // Search allows classname or variant match
       if(search){ var sOk = cls.toLowerCase().indexOf(search)!==-1 || (variants||[]).some(function(v){return (v||'').toLowerCase().indexOf(search)!==-1;}); if(!sOk) return; }
       if(state.filters.flags.length){ var f=item.flags||[]; var ok=false; for(var i=0;i<state.filters.flags.length;i++){ if(f.indexOf(state.filters.flags[i])!==-1){ ok=true; break; } } if(!ok) return; }
       var isActive = false; if(kind==='_all'){ isActive = sel && sel.dataset===dsName && sel.category===cat && sel.classname===cls; } else { isActive = sel && sel.category===cat && sel.classname===cls; }
       var key = dsName+'|'+cat+'|'+cls; var vCollapsed = !!state.collapsedItems[key];
       var isLocked = !!state.locked[key];
-    html+='<div class="nav-item '+(isActive?'active':'')+'" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
-      '<span class="flex items-center gap-1">'+
-      '<span>'+cls+'</span>'+
-      '</span>'+
-      '<div class="flex items-center gap-1">'+
-      (isLocked? '<span class="text-yellow-400" title="Item travado (L para destravar)">🔒</span>' : '')+
-      ((isActive && state.dirty[dsName])?'<span class="dirty-dot"></span>':'')+
-      '</div>'+
-      '</div>';
       
-      // Se este item está ativo e tem variantes, coletamos para mostrar no rodapé
-      if(isActive && variants && variants.length && !vCollapsed){
-        footerVariants = '<div class="mt-4 border-t border-gray-600 pt-4">'+
-          '<div class="text-sm font-semibold text-blue-400 mb-2">Variantes de '+cls+':</div>';
-        variants.forEach(function(vn){
-          var hasOv = (item.variants && typeof item.variants==='object' && item.variants[vn] && Object.keys(item.variants[vn]).length>0);
-          var isVariantActive = false;
-          if(kind==='_all'){ isVariantActive = sel && sel.dataset===dsName && sel.category===cat && sel.classname===cls && state.selectedVariant['_all']===vn; }
-          else { isVariantActive = sel && sel.category===cat && sel.classname===cls && state.selectedVariant[kind]===vn; }
-          footerVariants += '<div class="nav-variant mb-2 p-2 border border-gray-600 rounded flex items-center text-sm '+(isVariantActive?'text-blue-400 bg-blue-900 bg-opacity-30 border-blue-500':'text-gray-300')+' cursor-pointer hover:bg-gray-700 hover:bg-opacity-50" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
-            '<span class="truncate">'+vn+(hasOv?' <span class="text-amber-400 ml-1">●</span>':'')+'</span>'+
-          '</div>';
+      // Enhanced class item with better visual design
+      html+='<div class="nav-item ml-4 mb-2 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-lg transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
+        '<div class="flex items-center justify-between p-3">'+
+          '<div class="flex items-center gap-3 min-w-0 flex-1">'+
+            '<span class="text-green-400 text-base flex-shrink-0">🔧</span>'+
+            '<div class="min-w-0 flex-1">'+
+              '<div class="flex items-center gap-2">'+
+                '<span class="font-medium text-gray-100 truncate">'+cls+'</span>'+
+                ((isActive && state.dirty[dsName])?'<span class="dirty-dot bg-orange-400"></span>':'')+
+                (variants && variants.length? '<span class="text-xs text-gray-400 bg-gray-600 px-1.5 py-0.5 rounded-full">'+variants.length+' var</span>' : '')+
+              '</div>'+
+              (item.tier? '<div class="text-xs text-gray-400 mt-0.5">Tier '+item.tier+'</div>' : '')+
+            '</div>'+
+          '</div>'+
+          '<div class="flex items-center gap-2 flex-shrink-0">'+
+            (isLocked? '<span class="text-amber-400 text-sm" title="Item travado (L para destravar)">🔒</span>' : '')+
+            (variants && variants.length? '<button class="p-1 rounded hover:bg-gray-600 text-gray-400 hover:text-gray-200 transition-colors" title="Mostrar/ocultar variantes" data-action="toggle-variants" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'">'+
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transform transition-transform duration-200 '+(vCollapsed?'-rotate-90':'rotate-0')+'">'+
+                '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
+              '</svg>'+
+            '</button>' : '')+
+          '</div>'+
+        '</div>';
+        
+      // Enhanced variants section
+      if(!vCollapsed && variants && variants.length){
+        html+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-3 py-2">'+
+          '<div class="space-y-1">';
+        variants.forEach(function(vn){ 
+          var hasOv = (item.variants && typeof item.variants==='object' && item.variants[vn] && Object.keys(item.variants[vn]).length>0); 
+          var isVariantActive = false; 
+          if(kind==='_all'){ 
+            isVariantActive = sel && sel.dataset===dsName && sel.category===cat && sel.classname===cls && state.selectedVariant['_all']===vn; 
+          } else { 
+            isVariantActive = sel && sel.category===cat && sel.classname===cls && state.selectedVariant[kind]===vn; 
+          } 
+          html+='<div class="nav-variant flex items-center gap-2 p-2 rounded-md cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
+            '<span class="text-purple-400 text-sm flex-shrink-0">🔸</span>'+
+            '<span class="text-sm font-medium truncate flex-1">'+vn+'</span>'+
+            (hasOv? '<span class="text-amber-400 text-xs flex-shrink-0" title="Tem overrides customizados">●</span>' : '')+
+          '</div>'; 
         });
-        footerVariants += '</div>';
+        html+='</div></div>';
       }
+      html+='</div>';
       }); }); }
   if(kind==='_all'){
     state._datasets.forEach(function(ds){ renderOneDataset(ds); });
@@ -85,12 +121,7 @@ function renderNav(){
     var data=state[kind]; if(!data){ host.innerHTML='<p class="p-3 text-xs text-gray-500">Carregando...</p>'; return; }
     renderOneDataset(kind);
   }
-  // Adiciona painel de variantes no rodapé se houver item selecionado com variantes
-  var finalHtml = html || '<p class="p-3 text-xs text-gray-500">Sem itens.</p>';
-  if(footerVariants) {
-    finalHtml += footerVariants;
-  }
-  host.innerHTML = finalHtml;
+  host.innerHTML = html || '<p class="p-3 text-xs text-gray-500">Sem itens.</p>';
 }
 
 function getSelected(){ var k=state.active; var sel=state.selected[k]; if(!sel) return null; var variant = state.selectedVariant[k] || null; if(k==='_all'){ return Object.assign({}, sel, { variant: variant }); } return { dataset:k, category:sel.category, classname:sel.classname, variant: variant }; }
