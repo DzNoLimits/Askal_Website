@@ -466,7 +466,7 @@
                 <div class="p-2 text-xs text-gray-500 border-t">Selecione 1+ pastas para filtrar. Arraste itens aqui
                     para mover.</div>
             </aside>
-            <div class="relative w-64">
+            <div class="relative" style="width: 23rem;">
                 <aside class="bg-white border-r overflow-y-auto h-full" id="nav-pane"></aside>
                 <button id="btn-add-category-fab" title="Nova Categoria"
                     class="absolute bottom-3 right-3 rounded-full w-10 h-10 bg-purple-600 text-white text-xl leading-10 text-center shadow hover:bg-purple-500">+</button>
@@ -509,6 +509,23 @@
         </div>
     </div>
     <script src="app.js"></script>
+        <!-- Clipboard Drawer (Right) -->
+            <div id="clipboard-drawer" class="fixed right-0 top-16 bottom-0 w-72 transform translate-x-full transition-transform duration-200 ease-in-out bg-white theme-dark border-l shadow-lg flex flex-col z-20" data-open="false">
+                <div class="absolute -left-6 top-0">
+                    <button id="clipboard-toggle" class="w-6 h-8 rounded-l bg-gray-700 text-white text-sm flex items-center justify-center shadow" title="Área de transferência">▶</button>
+                </div>
+            <div class="p-3 border-b flex items-center justify-between">
+                <h3 class="font-semibold text-sm">Área de Transferência</h3>
+                <button id="clipboard-clear" class="text-xs px-2 py-1 rounded bg-gray-700">Limpar</button>
+            </div>
+            <div id="clipboard-list" class="flex-1 overflow-y-auto p-2 droppable" data-drop-type="clipboard"></div>
+            <div class="p-2 text-xs text-gray-400 border-t">Arraste itens aqui para guardar temporariamente.</div>
+        </div>
+
+        <!-- Bottom Trash Dropbar (hidden until drag) -->
+        <div id="trash-dropbar" class="fixed left-0 right-0 bottom-0 h-12 bg-red-900 bg-opacity-60 border-t-2 border-red-600 hidden items-center justify-center z-20 droppable" data-drop-type="trashbar">
+            <div class="text-sm text-red-200">Solte aqui para enviar para Lixeira</div>
+        </div>
     <!-- Find Variants Modal -->
     <div id="fv-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
         <div class="bg-white theme-dark rounded shadow-lg w-full max-w-2xl p-4">

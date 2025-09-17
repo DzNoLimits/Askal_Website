@@ -1,6 +1,6 @@
 // Extracted application logic
 // Dynamic datasets: state stores dataset data under state[<datasetName>]
-var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{}, multiCategory:{}, _fvPlan:null };
+var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{}, multiCategory:{}, _fvPlan:null, clipboard:[] };
 // Helper to build endpoints for dynamic datasets
 function endpoint(kind){ return '/api/'+kind; }
 
@@ -158,57 +158,31 @@ function setActive(tab){ state.active=tab; state.filters={ category:'', flags:[]
 
 function renderNav(){
   var kind=state.active; var host=document.getElementById('nav-pane'); var search=document.getElementById('search').value.trim().toLowerCase(); var html=''; var filterCat = state.filters.category; var sel=state.selected[kind];
-  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; Object.keys(cats).forEach(function(cat){ 
+  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; var addedAny=false; Object.keys(cats).forEach(function(cat){ 
       // Apply single-category chip filter if set
       if(filterCat && kind!=='_all' && cat!==filterCat) return; 
       // Apply multi-category folder filter if any selected
       var selectedFolders = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; });
       if(kind!=='_all' && selectedFolders.length>0 && selectedFolders.indexOf(cat)===-1) return;
-      var isColl = !!(state.collapsed[dsName] && state.collapsed[dsName][cat]); var headerLabel = (kind==='_all'? (dsName+' · '+cat):cat); 
-      // Enhanced category header with compact design
-      html+='<div class="nav-category mb-2 border border-gray-600 bg-gradient-to-r from-gray-800 to-gray-750 rounded-md shadow-sm droppable" data-drop-type="category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-        '<div class="flex items-center justify-between px-2 py-2">'+
-          '<div class="flex items-center gap-3">'+
-            '<button class="flex-shrink-0 text-gray-400 hover:text-blue-400 transition-colors duration-200" title="Expandir/Colapsar" data-action="toggle-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transform transition-transform duration-200 '+(isColl?'-rotate-90':'rotate-0')+'">'+
-                '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
-              '</svg>'+
-            '</button>'+
-            '<div class="flex items-center gap-2">'+
-              '<span class="text-blue-400 text-lg">📂</span>'+
-              '<button class="text-gray-100 font-semibold text-sm hover:text-blue-300 transition-colors" data-action="edit-category" data-category="'+cat+'" data-kind="'+dsName+'">'+headerLabel+'</button>'+
-              '<button class="text-xs text-gray-400 hover:text-gray-200 ml-1" title="Renomear categoria" data-action="rename-category" data-category="'+cat+'" data-kind="'+dsName+'">✏️</button>'+
-            '</div>'+
-          '</div>'+
-          '<div class="flex items-center gap-2">'+
-            '<span class="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full">'+Object.keys(cats[cat]||{}).length+' items</span>'+
-            '<button class="p-1.5 rounded-md hover:bg-red-600 hover:bg-opacity-20 transition-colors" title="Excluir categoria" data-action="remove-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-red-400 hover:text-red-300">'+
-                '<path fill-rule="evenodd" d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z" clip-rule="evenodd" />'+
-              '</svg>'+
-            '</button>'+
-          '</div>'+
-        '</div>'+
-      '</div>';
-      
-      var items=cats[cat]; if(isColl) return; 
-      
+      var items=cats[cat];
+      var catHtml='';
       Object.keys(items).forEach(function(cls){ var item=items[cls]||{}; var variants = Array.isArray(item.variants)? item.variants: (item.variants && typeof item.variants==='object'? Object.keys(item.variants):[]);
       // Search allows classname or variant match
       if(search){ var sOk = cls.toLowerCase().indexOf(search)!==-1 || (variants||[]).some(function(v){return (v||'').toLowerCase().indexOf(search)!==-1;}); if(!sOk) return; }
       if(state.filters.flags.length){ var f=item.flags||[]; var ok=false; for(var i=0;i<state.filters.flags.length;i++){ if(f.indexOf(state.filters.flags[i])!==-1){ ok=true; break; } } if(!ok) return; }
       var isActive = false; if(kind==='_all'){ isActive = sel && sel.dataset===dsName && sel.category===cat && sel.classname===cls; } else { isActive = sel && sel.category===cat && sel.classname===cls; }
-      var key = dsName+'|'+cat+'|'+cls; var vCollapsed = !!state.collapsedItems[key];
+  var key = dsName+'|'+cat+'|'+cls; var vCollapsed = (state.collapsedItems[key]!==undefined) ? !!state.collapsedItems[key] : true;
       var isLocked = !!state.locked[key];
       
       // Enhanced class item with compact design
-      html+='<div class="nav-item ml-4 mb-1 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-md transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
+      catHtml+='<div class="nav-item mb-1 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-md transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
         '<div class="flex items-center justify-between px-2 py-1.5">'+
           '<div class="flex items-center gap-2 min-w-0 flex-1">'+
             '<span class="text-green-400 text-sm flex-shrink-0">🔧</span>'+
             '<div class="min-w-0 flex-1">'+
               '<div class="flex items-center gap-1.5">'+
                 '<span class="font-medium text-gray-100 truncate text-sm">'+cls+'</span>'+
+                '<span class="text-xs text-gray-500 ml-2">'+cat+'</span>'+
                 ((isActive && state.dirty[dsName])?'<span class="dirty-dot bg-orange-400"></span>':'')+
                 (variants && variants.length? '<span class="text-xs text-gray-400 bg-gray-600 px-1 py-0.5 rounded-full leading-none">'+variants.length+'</span>' : '')+
                 (item.tier? '<span class="text-xs text-gray-500">T'+item.tier+'</span>' : '')+
@@ -227,7 +201,7 @@ function renderNav(){
         
       // Enhanced variants section - compact
       if(!vCollapsed && variants && variants.length){
-        html+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-2 py-1">'+
+        catHtml+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-2 py-1">'+
           '<div class="space-y-0.5">';
         variants.forEach(function(vn){ 
           var hasOv = (item.variants && typeof item.variants==='object' && item.variants[vn] && Object.keys(item.variants[vn]).length>0); 
@@ -237,21 +211,68 @@ function renderNav(){
           } else { 
             isVariantActive = sel && sel.category===cat && sel.classname===cls && state.selectedVariant[kind]===vn; 
           } 
-          html+='<div class="nav-variant flex items-center gap-1.5 px-2 py-1 rounded cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
+          catHtml+='<div class="nav-variant flex items-center gap-1.5 px-2 py-1 rounded cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
             '<span class="text-purple-400 text-xs flex-shrink-0">🔸</span>'+
             '<span class="text-xs font-medium truncate flex-1">'+vn+'</span>'+
             (hasOv? '<span class="text-amber-400 text-xs flex-shrink-0" title="Tem overrides customizados">●</span>' : '')+
           '</div>'; 
         });
-        html+='</div></div>';
+        catHtml+='</div></div>';
       }
-      html+='</div>';
+      catHtml+='</div>';
       }); }); }
   if(kind==='_all'){
     state._datasets.forEach(function(ds){ renderOneDataset(ds); });
   } else {
     var data=state[kind]; if(!data){ host.innerHTML='<p class="p-3 text-xs text-gray-500">Carregando...</p>'; return; }
-    renderOneDataset(kind);
+    // Rebuild with separators between categories
+    var data2=state[kind]; var cats2=(data2 && data2.Categories)? Object.keys(data2.Categories):[]; var first=true; cats2.forEach(function(cat){
+      // Apply filters
+      if(filterCat && cat!==filterCat) return;
+      var selectedFolders = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; });
+      if(selectedFolders.length>0 && selectedFolders.indexOf(cat)===-1) return;
+      var items=data2.Categories[cat]||{}; var catHtml='';
+      Object.keys(items).forEach(function(cls){ var item=items[cls]||{}; var variants = Array.isArray(item.variants)? item.variants: (item.variants && typeof item.variants==='object'? Object.keys(item.variants):[]);
+        if(search){ var sOk = cls.toLowerCase().indexOf(search)!==-1 || (variants||[]).some(function(v){return (v||'').toLowerCase().indexOf(search)!==-1;}); if(!sOk) return; }
+        if(state.filters.flags.length){ var f=item.flags||[]; var ok=false; for(var i=0;i<state.filters.flags.length;i++){ if(f.indexOf(state.filters.flags[i])!==-1){ ok=true; break; } } if(!ok) return; }
+        var isActive = sel && sel.category===cat && sel.classname===cls; var key=kind+'|'+cat+'|'+cls; var vCollapsed=(state.collapsedItems[key]!==undefined)?!!state.collapsedItems[key]:true; var isLocked=!!state.locked[key];
+        catHtml+='<div class="nav-item mb-1 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-md transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+kind+'">'+
+          '<div class="flex items-center justify-between px-2 py-1.5">'+
+            '<div class="flex items-center gap-2 min-w-0 flex-1">'+
+              '<span class="text-green-400 text-sm flex-shrink-0">🔧</span>'+
+              '<div class="min-w-0 flex-1">'+
+                '<div class="flex items-center gap-1.5">'+
+                  '<span class="font-medium text-gray-100 truncate text-sm">'+cls+'</span>'+
+                  '<span class="text-xs text-gray-500 ml-2">'+cat+'</span>'+
+                  ((isActive && state.dirty[kind])?'<span class="dirty-dot bg-orange-400"></span>':'')+
+                  (variants && variants.length? '<span class="text-xs text-gray-400 bg-gray-600 px-1 py-0.5 rounded-full leading-none">'+variants.length+'</span>' : '')+
+                  (item.tier? '<span class="text-xs text-gray-500">T'+item.tier+'</span>' : '')+
+                '</div>'+
+              '</div>'+
+            '</div>'+
+            '<div class="flex items-center gap-1 flex-shrink-0">'+
+              (isLocked? '<span class="text-amber-400 text-xs" title="Item travado (L para destravar)">🔒</span>' : '')+
+              (variants && variants.length? '<button class="p-0.5 rounded hover:bg-gray-600 text-gray-400 hover:text-gray-200 transition-colors" title="Mostrar/ocultar variantes" data-action="toggle-variants" data-kind="'+kind+'" data-category="'+cat+'" data-classname="'+cls+'">'+
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transform transition-transform duration-200 '+(vCollapsed?'-rotate-90':'rotate-0')+'">'+
+                  '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
+                '</svg>'+
+              '</button>' : '')+
+            '</div>'+
+          '</div>';
+        if(!vCollapsed && variants && variants.length){
+          catHtml+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-2 py-1">'+
+            '<div class="space-y-0.5">';
+          variants.forEach(function(vn){ var hasOv=(item.variants && typeof item.variants==='object' && item.variants[vn] && Object.keys(item.variants[vn]).length>0); var isVariantActive = sel && sel.category===cat && sel.classname===cls && state.selectedVariant[kind]===vn; catHtml+='<div class="nav-variant flex items-center gap-1.5 px-2 py-1 rounded cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+kind+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
+              '<span class="text-purple-400 text-xs flex-shrink-0">🔸</span>'+
+              '<span class="text-xs font-medium truncate flex-1">'+vn+'</span>'+
+              (hasOv? '<span class="text-amber-400 text-xs flex-shrink-0" title="Tem overrides customizados">●</span>' : '')+
+            '</div>'; });
+          catHtml+='</div></div>';
+        }
+        catHtml+='</div>';
+      });
+      if(catHtml){ if(!first){ html+='<div class="my-2 border-t border-gray-700 opacity-70"></div>'; } html+=catHtml; first=false; }
+    });
   }
   host.innerHTML = html || '<p class="p-3 text-xs text-gray-500">Sem itens.</p>';
 }
@@ -598,25 +619,7 @@ document.addEventListener('click', function(e){
     return; }
   if(action==='toggle-category'){ var dsT = el.dataset.kind || state.active; var catT = el.dataset.category; if(!state.collapsed[dsT]) state.collapsed[dsT]={}; state.collapsed[dsT][catT] = !state.collapsed[dsT][catT]; renderNav(); return; }
   if(action==='toggle-variants'){ var dsTV=el.dataset.kind || state.active; var catTV=el.dataset.category; var clsTV=el.dataset.classname; var keyTV=dsTV+'|'+catTV+'|'+clsTV; state.collapsedItems[keyTV] = !state.collapsedItems[keyTV]; renderNav(); return; }
-  if(action==='edit-category'){ 
-    var dsK = el.dataset.kind || state.active; 
-    var cat = el.dataset.category; 
-    var data = state[dsK]; 
-    if(!data || !data.Categories || !data.Categories[cat]) return; 
-    
-    // Set category as selected for editing
-    if(dsK === '_all') {
-      state.selected['_all'] = { dataset: dsK, category: cat, classname: '_CATEGORY_' }; 
-    } else {
-      state.selected[dsK] = { category: cat, classname: '_CATEGORY_' }; 
-    }
-    state.selectedVariant[dsK] = null;
-    state.rightTab = 'attachments';
-    renderRightTab(); 
-    renderNav(); 
-    renderEditor();
-    return; 
-  }
+  // edit-category moved to left pane (double-click on folder row)
   if(action==='rename-category'){ var dsK = el.dataset.kind || state.active; var old = el.dataset.category; var data = state[dsK]; if(!data || !data.Categories || !data.Categories[old]) return; var nn = prompt('Renomear categoria:', old); if(!nn || nn===old) return; if(data.Categories[nn]){ alert('Categoria já existe.'); return; } pushHistory(); data.Categories[nn]=data.Categories[old]; delete data.Categories[old]; if(state.collapsed[dsK] && state.collapsed[dsK][old]!=null){ state.collapsed[dsK][nn]=state.collapsed[dsK][old]; delete state.collapsed[dsK][old]; } if(state.filters.category===old) state.filters.category=nn; markDirty(dsK); renderCategoryChips(); renderFoldersPane(); renderNav(); return; }
   if(action==='variant-add'){ var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var it=state[ds].Categories[sel.category][sel.classname]; var vname=prompt('Nome da variante (ex: _black):'); if(!vname) return; if(Array.isArray(it.variants)){ it.variants = it.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); }
     if(!it.variants || typeof it.variants!=='object') it.variants={};
@@ -694,6 +697,12 @@ function _getDragObject(e, type){
 // Drag & Drop
 document.addEventListener('dragstart', function(e){ 
   try{ document.body.classList.add('dnd-mode'); }catch(_e){}
+  // Show clipboard drawer and trash dropbar on any drag start
+  try{
+    var drawer=document.getElementById('clipboard-drawer');
+    if(drawer){ drawer.classList.remove('translate-x-full'); drawer.setAttribute('data-open','true'); var btn=document.getElementById('clipboard-toggle'); if(btn){ btn.textContent='◀'; } }
+    var bar=document.getElementById('trash-dropbar'); if(bar){ bar.classList.remove('hidden'); bar.classList.add('flex'); }
+  }catch(_e){}
   var p=e.target.closest('.palette-item'); 
   if(p && p.dataset.value){ 
     e.dataTransfer.setData('text/attachment', p.dataset.value); 
@@ -732,6 +741,10 @@ document.addEventListener('dragstart', function(e){
 });
 document.addEventListener('dragend', function(){ try{ document.body.classList.remove('dnd-mode'); }catch(_e){} });
 document.addEventListener('drop', function(){ try{ document.body.classList.remove('dnd-mode'); }catch(_e){} });
+document.addEventListener('dragend', function(){
+  // Hide trash dropbar when drag ends
+  var bar=document.getElementById('trash-dropbar'); if(bar){ bar.classList.add('hidden'); bar.classList.remove('flex'); }
+});
 document.addEventListener('dragover', function(e){ 
   // Check for item-to-item drop (create variant) first
   var navItem = e.target.closest('.nav-item');
@@ -833,6 +846,38 @@ document.addEventListener('drop', function(e){
   }
 
   var t=e.target.closest('[data-drop-type]'); if(!t) return; var type=t.dataset.dropType; 
+  if(type==='clipboard'){
+    e.preventDefault(); t.classList.remove('drag-over');
+    // Accept move-item, pending, or trash to add to clipboard list (structured)
+    var mv = _getDragObject(e,'move-item');
+    var pn = _getDragObject(e,'pending');
+    var tr = _getDragObject(e,'trash');
+    var entry = null;
+    if(mv){ entry = { kind:'move-item', payload: mv, label: (mv.dataset||'')+':'+mv.category+'/'+mv.classname }; }
+    else if(pn){ entry = { kind:'pending', payload: pn, label: pn.name }; }
+    else if(tr){ entry = { kind:'trash', payload: tr, label: tr.name }; }
+    if(entry){
+      var exists = state.clipboard.some(function(x){ return x.kind===entry.kind && JSON.stringify(x.payload)===JSON.stringify(entry.payload); });
+      if(!exists){ state.clipboard.push(entry); renderClipboard(); showToast('Adicionado à área de transferência', 'success'); }
+    }
+    return;
+  }
+  if(type==='trashbar'){
+    e.preventDefault(); t.classList.remove('drag-over');
+    // Accept move-item to delete and send to trash
+    var mv4 = _getDragObject(e,'move-item');
+    if(mv4){ var ds=mv4.dataset, cat=mv4.category, cls=mv4.classname; if(state[ds] && state[ds].Categories && state[ds].Categories[cat] && state[ds].Categories[cat][cls]){
+        pushHistory(); delete state[ds].Categories[cat][cls]; markDirty(ds); renderNav(); renderEditor(); axios.post('/api/trash', { classes: [cls] }).catch(function(){}); showToast('Movido para Lixeira', 'info'); }
+      // Hide the bar immediately after drop
+      var bar=document.getElementById('trash-dropbar'); if(bar){ bar.classList.add('hidden'); bar.classList.remove('flex'); }
+      return; }
+    // Also accept pending to move its name to trash list
+    var pn4 = _getDragObject(e,'pending');
+    if(pn4 && pn4.name){ axios.post('/api/trash', { classes: [pn4.name] }).catch(function(){}); showToast('Classe adicionada à Lixeira', 'info'); var idx=(state.pending.items||[]).findIndex(function(it){return (typeof it==='string'?it:it.name)===pn4.name;}); if(idx!==-1){ state.pending.items.splice(idx,1); savePending(true); renderPending(); }
+      var bar2=document.getElementById('trash-dropbar'); if(bar2){ bar2.classList.add('hidden'); bar2.classList.remove('flex'); }
+      return; }
+    return;
+  }
   if(type==='attachment'){
     var attVal = _getDragObject(e,'attachment');
     if(attVal){ e.preventDefault(); t.classList.remove('drag-over'); var val=attVal; var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; if(ds==='weapons'){ var slot=t.dataset.slot; if(!slot){ slot=prompt('Slot destino:'); if(!slot) return; } pushHistory(); if(!item.attachments||typeof item.attachments!=='object') item.attachments={}; if(!item.attachments[slot]) item.attachments[slot]=[]; if(item.attachments[slot].indexOf(val)===-1) item.attachments[slot].push(val); } else { pushHistory(); if(!Array.isArray(item.attachments)) item.attachments=[]; if(item.attachments.indexOf(val)===-1) item.attachments.push(val); } markDirty(ds); renderEditor(); buildPalette(); }
@@ -1092,11 +1137,15 @@ function renderFoldersPane(){
   var cats = Object.keys(ds.Categories||{}).sort();
   var html = '';
   cats.forEach(function(cat){
-    var checked = !!state.multiCategory[cat];
-    html += '<label class="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 droppable" data-drop-type="category" data-kind="'+state.active+'" data-category="'+cat+'">'
-      + '<input type="checkbox" class="folder-check" data-category="'+cat+'" '+(checked?'checked':'')+'>'
+    var selected = !!state.multiCategory[cat];
+    html += '<div class="folder-row flex items-center gap-2 px-2 py-1 rounded '+(selected?'bg-blue-900 bg-opacity-30':'hover:bg-gray-100')+' droppable" data-drop-type="category" data-kind="'+state.active+'" data-category="'+cat+'">'
       + '<span class="text-sm flex-1">'+cat+'</span>'
-      + '</label>';
+      + (selected? '<span class="text-xs text-blue-300 mr-1">●</span>' : '')
+      + '<div class="flex items-center gap-1">'
+      +   '<button class="text-xs text-gray-500 hover:text-gray-800" title="Renomear pasta" data-action="rename-category" data-kind="'+state.active+'" data-category="'+cat+'">✏️</button>'
+      +   '<button class="text-xs text-gray-500 hover:text-red-600" title="Remover pasta" data-action="remove-category" data-kind="'+state.active+'" data-category="'+cat+'">🗑️</button>'
+      + '</div>'
+      + '</div>';
   });
   listEl.innerHTML = html || '<div class="text-xs text-gray-500">Sem categorias</div>';
 }
@@ -1115,14 +1164,30 @@ document.addEventListener('click', function(e){
   }
 });
 
-// Checkbox toggles inside folders list
-document.addEventListener('change', function(e){
-  var chk = e.target;
-  if(chk && chk.classList && chk.classList.contains('folder-check')){
-    var cat = chk.dataset.category;
+// Row-click toggles inside folders list
+document.addEventListener('click', function(e){
+  var row = e.target && e.target.closest('.folder-row');
+  if(row && row.parentElement && row.parentElement.id==='folders-list'){
+    // Ignore clicks on action buttons inside the row
+    if(e.target.closest('button[data-action]')) return;
+    var cat = row.dataset.category;
     if(!cat) return;
-    if(chk.checked){ state.multiCategory[cat] = true; } else { delete state.multiCategory[cat]; }
+    if(state.multiCategory[cat]){ delete state.multiCategory[cat]; }
+    else { state.multiCategory[cat] = true; }
+    renderFoldersPane();
     renderNav();
+  }
+});
+
+// Double-click folder row to open category editor
+document.addEventListener('dblclick', function(e){
+  var row = e.target && e.target.closest('.folder-row');
+  if(row && row.parentElement && row.parentElement.id==='folders-list'){
+    var dsK = state.active; var cat = row.dataset.category; var data = state[dsK];
+    if(!data || !data.Categories || !data.Categories[cat]) return;
+    state.selected[dsK] = { category: cat, classname: '_CATEGORY_' };
+    state.selectedVariant[dsK] = null;
+    state.rightTab='attachments'; renderRightTab(); renderNav(); renderEditor();
   }
 });
 
@@ -1157,6 +1222,59 @@ function moveItemToCategory(dsName, fromCategory, classname, toCategory){ if(fro
   markDirty(dsName); renderCategoryChips(); renderNav(); }
 
 function applyTheme(mode){ var b=document.body; b.classList.add('theme-dark'); }
+
+// Clipboard drawer logic
+function renderClipboard(){
+  var host=document.getElementById('clipboard-list'); if(!host) return; var html='';
+  if(!state.clipboard.length){ host.innerHTML='<div class="text-xs text-gray-500">Vazio</div>'; return; }
+  state.clipboard.forEach(function(entry, idx){
+    var label = entry && entry.label ? entry.label : '(sem nome)';
+    html += '<div class="clipboard-item palette-item flex items-center justify-between mb-1" draggable="true" data-index="'+idx+'">'
+          + '<span class="truncate">'+label+'</span>'
+          + '<button class="text-xs" data-action="clipboard-remove" data-index="'+idx+'">🗑️</button>'
+          + '</div>';
+  });
+  host.innerHTML = html;
+}
+
+document.addEventListener('click', function(e){
+  if(e.target && e.target.id==='clipboard-toggle'){
+    var drawer=document.getElementById('clipboard-drawer'); if(!drawer) return; var open = drawer.getAttribute('data-open')==='true';
+    var btn=e.target;
+    if(open){ drawer.classList.add('translate-x-full'); drawer.setAttribute('data-open','false'); if(btn){ btn.textContent='▶'; } }
+    else { drawer.classList.remove('translate-x-full'); drawer.setAttribute('data-open','true'); if(btn){ btn.textContent='◀'; } }
+    return;
+  }
+  if(e.target && e.target.id==='clipboard-clear'){
+    state.clipboard=[]; renderClipboard(); return;
+  }
+  if(e.target && e.target.dataset && e.target.dataset.action==='clipboard-remove'){
+    var i=parseInt(e.target.dataset.index,10); if(!isNaN(i)){ state.clipboard.splice(i,1); renderClipboard(); }
+    return;
+  }
+});
+
+// Drag from clipboard out to any zone
+document.addEventListener('dragstart', function(e){
+  var ci = e.target && e.target.closest('.clipboard-item');
+  if(!ci) return;
+  var idx = parseInt(ci.dataset.index,10);
+  var entry = state.clipboard[idx];
+  if(!entry) return;
+  if(entry.kind==='move-item'){
+    e.dataTransfer.setData('text/move-item', JSON.stringify(entry.payload));
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'move-item', data: entry.payload }));
+    e.dataTransfer.effectAllowed='move';
+  } else if(entry.kind==='pending'){
+    e.dataTransfer.setData('text/pending', JSON.stringify(entry.payload));
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'pending', data: entry.payload }));
+    e.dataTransfer.effectAllowed='copy';
+  } else if(entry.kind==='trash'){
+    e.dataTransfer.setData('text/trash', JSON.stringify(entry.payload));
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'trash', data: entry.payload }));
+    e.dataTransfer.effectAllowed='copy';
+  }
+});
 
 // Create dataset flow: prompt name, POST, refresh, activate
 function createDatasetFlow(){
