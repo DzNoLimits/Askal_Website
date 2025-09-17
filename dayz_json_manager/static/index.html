@@ -1,159 +1,551 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Askal Database Manager</title>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    // Fallback check for axios
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof axios === 'undefined') {
-        console.error('Axios not loaded! Check CDN connection.');
-        alert('Erro: Axios não carregou. Verifique sua conexão com a internet.');
-      } else {
-        console.log('Axios loaded successfully');
-      }
-    });
-  </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <style>
-    .pill{display:inline-flex;align-items:center;background:#3a3a3a;border-radius:4px;padding:2px 6px;font-size:11px;margin:0 4px 4px 0}
-    .pill button{margin-left:4px;color:#dc2626;line-height:1}
-    .pill button:hover{color:#b91c1c}
-    
-    /* Enhanced Navigation Styles */
-    .nav-item{cursor:pointer;border-radius:8px;font-size:13px;transition:all 0.2s ease-in-out;position:relative;overflow:hidden}
-    .nav-item:hover{transform:translateX(2px);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
-    .nav-item.active{background:linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);color:#fff;box-shadow:0 4px 12px rgba(59,130,246,0.3)}
-    .nav-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:#60a5fa}
-    
-    .nav-category{position:relative;font-weight:600;font-size:12px;overflow:hidden}
-    .nav-category:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
-    
-    .nav-variant{border-radius:6px;font-size:12px;margin:1px 0;position:relative}
-    .nav-variant::before{content:'';position:absolute;left:0;top:50%;bottom:50%;width:2px;background:#6b7280;transform:translateY(-50%);transition:all 0.2s ease}
-    .nav-variant:hover::before{height:100%;top:0;bottom:0;transform:none;background:#8b5cf6}
-    
-    .dirty-dot{width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block;margin-left:4px;animation:pulse 2s infinite}
-    
-    /* Custom colors and gradients */
-    .bg-gray-750{background:#2d3748}
-    .from-gray-800{background:linear-gradient(135deg, #1f2937 0%, #374151 100%)}
-    .to-gray-750{background:#2d3748}
-    
-    /* Animations */
-    @keyframes pulse{0%, 100%{opacity:1} 50%{opacity:0.5}}
-    
-    /* Improved scrollbar for nav */
-    #nav-pane{scrollbar-width:thin;scrollbar-color:#4b5563 #1f2937}
-    #nav-pane::-webkit-scrollbar{width:6px}
-    #nav-pane::-webkit-scrollbar-track{background:#1f2937;border-radius:3px}
-    #nav-pane::-webkit-scrollbar-thumb{background:#4b5563;border-radius:3px}
-    #nav-pane::-webkit-scrollbar-thumb:hover{background:#6b7280}
-    .editor-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#374151}
-    .editor-box{background:#1f1f1f;border-radius:6px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
-    .palette-item{font-size:11px;background:#f3f4f6;padding:4px 6px;border-radius:4px;cursor:grab;display:flex;justify-content:space-between;align-items:center}
-    .palette-item:hover{background:#e5e7eb}
-    .chip{padding:4px 10px;border-radius:16px;background:#e5e7eb;cursor:pointer;font-size:12px;white-space:nowrap}
-    .chip.active{background:#2563eb;color:#fff}
-    .droppable{outline:2px dashed transparent}
-    .droppable.drag-over{outline-color:#2563eb}
-    /* Themes */
-    .theme-dark{background:#111827;color:#e5e7eb}
-    .theme-dark .bg-white{background:#1f2937 !important;color:#e5e7eb}
-    .theme-dark .bg-gray-50{background:#111827 !important}
-    .theme-dark .border{border-color:#374151 !important}
-    .theme-dark input, .theme-dark select{background:#111827;color:#e5e7eb;border-color:#374151}
-    .theme-dark .nav-item.active{background:#3b82f6;color:#fff}
-    .theme-dark .palette-item{background:#374151;color:#e5e7eb}
-    .theme-dark .palette-item:hover{background:#4b5563}
-    .theme-dark .chip{background:#374151;color:#e5e7eb}
-    .theme-dark .chip.active{background:#3b82f6;color:#fff}
-    .theme-contrast{filter:contrast(1.35) saturate(1.2)}
-    /* Minimal dark scrollbars */
-    * { scrollbar-width: thin; scrollbar-color: #4b5563 #1f2937; }
-    *::-webkit-scrollbar{ width:8px; height:8px }
-    *::-webkit-scrollbar-track{ background:#1f2937 }
-    *::-webkit-scrollbar-thumb{ background:#4b5563; border-radius:6px }
-    *::-webkit-scrollbar-thumb:hover{ background:#6b7280 }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Askal Database Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Fallback check for axios
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof axios === 'undefined') {
+                console.error('Axios not loaded! Check CDN connection.');
+                alert('Erro: Axios não carregou. Verifique sua conexão com a internet.');
+            } else {
+                console.log('Axios loaded successfully');
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <style>
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            background: #3a3a3a;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 11px;
+            margin: 0 4px 4px 0
+        }
+
+        .pill button {
+            margin-left: 4px;
+            color: #dc2626;
+            line-height: 1
+        }
+
+        .pill button:hover {
+            color: #b91c1c
+        }
+
+        /* Enhanced Navigation Styles - Compact */
+        .nav-item {
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 12px;
+            transition: all 0.15s ease-in-out;
+            position: relative;
+            overflow: hidden
+        }
+
+        .nav-item:hover {
+            transform: translateX(1px);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)
+        }
+
+        .nav-item.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: #fff;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.25)
+        }
+
+        .nav-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #60a5fa
+        }
+
+        .nav-category {
+            position: relative;
+            font-weight: 600;
+            font-size: 12px;
+            overflow: hidden
+        }
+
+        .nav-category:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+        }
+
+        .nav-variant {
+            border-radius: 6px;
+            font-size: 12px;
+            margin: 1px 0;
+            position: relative
+        }
+
+        .nav-variant::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            bottom: 50%;
+            width: 2px;
+            background: #6b7280;
+            transform: translateY(-50%);
+            transition: all 0.2s ease
+        }
+
+        .nav-variant:hover::before {
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            transform: none;
+            background: #8b5cf6
+        }
+
+        .dirty-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #f59e0b;
+            display: inline-block;
+            margin-left: 4px;
+            animation: pulse 2s infinite
+        }
+
+        /* Custom colors and gradients */
+        .bg-gray-750 {
+            background: #2d3748
+        }
+
+        .from-gray-800 {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%)
+        }
+
+        .to-gray-750 {
+            background: #2d3748
+        }
+
+        /* Drag & Drop feedback */
+        .drag-over-variant {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4) !important;
+            transform: scale(1.02) !important;
+        }
+
+        /* Ensure drag events work on nav items during DnD only */
+        body.dnd-mode .nav-item * {
+            pointer-events: none;
+        }
+
+        body.dnd-mode .nav-item {
+            pointer-events: auto;
+        }
+
+        /* Compact layout adjustments */
+        body {
+            font-size: 13px;
+        }
+
+        .nav-category {
+            font-size: 11px;
+        }
+
+        .nav-item {
+            font-size: 11px;
+        }
+
+        /* Tooltip on hover for header buttons */
+        header button[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header button[title]:hover::before {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid #1f2937;
+            z-index: 1001;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.5
+            }
+        }
+
+        /* Improved scrollbar for nav */
+        #nav-pane {
+            scrollbar-width: thin;
+            scrollbar-color: #4b5563 #1f2937
+        }
+
+        #nav-pane::-webkit-scrollbar {
+            width: 6px
+        }
+
+        #nav-pane::-webkit-scrollbar-track {
+            background: #1f2937;
+            border-radius: 3px
+        }
+
+        #nav-pane::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 3px
+        }
+
+        #nav-pane::-webkit-scrollbar-thumb:hover {
+            background: #6b7280
+        }
+
+        .editor-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: #374151
+        }
+
+        .editor-box {
+            background: #1f1f1f;
+            border-radius: 6px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .06)
+        }
+
+        .palette-item {
+            font-size: 11px;
+            background: #f3f4f6;
+            padding: 4px 6px;
+            border-radius: 4px;
+            cursor: grab;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .palette-item:hover {
+            background: #e5e7eb
+        }
+
+        .chip {
+            padding: 4px 10px;
+            border-radius: 16px;
+            background: #e5e7eb;
+            cursor: pointer;
+            font-size: 12px;
+            white-space: nowrap
+        }
+
+        .chip.active {
+            background: #2563eb;
+            color: #fff
+        }
+
+        .droppable {
+            outline: 2px dashed transparent
+        }
+
+        .droppable.drag-over {
+            outline-color: #2563eb
+        }
+
+        /* Themes */
+        .theme-dark {
+            background: #111827;
+            color: #e5e7eb
+        }
+
+        .theme-dark .bg-white {
+            background: #1f2937 !important;
+            color: #e5e7eb
+        }
+
+        .theme-dark .bg-gray-50 {
+            background: #111827 !important
+        }
+
+        .theme-dark .border {
+            border-color: #374151 !important
+        }
+
+        .theme-dark input,
+        .theme-dark select {
+            background: #111827;
+            color: #e5e7eb;
+            border-color: #374151
+        }
+
+        .theme-dark .nav-item.active {
+            background: #3b82f6;
+            color: #fff
+        }
+
+        .theme-dark .palette-item {
+            background: #374151;
+            color: #e5e7eb
+        }
+
+        .theme-dark .palette-item:hover {
+            background: #4b5563
+        }
+
+        .theme-dark .chip {
+            background: #374151;
+            color: #e5e7eb
+        }
+
+        .theme-dark .chip.active {
+            background: #3b82f6;
+            color: #fff
+        }
+
+        .theme-contrast {
+            filter: contrast(1.35) saturate(1.2)
+        }
+
+        /* Minimal dark scrollbars */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #4b5563 #1f2937;
+        }
+
+        *::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #1f2937
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 6px
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background: #6b7280
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 min-h-screen theme-dark">
-  <div class="flex flex-col h-screen">
-  <header class="p-4 bg-white shadow flex flex-wrap gap-3 items-center sticky top-0 z-10">
-      <div class="flex items-center gap-4">
-        <h1 class="text-xl font-bold">Askal Economy Manager</h1>
-        <div id="dataset-dirty-indicator" class="text-xs text-gray-500"></div>
-      </div>
-      <div class="flex gap-2 ml-auto flex-wrap">
-        <button id="btn-refresh" class="px-3 py-2 bg-blue-500 text-white rounded">Recarregar</button>
-        <button id="btn-save-active" class="px-3 py-2 bg-green-600 text-white rounded">Salvar Aba</button>
-        <button id="btn-save-all" class="px-3 py-2 bg-green-700 text-white rounded">Salvar Tudo</button>
-        <button id="btn-add-item" class="px-3 py-2 bg-indigo-500 text-white rounded">Novo Item</button>
-        <button id="btn-add-category" class="px-3 py-2 bg-purple-500 text-white rounded">Nova Categoria</button>
-  <button id="btn-toggle-pending" class="px-3 py-2 bg-yellow-600 text-white rounded">Pendentes</button>
-  <button id="btn-toggle-trash" class="px-3 py-2 bg-gray-700 text-white rounded">Lixeira</button>
-      </div>
-    </header>
-    <div class="p-3 bg-gray-50 flex gap-3 items-center text-sm">
-      <input id="search" placeholder="Buscar classname..." class="px-3 py-2 border rounded w-64">
-      <div id="flags-chips" class="flex flex-wrap gap-2"></div>
-    </div>
-    <div class="px-3 py-2 bg-gray-50 border-t flex items-center gap-3 overflow-x-auto">
-      <div id="dataset-chips" class="flex items-center gap-2"></div>
-      <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">NOVO</button>
-    </div>
-    <div class="flex flex-1 overflow-hidden">
-      <div class="relative w-64">
-        <aside class="bg-white border-r overflow-y-auto h-full" id="nav-pane"></aside>
-        <button id="btn-add-category-fab" title="Nova Categoria" class="absolute bottom-3 right-3 rounded-full w-10 h-10 bg-purple-600 text-white text-xl leading-10 text-center shadow hover:bg-purple-500">+</button>
-      </div>
-      <main class="flex-1 overflow-y-auto p-4" id="editor-pane">
-        <p class="text-sm text-gray-500">Selecione um item à esquerda para editar.</p>
-      </main>
-      <aside class="w-72 bg-white border-l flex flex-col" id="palette-pane">
-        <div class="p-3 border-b flex items-center justify-between">
-          <h2 id="palette-title" class="font-semibold text-sm">Attachments</h2>
-          <span id="palette-count" class="text-xs text-gray-500"></span>
+    <div class="flex flex-col h-screen">
+        <header class="px-4 py-2 bg-white shadow flex items-center justify-between sticky top-0 z-10">
+            <div class="flex items-center gap-3">
+                <img src="https://i.ibb.co/1GGrXBzw/economy-master.png" alt="economy-master" border="0">
+                <div id="dataset-dirty-indicator" class="text-xs text-gray-500"></div>
+            </div>
+            <div class="flex gap-1">
+                <button id="btn-find-variants"
+                    class="p-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all group relative"
+                    title="Encontrar variantes (agrupamento automático)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                            d="M3.5 10a6.5 6.5 0 1111.196 3.605l1.824 1.824a.75.75 0 11-1.06 1.06l-1.824-1.823A6.5 6.5 0 013.5 10zm6.5-5a5 5 0 100 10 5 5 0 000-10z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button id="btn-refresh"
+                    class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all group relative"
+                    title="Recarregar dados">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                            d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button id="btn-save-active"
+                    class="p-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all group relative"
+                    title="Salvar aba atual">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03L10 14.478l4.795-5.213a.75.75 0 00-1.09-1.03L10.75 11.364V2.75z" />
+                        <path
+                            d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" />
+                    </svg>
+                </button>
+                <button id="btn-save-all"
+                    class="p-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-all group relative"
+                    title="Salvar tudo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.053 10.5a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button id="btn-add-item"
+                    class="p-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-all group relative"
+                    title="Novo item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                </button>
+                <button id="btn-add-category"
+                    class="p-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all group relative"
+                    title="Nova categoria">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path
+                            d="M3.75 3A1.75 1.75 0 002 4.75v3.26a3.235 3.235 0 011.75-.51h12.5c.644 0 1.235.188 1.75.51V6.75A1.75 1.75 0 0016.25 5h-4.836a.25.25 0 01-.177-.073L9.823 3.513A1.75 1.75 0 008.586 3H3.75zM3.75 9A1.75 1.75 0 002 10.75v4.5c0 .966.784 1.75 1.75 1.75h12.5A1.75 1.75 0 0018 15.25v-4.5A1.75 1.75 0 0016.25 9H3.75z" />
+                    </svg>
+                </button>
+                <button id="btn-toggle-pending"
+                    class="p-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-all group relative"
+                    title="Itens pendentes">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button id="btn-toggle-trash"
+                    class="p-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all group relative"
+                    title="Lixeira">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                            d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="p-3 bg-gray-50 flex gap-3 items-center text-sm">
+            <input id="search" placeholder="Buscar classname..." class="px-3 py-2 border rounded w-64">
+            <div id="flags-chips" class="flex flex-wrap gap-2"></div>
         </div>
-        <!-- Attachments tab content -->
-        <div id="attachments-pane" class="flex-1 flex flex-col">
-          <div class="p-2 border-b"><input id="palette-filter" placeholder="Filtrar attachments..." class="px-2 py-1 border rounded w-full"></div>
-          <div id="palette-list" class="p-3 space-y-2 overflow-y-auto flex-1"></div>
-          <div class="p-3 text-xs text-gray-500 border-t">Arraste e solte no editor ou clique para adicionar.</div>
+        <div class="px-3 py-2 bg-gray-50 border-t flex items-center gap-3 overflow-x-auto">
+            <div id="dataset-chips" class="flex items-center gap-2"></div>
+            <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">NOVO</button>
         </div>
-        <!-- Pending tab content -->
-  <div id="pending-pane" class="flex-1 flex-col hidden relative droppable" data-drop-type="pending-target">
-          <div id="pending-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);"></div>
-          <button id="btn-pending-add" class="absolute bottom-3 right-3 px-2 py-1 bg-indigo-600 text-white text-xs rounded shadow">+ Adicionar</button>
-          <div class="p-2 text-xs text-gray-500 border-t">Arraste para uma categoria à esquerda para criar o item.</div>
+        <div class="flex flex-1 overflow-hidden">
+            <!-- Leftmost folders sidebar -->
+            <aside class="w-44 bg-white border-r overflow-y-auto h-full" id="folders-pane">
+                <div class="p-2 border-b flex items-center justify-between">
+                    <h2 class="font-semibold text-sm">Pastas</h2>
+                    <div class="flex gap-1">
+                        <button id="folders-select-all"
+                            class="px-2 py-0.5 text-xs rounded bg-gray-700 text-white">All</button>
+                        <button id="folders-clear"
+                            class="px-2 py-0.5 text-xs rounded bg-gray-500 text-white">Clr</button>
+                    </div>
+                </div>
+                <div id="folders-list" class="p-2 space-y-1"></div>
+                <div class="p-2 text-xs text-gray-500 border-t">Selecione 1+ pastas para filtrar. Arraste itens aqui
+                    para mover.</div>
+            </aside>
+            <div class="relative w-64">
+                <aside class="bg-white border-r overflow-y-auto h-full" id="nav-pane"></aside>
+                <button id="btn-add-category-fab" title="Nova Categoria"
+                    class="absolute bottom-3 right-3 rounded-full w-10 h-10 bg-purple-600 text-white text-xl leading-10 text-center shadow hover:bg-purple-500">+</button>
+            </div>
+            <main class="flex-1 overflow-y-auto p-4" id="editor-pane">
+                <p class="text-sm text-gray-500">Selecione um item à esquerda para editar.</p>
+            </main>
+            <aside class="w-72 bg-white border-l flex flex-col" id="palette-pane">
+                <div class="p-3 border-b flex items-center justify-between">
+                    <h2 id="palette-title" class="font-semibold text-sm">Attachments</h2>
+                    <span id="palette-count" class="text-xs text-gray-500"></span>
+                </div>
+                <!-- Attachments tab content -->
+                <div id="attachments-pane" class="flex-1 flex flex-col">
+                    <div class="p-2 border-b"><input id="palette-filter" placeholder="Filtrar attachments..."
+                            class="px-2 py-1 border rounded w-full"></div>
+                    <div id="palette-list" class="p-3 space-y-2 overflow-y-auto flex-1"></div>
+                    <div class="p-3 text-xs text-gray-500 border-t">Arraste e solte no editor ou clique para adicionar.
+                    </div>
+                </div>
+                <!-- Pending tab content -->
+                <div id="pending-pane" class="flex-1 flex-col hidden relative droppable"
+                    data-drop-type="pending-target">
+                    <div id="pending-list" class="p-2 space-y-2 overflow-y-auto"
+                        style="max-height: calc(100vh - 220px);"></div>
+                    <button id="btn-pending-add"
+                        class="absolute bottom-3 right-3 px-2 py-1 bg-indigo-600 text-white text-xs rounded shadow">+
+                        Adicionar</button>
+                    <div class="p-2 text-xs text-gray-500 border-t">Arraste para uma categoria à esquerda para criar o
+                        item.</div>
+                </div>
+                <!-- Trash tab content -->
+                <div id="trash-pane" class="flex-1 flex-col hidden relative">
+                    <div id="trash-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);">
+                    </div>
+                    <div class="p-2 text-xs text-gray-500 border-t">Arraste da lixeira para uma categoria à esquerda
+                        para restaurar/criar.</div>
+                </div>
+            </aside>
         </div>
-        <!-- Trash tab content -->
-        <div id="trash-pane" class="flex-1 flex-col hidden relative">
-          <div id="trash-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);"></div>
-          <div class="p-2 text-xs text-gray-500 border-t">Arraste da lixeira para uma categoria à esquerda para restaurar/criar.</div>
-        </div>
-      </aside>
     </div>
-  </div>
-  <script src="app.js"></script>
-  <!-- Modal for adding pending items -->
-  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
-    <div class="bg-white theme-dark rounded shadow-lg w-full max-w-xl p-4">
-      <div class="flex items-center justify-between mb-2">
-        <h3 class="font-semibold">Adicionar pendências</h3>
-        <button id="modal-close" class="px-2 py-1">✕</button>
-      </div>
-      <div class="mb-2 text-sm">Cole várias linhas (uma por item):</div>
-      <textarea id="modal-text" class="w-full h-40 border rounded p-2" placeholder="Ex:\nAKM\nSkorpion\nM4A1"></textarea>
-      <div class="mt-3 flex justify-end gap-2">
-        <button id="modal-cancel" class="px-3 py-1 rounded border">Cancelar</button>
-        <button id="modal-apply" class="px-3 py-1 rounded bg-green-600 text-white">Aplicar</button>
-      </div>
+    <script src="app.js"></script>
+    <!-- Find Variants Modal -->
+    <div id="fv-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white theme-dark rounded shadow-lg w-full max-w-2xl p-4">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="font-semibold">Encontrar Variantes</h3>
+                <button id="fv-close" class="px-2 py-1">✕</button>
+            </div>
+            <div class="flex items-center gap-2 mb-3">
+                <label class="text-xs">Categoria:</label>
+                <select id="fv-category" class="border rounded px-2 py-1 text-sm"></select>
+                <span class="text-xs text-gray-400">(Apenas nesta categoria)</span>
+            </div>
+            <div id="fv-summary" class="text-sm max-h-80 overflow-y-auto border rounded p-2 bg-gray-800"></div>
+            <div class="mt-3 flex justify-end gap-2">
+                <button id="fv-cancel" class="px-3 py-1 rounded border">Cancelar</button>
+                <button id="fv-apply" class="px-3 py-1 rounded bg-green-600 text-white">Aplicar</button>
+            </div>
+        </div>
     </div>
-  </div>
+    <!-- Modal for adding pending items -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white theme-dark rounded shadow-lg w-full max-w-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold">Adicionar pendências</h3>
+                <button id="modal-close" class="px-2 py-1">✕</button>
+            </div>
+            <div class="mb-2 text-sm">Cole várias linhas (uma por item):</div>
+            <textarea id="modal-text" class="w-full h-40 border rounded p-2"
+                placeholder="Ex:\nAKM\nSkorpion\nM4A1"></textarea>
+            <div class="mt-3 flex justify-end gap-2">
+                <button id="modal-cancel" class="px-3 py-1 rounded border">Cancelar</button>
+                <button id="modal-apply" class="px-3 py-1 rounded bg-green-600 text-white">Aplicar</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
 <!-- Credits:
  <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Ilham Fitrotul Hayat - Flaticon</a>

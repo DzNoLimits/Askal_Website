@@ -1,5 +1,8 @@
 {
     "classes": [
-        "BallisticHelmet_Desert"
+        "AliceBag_FarBubble",
+        "AliceBag_NearBubble",
+        "BallisticHelmet_Desert",
+        "M4A1_Black"
     ]
 }

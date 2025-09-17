@@ -1,13 +1,138 @@
 // Extracted application logic
 // Dynamic datasets: state stores dataset data under state[<datasetName>]
-var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{} };
+var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{}, multiCategory:{}, _fvPlan:null };
 // Helper to build endpoints for dynamic datasets
 function endpoint(kind){ return '/api/'+kind; }
 
 function markDirty(kind){ state.dirty[kind]=true; updateDirtyIndicator(); }
 function updateDirtyIndicator(){ var el=document.getElementById('dataset-dirty-indicator'); var arr=[]; for(var k in state.dirty){ if(state.dirty[k]) arr.push(k); } el.textContent = arr.length? 'Alterações não salvas: '+arr.join(', '):''; }
 
-function load(kind){ return axios.get(endpoint(kind)).then(function(r){ state[kind]=r.data; state.dirty[kind]=false; if(!(kind in state.selected)) state.selected[kind]=null; }); }
+function load(kind){ return axios.get(endpoint(kind)).then(function(r){ state[kind]=r.data; state.dirty[kind]=false; if(!(kind in state.selected)) state.selected[kind]=null; validateDatasetIntegrity(kind); }); }
+
+// --- Toast notifications ---
+function showToast(message, type){
+  try{
+    var root = document.getElementById('toast-root');
+    if(!root){
+      root = document.createElement('div');
+      root.id = 'toast-root';
+      root.style.position = 'fixed';
+      root.style.top = '12px';
+      root.style.right = '12px';
+      root.style.zIndex = '9999';
+      root.style.display = 'flex';
+      root.style.flexDirection = 'column';
+      root.style.gap = '8px';
+      document.body.appendChild(root);
+    }
+    var toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.style.minWidth = '240px';
+    toast.style.maxWidth = '420px';
+    toast.style.padding = '10px 12px';
+    toast.style.borderRadius = '6px';
+    toast.style.fontSize = '12px';
+    toast.style.color = '#fff';
+    toast.style.boxShadow = '0 4px 16px rgba(0,0,0,0.35)';
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(-6px)';
+    toast.style.transition = 'opacity .18s ease, transform .18s ease';
+    var bg = '#374151';
+    if(type==='success') bg = '#16a34a';
+    else if(type==='error') bg = '#dc2626';
+    else if(type==='warning') bg = '#d97706';
+    else if(type==='info') bg = '#2563eb';
+    toast.style.background = bg;
+    toast.textContent = message;
+    root.appendChild(toast);
+    requestAnimationFrame(function(){ toast.style.opacity='1'; toast.style.transform='translateY(0)'; });
+    setTimeout(function(){ toast.style.opacity='0'; toast.style.transform='translateY(-6px)'; setTimeout(function(){ if(toast.parentNode) toast.parentNode.removeChild(toast); }, 220); }, 3200);
+  }catch(_e){
+    // Fallback
+    console.log('[toast]', type||'info', message);
+  }
+}
+
+// --- Global helpers used across editor and DnD ---
+function ensureVariantsObject(it){ if(!it) return {}; if(Array.isArray(it.variants)){ var obj={}; it.variants.forEach(function(n){ obj[n]={}; }); it.variants=obj; } else if(!it.variants || typeof it.variants!=='object'){ it.variants={}; } return it.variants; }
+function validateUniqueClassname(classname, dataset, excludeCategory, excludeClass) {
+  if(!classname || !dataset || !state[dataset] || !state[dataset].Categories) return { valid: true };
+  var cats = state[dataset].Categories; var conflicts = [];
+  Object.keys(cats).forEach(function(catName){ if(excludeCategory === catName && excludeClass) return; var items=cats[catName]; Object.keys(items).forEach(function(itemName){ if(excludeCategory === catName && excludeClass === itemName) return; if(itemName === classname){ conflicts.push({ type:'item', category:catName, classname:itemName }); }
+      var item = items[itemName]; if(item.variants && typeof item.variants==='object'){ Object.keys(item.variants).forEach(function(variantName){ if(variantName===classname){ conflicts.push({ type:'variant', category:catName, classname:itemName, variant:variantName }); } }); }
+    }); });
+  return { valid: conflicts.length===0, conflicts: conflicts };
+}
+function generateUniqueClassname(baseName, dataset){ var counter=1; var testName=baseName; while(!validateUniqueClassname(testName, dataset).valid){ counter++; testName=baseName+'_'+counter; } return testName; }
+
+// Validate dataset integrity and report conflicts
+function validateDatasetIntegrity(dataset) {
+  if(!state[dataset] || !state[dataset].Categories) return;
+  
+  var allNames = {};
+  var conflicts = [];
+  var categories = state[dataset].Categories;
+  
+  // Collect all classnames and variant names
+  Object.keys(categories).forEach(function(catName) {
+    var items = categories[catName];
+    Object.keys(items).forEach(function(itemName) {
+      // Check main item name
+      if(allNames[itemName]) {
+        conflicts.push({
+          name: itemName,
+          existing: allNames[itemName],
+          new: { type: 'item', category: catName, classname: itemName }
+        });
+      } else {
+        allNames[itemName] = { type: 'item', category: catName, classname: itemName };
+      }
+      
+      // Check variants
+      var item = items[itemName];
+      if(item.variants && typeof item.variants === 'object') {
+        Object.keys(item.variants).forEach(function(variantName) {
+          if(allNames[variantName]) {
+            conflicts.push({
+              name: variantName,
+              existing: allNames[variantName],
+              new: { type: 'variant', category: catName, classname: itemName, variant: variantName }
+            });
+          } else {
+            allNames[variantName] = { type: 'variant', category: catName, classname: itemName, variant: variantName };
+          }
+        });
+      }
+    });
+  });
+  
+  // Report conflicts if any
+  if(conflicts.length > 0) {
+    console.warn('🚨 Conflitos de classnames detectados em ' + dataset + ':');
+    conflicts.forEach(function(conflict) {
+      var existingDesc = conflict.existing.type === 'item' 
+        ? conflict.existing.category + '/' + conflict.existing.classname
+        : conflict.existing.category + '/' + conflict.existing.classname + ' (variante: ' + conflict.existing.variant + ')';
+      var newDesc = conflict.new.type === 'item'
+        ? conflict.new.category + '/' + conflict.new.classname  
+        : conflict.new.category + '/' + conflict.new.classname + ' (variante: ' + conflict.new.variant + ')';
+      console.warn('  ⚠️  "' + conflict.name + '": ' + existingDesc + ' ↔ ' + newDesc);
+    });
+    
+    // Show user notification
+    if(conflicts.length < 10) {
+      var message = 'Detectados ' + conflicts.length + ' conflitos de nomes em ' + dataset + ':\n\n';
+      conflicts.slice(0, 5).forEach(function(c) {
+        message += '• "' + c.name + '"\n';
+      });
+      if(conflicts.length > 5) message += '• ... e mais ' + (conflicts.length - 5) + ' conflitos\n';
+      message += '\nVerifique o console do navegador para detalhes.';
+      alert(message);
+    }
+  } else {
+    console.log('✅ Dataset ' + dataset + ' carregado sem conflitos de nomes');
+  }
+}
 function refreshAll(){
   return axios.get('/api/datasets').then(function(res){
     var list = Array.isArray(res.data)? res.data:[];
@@ -25,18 +150,24 @@ function refreshAll(){
     if(!state.active || state._datasets.indexOf(state.active)===-1){
       state.active = (state._datasets.indexOf('weapons')!==-1) ? 'weapons' : (state._datasets[0] || '');
     }
-    renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); buildPalette(); renderPending(); renderTrash(); renderRightTab(); renderNav(); renderEditor(); updateDirtyIndicator(); applyTheme('dark');
+    renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); buildPalette(); renderPending(); renderTrash(); renderRightTab(); renderFoldersPane(); renderNav(); renderEditor(); updateDirtyIndicator(); applyTheme('dark');
   }).catch(function(err){ console.error('Falha ao carregar datasets', err); });
 }
 
-function setActive(tab){ state.active=tab; state.filters={ category:'', flags:[] }; renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); renderNav(); renderEditor(); buildPalette(); }
+function setActive(tab){ state.active=tab; state.filters={ category:'', flags:[] }; state.multiCategory={}; renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); renderFoldersPane(); renderNav(); renderEditor(); buildPalette(); }
 
 function renderNav(){
   var kind=state.active; var host=document.getElementById('nav-pane'); var search=document.getElementById('search').value.trim().toLowerCase(); var html=''; var filterCat = state.filters.category; var sel=state.selected[kind];
-  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; Object.keys(cats).forEach(function(cat){ if(filterCat && kind!=="_all" && cat!==filterCat) return; var isColl = !!(state.collapsed[dsName] && state.collapsed[dsName][cat]); var headerLabel = (kind==='_all'? (dsName+' · '+cat):cat); 
-      // Enhanced category header with better visual hierarchy
-      html+='<div class="nav-category mb-3 border border-gray-600 bg-gradient-to-r from-gray-800 to-gray-750 rounded-lg shadow-sm droppable" data-drop-type="category" data-category="'+cat+'" data-kind="'+dsName+'">'+
-        '<div class="flex items-center justify-between p-3">'+
+  function renderOneDataset(dsName){ var data=state[dsName]; if(!data) return; var cats=data.Categories||{}; Object.keys(cats).forEach(function(cat){ 
+      // Apply single-category chip filter if set
+      if(filterCat && kind!=='_all' && cat!==filterCat) return; 
+      // Apply multi-category folder filter if any selected
+      var selectedFolders = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; });
+      if(kind!=='_all' && selectedFolders.length>0 && selectedFolders.indexOf(cat)===-1) return;
+      var isColl = !!(state.collapsed[dsName] && state.collapsed[dsName][cat]); var headerLabel = (kind==='_all'? (dsName+' · '+cat):cat); 
+      // Enhanced category header with compact design
+      html+='<div class="nav-category mb-2 border border-gray-600 bg-gradient-to-r from-gray-800 to-gray-750 rounded-md shadow-sm droppable" data-drop-type="category" data-category="'+cat+'" data-kind="'+dsName+'">'+
+        '<div class="flex items-center justify-between px-2 py-2">'+
           '<div class="flex items-center gap-3">'+
             '<button class="flex-shrink-0 text-gray-400 hover:text-blue-400 transition-colors duration-200" title="Expandir/Colapsar" data-action="toggle-category" data-category="'+cat+'" data-kind="'+dsName+'">'+
               '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transform transition-transform duration-200 '+(isColl?'-rotate-90':'rotate-0')+'">'+
@@ -45,7 +176,8 @@ function renderNav(){
             '</button>'+
             '<div class="flex items-center gap-2">'+
               '<span class="text-blue-400 text-lg">📂</span>'+
-              '<button class="text-gray-100 font-semibold text-sm hover:text-blue-300 transition-colors" data-action="rename-category" data-category="'+cat+'" data-kind="'+dsName+'">'+headerLabel+'</button>'+
+              '<button class="text-gray-100 font-semibold text-sm hover:text-blue-300 transition-colors" data-action="edit-category" data-category="'+cat+'" data-kind="'+dsName+'">'+headerLabel+'</button>'+
+              '<button class="text-xs text-gray-400 hover:text-gray-200 ml-1" title="Renomear categoria" data-action="rename-category" data-category="'+cat+'" data-kind="'+dsName+'">✏️</button>'+
             '</div>'+
           '</div>'+
           '<div class="flex items-center gap-2">'+
@@ -69,34 +201,34 @@ function renderNav(){
       var key = dsName+'|'+cat+'|'+cls; var vCollapsed = !!state.collapsedItems[key];
       var isLocked = !!state.locked[key];
       
-      // Enhanced class item with better visual design
-      html+='<div class="nav-item ml-4 mb-2 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-lg transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
-        '<div class="flex items-center justify-between p-3">'+
-          '<div class="flex items-center gap-3 min-w-0 flex-1">'+
-            '<span class="text-green-400 text-base flex-shrink-0">🔧</span>'+
+      // Enhanced class item with compact design
+      html+='<div class="nav-item ml-4 mb-1 '+(isActive?'active':'')+' bg-gray-750 hover:bg-gray-700 border border-gray-600 rounded-md transition-all duration-200" draggable="true" data-action="select-item" data-category="'+cat+'" data-classname="'+cls+'" data-kind="'+dsName+'">'+
+        '<div class="flex items-center justify-between px-2 py-1.5">'+
+          '<div class="flex items-center gap-2 min-w-0 flex-1">'+
+            '<span class="text-green-400 text-sm flex-shrink-0">🔧</span>'+
             '<div class="min-w-0 flex-1">'+
-              '<div class="flex items-center gap-2">'+
-                '<span class="font-medium text-gray-100 truncate">'+cls+'</span>'+
+              '<div class="flex items-center gap-1.5">'+
+                '<span class="font-medium text-gray-100 truncate text-sm">'+cls+'</span>'+
                 ((isActive && state.dirty[dsName])?'<span class="dirty-dot bg-orange-400"></span>':'')+
-                (variants && variants.length? '<span class="text-xs text-gray-400 bg-gray-600 px-1.5 py-0.5 rounded-full">'+variants.length+' var</span>' : '')+
+                (variants && variants.length? '<span class="text-xs text-gray-400 bg-gray-600 px-1 py-0.5 rounded-full leading-none">'+variants.length+'</span>' : '')+
+                (item.tier? '<span class="text-xs text-gray-500">T'+item.tier+'</span>' : '')+
               '</div>'+
-              (item.tier? '<div class="text-xs text-gray-400 mt-0.5">Tier '+item.tier+'</div>' : '')+
             '</div>'+
           '</div>'+
-          '<div class="flex items-center gap-2 flex-shrink-0">'+
-            (isLocked? '<span class="text-amber-400 text-sm" title="Item travado (L para destravar)">🔒</span>' : '')+
-            (variants && variants.length? '<button class="p-1 rounded hover:bg-gray-600 text-gray-400 hover:text-gray-200 transition-colors" title="Mostrar/ocultar variantes" data-action="toggle-variants" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'">'+
-              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transform transition-transform duration-200 '+(vCollapsed?'-rotate-90':'rotate-0')+'">'+
+          '<div class="flex items-center gap-1 flex-shrink-0">'+
+            (isLocked? '<span class="text-amber-400 text-xs" title="Item travado (L para destravar)">🔒</span>' : '')+
+            (variants && variants.length? '<button class="p-0.5 rounded hover:bg-gray-600 text-gray-400 hover:text-gray-200 transition-colors" title="Mostrar/ocultar variantes" data-action="toggle-variants" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'">'+
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3 transform transition-transform duration-200 '+(vCollapsed?'-rotate-90':'rotate-0')+'">'+
                 '<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.855a.75.75 0 111.08 1.04l-4.24 4.4a.75.75 0 01-1.08 0l-4.24-4.4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />'+
               '</svg>'+
             '</button>' : '')+
           '</div>'+
         '</div>';
         
-      // Enhanced variants section
+      // Enhanced variants section - compact
       if(!vCollapsed && variants && variants.length){
-        html+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-3 py-2">'+
-          '<div class="space-y-1">';
+        html+='<div class="border-t border-gray-600 bg-gray-800 bg-opacity-50 px-2 py-1">'+
+          '<div class="space-y-0.5">';
         variants.forEach(function(vn){ 
           var hasOv = (item.variants && typeof item.variants==='object' && item.variants[vn] && Object.keys(item.variants[vn]).length>0); 
           var isVariantActive = false; 
@@ -105,9 +237,9 @@ function renderNav(){
           } else { 
             isVariantActive = sel && sel.category===cat && sel.classname===cls && state.selectedVariant[kind]===vn; 
           } 
-          html+='<div class="nav-variant flex items-center gap-2 p-2 rounded-md cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
-            '<span class="text-purple-400 text-sm flex-shrink-0">🔸</span>'+
-            '<span class="text-sm font-medium truncate flex-1">'+vn+'</span>'+
+          html+='<div class="nav-variant flex items-center gap-1.5 px-2 py-1 rounded cursor-pointer transition-all duration-150 '+(isVariantActive?'bg-blue-600 bg-opacity-60 text-blue-100':'text-gray-300 hover:bg-gray-700 hover:bg-opacity-50')+'" data-kind="'+dsName+'" data-category="'+cat+'" data-classname="'+cls+'" data-variant="'+vn+'">'+
+            '<span class="text-purple-400 text-xs flex-shrink-0">🔸</span>'+
+            '<span class="text-xs font-medium truncate flex-1">'+vn+'</span>'+
             (hasOv? '<span class="text-amber-400 text-xs flex-shrink-0" title="Tem overrides customizados">●</span>' : '')+
           '</div>'; 
         });
@@ -126,7 +258,15 @@ function renderNav(){
 
 function getSelected(){ var k=state.active; var sel=state.selected[k]; if(!sel) return null; var variant = state.selectedVariant[k] || null; if(k==='_all'){ return Object.assign({}, sel, { variant: variant }); } return { dataset:k, category:sel.category, classname:sel.classname, variant: variant }; }
 
-function renderEditor(){ var pane=document.getElementById('editor-pane'); var sel=getSelected(); var kindActual = sel? sel.dataset : state.active; if(state.active==='_all' && !sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } if(!state[kindActual]){ pane.innerHTML='<p class="text-sm text-gray-500">Carregando...</p>'; return; } if(!sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } var category=sel.category, classname=sel.classname, selectedVariant=sel.variant; var item = state[kindActual].Categories[category][classname]; if(!item){ pane.innerHTML='<p class="text-sm text-red-500">Item não encontrado.</p>'; return; }
+function renderEditor(){ var pane=document.getElementById('editor-pane'); var sel=getSelected(); var kindActual = sel? sel.dataset : state.active; if(state.active==='_all' && !sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } if(!state[kindActual]){ pane.innerHTML='<p class="text-sm text-gray-500">Carregando...</p>'; return; } if(!sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } var category=sel.category, classname=sel.classname, selectedVariant=sel.variant; 
+  
+  // Check if editing category
+  if(classname === '_CATEGORY_') {
+    renderCategoryEditor(pane, kindActual, category);
+    return;
+  }
+  
+  var item = state[kindActual].Categories[category][classname]; if(!item){ pane.innerHTML='<p class="text-sm text-red-500">Item não encontrado.</p>'; return; }
   // Check if item is locked
   var lockKey = kindActual+'|'+category+'|'+classname;
   var isLocked = !!state.locked[lockKey];
@@ -137,6 +277,57 @@ function renderEditor(){ var pane=document.getElementById('editor-pane'); var se
   var isWeapon = kindActual==='weapons';
   function getVariantNames(it){ if(!it) return []; if(Array.isArray(it.variants)) return it.variants.slice(); if(it.variants && typeof it.variants==='object') return Object.keys(it.variants); return []; }
   function ensureVariantsObject(it){ if(!it) return {}; if(Array.isArray(it.variants)){ var obj={}; it.variants.forEach(function(n){ obj[n]={}; }); it.variants=obj; } else if(!it.variants || typeof it.variants!=='object'){ it.variants={}; } return it.variants; }
+  
+  // Validate that classname is unique across entire dataset
+  function validateUniqueClassname(classname, dataset, excludeCategory, excludeClass) {
+    if(!classname || !dataset || !state[dataset] || !state[dataset].Categories) return { valid: true };
+    
+    var cats = state[dataset].Categories;
+    var conflicts = [];
+    
+    // Check all categories and their items
+    Object.keys(cats).forEach(function(catName) {
+      if(excludeCategory === catName && excludeClass) return; // Skip self when editing
+      
+      var items = cats[catName];
+      Object.keys(items).forEach(function(itemName) {
+        if(excludeCategory === catName && excludeClass === itemName) return; // Skip self when editing
+        
+        // Check main item name
+        if(itemName === classname) {
+          conflicts.push({ type: 'item', category: catName, classname: itemName });
+        }
+        
+        // Check variants
+        var item = items[itemName];
+        if(item.variants && typeof item.variants === 'object') {
+          Object.keys(item.variants).forEach(function(variantName) {
+            if(variantName === classname) {
+              conflicts.push({ type: 'variant', category: catName, classname: itemName, variant: variantName });
+            }
+          });
+        }
+      });
+    });
+    
+    return {
+      valid: conflicts.length === 0,
+      conflicts: conflicts
+    };
+  }
+  
+  // Generate unique classname suggestion
+  function generateUniqueClassname(baseName, dataset) {
+    var counter = 1;
+    var testName = baseName;
+    
+    while(!validateUniqueClassname(testName, dataset).valid) {
+      counter++;
+      testName = baseName + '_' + counter;
+    }
+    
+    return testName;
+  }
   function numInput(label, field, val){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" type="number" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
   function textInput(label, field, val){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" type="text" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
   function arrayEditor(label, field, arr){ arr = Array.isArray(arr)?arr:[]; var inner=''; for(var i=0;i<arr.length;i++){ inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; } return '<div data-array-field="'+field+'"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div></div>'; }
@@ -180,6 +371,104 @@ function renderEditor(){ var pane=document.getElementById('editor-pane'); var se
     parts.push(variantsEditor()); parts.push(attachmentsEditor()); parts.push(arrayEditor('Flags','flags', item.flags));
     pane.innerHTML = '<div class="editor-box space-y-4" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'">'+parts.join('')+'</div>';
   }
+}
+
+function renderCategoryEditor(pane, dataset, categoryName) {
+  var data = state[dataset];
+  if(!data || !data.Categories || !data.Categories[categoryName]) {
+    pane.innerHTML = '<p class="text-sm text-red-500">Categoria não encontrada.</p>';
+    return;
+  }
+  
+  var items = data.Categories[categoryName];
+  var itemNames = Object.keys(items);
+  var isWeapon = dataset === 'weapons';
+  
+  // Initialize category defaults if they don't exist
+  if(!data.CategoryDefaults) data.CategoryDefaults = {};
+  if(!data.CategoryDefaults[categoryName]) {
+    data.CategoryDefaults[categoryName] = isWeapon ? {
+      tier: null,
+      value: null,
+      chamber_size: 1,
+      ammo_types: [],
+      magazines: [],
+      flags: [],
+      attachments: {}
+    } : {
+      tier: null,
+      value: null,
+      flags: [],
+      attachments: []
+    };
+  }
+  
+  var defaults = data.CategoryDefaults[categoryName];
+  
+  function numInput(label, field, val) { 
+    return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" data-category-defaults="true" type="number" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; 
+  }
+  function arrayEditor(label, field, arr) { 
+    arr = Array.isArray(arr)?arr:[]; var inner=''; 
+    for(var i=0;i<arr.length;i++) { 
+      inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'" data-category-defaults="true">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; 
+    } 
+    return '<div data-array-field="'+field+'" data-category-defaults="true"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" data-category-defaults="true" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div></div>'; 
+  }
+  
+  var parts = [];
+  
+  // Category header
+  parts.push('<div class="bg-purple-900 bg-opacity-30 border border-purple-600 rounded p-4 mb-4">');
+  parts.push('<h3 class="text-purple-200 font-semibold mb-2">📂 Editando Categoria: ' + categoryName + '</h3>');
+  parts.push('<p class="text-xs text-purple-300 mb-3">Dataset: ' + dataset + ' | ' + itemNames.length + ' itens</p>');
+  parts.push('<div class="flex space-x-2">');
+  parts.push('<button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs" data-action="sync-category-to-items" data-dataset="'+dataset+'" data-category="'+categoryName+'">↓ Sincronizar para Itens</button>');
+  parts.push('<button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs" data-action="sync-items-to-category" data-dataset="'+dataset+'" data-category="'+categoryName+'">↑ Sincronizar dos Itens</button>');
+  parts.push('</div></div>');
+  
+  // Default values section
+  parts.push('<div class="bg-gray-800 rounded p-3 mb-4">');
+  parts.push('<h4 class="text-gray-200 font-semibold mb-3">Valores Padrão da Categoria</h4>');
+  parts.push('<div class="grid grid-cols-2 gap-4">');
+  parts.push(numInput('Tier Padrão', 'tier', defaults.tier));
+  parts.push(numInput('Value Padrão', 'value', defaults.value));
+  if(isWeapon) {
+    parts.push(numInput('Chamber Size Padrão', 'chamber_size', defaults.chamber_size));
+  }
+  parts.push('</div>');
+  
+  if(isWeapon) {
+    parts.push(arrayEditor('Ammo Types Padrão', 'ammo_types', defaults.ammo_types));
+    parts.push(arrayEditor('Magazines Padrão', 'magazines', defaults.magazines));
+  }
+  parts.push(arrayEditor('Flags Padrão', 'flags', defaults.flags));
+  parts.push('</div>');
+  
+  // Items list
+  parts.push('<div class="bg-gray-800 rounded p-3">');
+  parts.push('<h4 class="text-gray-200 font-semibold mb-3">Itens na Categoria (' + itemNames.length + ')</h4>');
+  parts.push('<div class="max-h-64 overflow-y-auto space-y-2">');
+  
+  itemNames.forEach(function(itemName) {
+    var item = items[itemName];
+    var variants = item.variants && typeof item.variants === 'object' ? Object.keys(item.variants) : [];
+    parts.push('<div class="bg-gray-700 rounded p-2 text-sm">');
+    parts.push('<div class="flex justify-between items-center">');
+    parts.push('<span class="font-medium text-gray-100">' + itemName + '</span>');
+    parts.push('<div class="text-xs text-gray-400">');
+    if(item.tier) parts.push('T' + item.tier + ' ');
+    if(variants.length) parts.push(variants.length + ' var');
+    parts.push('</div></div>');
+    if(variants.length > 0) {
+      parts.push('<div class="text-xs text-gray-300 mt-1">Variantes: ' + variants.join(', ') + '</div>');
+    }
+    parts.push('</div>');
+  });
+  
+  parts.push('</div></div>');
+  
+  pane.innerHTML = '<div class="editor-box space-y-4" data-kind="'+dataset+'" data-category="'+categoryName+'" data-classname="_CATEGORY_">' + parts.join('') + '</div>';
 }
 
 function buildPalette(){ var all={}; if(state.active==='_all'){
@@ -309,9 +598,46 @@ document.addEventListener('click', function(e){
     return; }
   if(action==='toggle-category'){ var dsT = el.dataset.kind || state.active; var catT = el.dataset.category; if(!state.collapsed[dsT]) state.collapsed[dsT]={}; state.collapsed[dsT][catT] = !state.collapsed[dsT][catT]; renderNav(); return; }
   if(action==='toggle-variants'){ var dsTV=el.dataset.kind || state.active; var catTV=el.dataset.category; var clsTV=el.dataset.classname; var keyTV=dsTV+'|'+catTV+'|'+clsTV; state.collapsedItems[keyTV] = !state.collapsedItems[keyTV]; renderNav(); return; }
-  if(action==='rename-category'){ var dsK = el.dataset.kind || state.active; var old = el.dataset.category; var data = state[dsK]; if(!data || !data.Categories || !data.Categories[old]) return; var nn = prompt('Renomear categoria:', old); if(!nn || nn===old) return; if(data.Categories[nn]){ alert('Categoria já existe.'); return; } pushHistory(); data.Categories[nn]=data.Categories[old]; delete data.Categories[old]; if(state.collapsed[dsK] && state.collapsed[dsK][old]!=null){ state.collapsed[dsK][nn]=state.collapsed[dsK][old]; delete state.collapsed[dsK][old]; } if(state.filters.category===old) state.filters.category=nn; markDirty(dsK); renderCategoryChips(); renderNav(); return; }
+  if(action==='edit-category'){ 
+    var dsK = el.dataset.kind || state.active; 
+    var cat = el.dataset.category; 
+    var data = state[dsK]; 
+    if(!data || !data.Categories || !data.Categories[cat]) return; 
+    
+    // Set category as selected for editing
+    if(dsK === '_all') {
+      state.selected['_all'] = { dataset: dsK, category: cat, classname: '_CATEGORY_' }; 
+    } else {
+      state.selected[dsK] = { category: cat, classname: '_CATEGORY_' }; 
+    }
+    state.selectedVariant[dsK] = null;
+    state.rightTab = 'attachments';
+    renderRightTab(); 
+    renderNav(); 
+    renderEditor();
+    return; 
+  }
+  if(action==='rename-category'){ var dsK = el.dataset.kind || state.active; var old = el.dataset.category; var data = state[dsK]; if(!data || !data.Categories || !data.Categories[old]) return; var nn = prompt('Renomear categoria:', old); if(!nn || nn===old) return; if(data.Categories[nn]){ alert('Categoria já existe.'); return; } pushHistory(); data.Categories[nn]=data.Categories[old]; delete data.Categories[old]; if(state.collapsed[dsK] && state.collapsed[dsK][old]!=null){ state.collapsed[dsK][nn]=state.collapsed[dsK][old]; delete state.collapsed[dsK][old]; } if(state.filters.category===old) state.filters.category=nn; markDirty(dsK); renderCategoryChips(); renderFoldersPane(); renderNav(); return; }
   if(action==='variant-add'){ var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var it=state[ds].Categories[sel.category][sel.classname]; var vname=prompt('Nome da variante (ex: _black):'); if(!vname) return; if(Array.isArray(it.variants)){ it.variants = it.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); }
-    if(!it.variants || typeof it.variants!=='object') it.variants={}; if(it.variants[vname]){ alert('Variante já existe'); return; } pushHistory(); it.variants[vname]={}; markDirty(ds); renderEditor(); renderNav(); return; }
+    if(!it.variants || typeof it.variants!=='object') it.variants={};
+    
+    // Check for unique variant name across entire dataset
+    var validation = validateUniqueClassname(vname, ds);
+    if(!validation.valid) {
+      var conflictDetails = validation.conflicts.map(function(c) {
+        if(c.type === 'item') return c.category + '/' + c.classname;
+        return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+      }).join(', ');
+      
+      var uniqueName = generateUniqueClassname(vname, ds);
+      if(confirm('Nome "' + vname + '" já existe em: ' + conflictDetails + '.\n\nDeseja usar "' + uniqueName + '" no lugar?')) {
+        vname = uniqueName;
+      } else {
+        return;
+      }
+    }
+    
+    if(it.variants[vname]){ alert('Variante já existe neste item'); return; } pushHistory(); it.variants[vname]={}; markDirty(ds); renderEditor(); renderNav(); return; }
   if(action==='nav-variant-edit'){ var dsN=el.dataset.kind || state.active; var catN=el.dataset.category; var clsN=el.dataset.classname; var vnN=el.dataset.variant; var itN = state[dsN] && state[dsN].Categories && state[dsN].Categories[catN] && state[dsN].Categories[catN][clsN]; if(!itN) return; if(!itN.variants || typeof itN.variants!=='object'){ itN.variants={}; } var curN = itN.variants[vnN] || {}; var txtN = prompt('Overrides (JSON) para '+vnN+':', JSON.stringify(curN)); if(txtN==null) return; try{ var objN = JSON.parse(txtN); }catch(eN){ alert('JSON inválido'); return; } pushHistory(); itN.variants[vnN]=objN; markDirty(dsN); renderEditor(); renderNav(); return; }
   if(action==='nav-variant-promote'){ var dsP=el.dataset.kind || state.active; var catP=el.dataset.category; var clsP=el.dataset.classname; var vnP=el.dataset.variant; promoteVariant(dsP, catP, clsP, vnP); renderEditor(); return; }
   if(action==='nav-variant-remove'){ var dsR=el.dataset.kind || state.active; var catR=el.dataset.category; var clsR=el.dataset.classname; var vnR=el.dataset.variant; var itR = state[dsR] && state[dsR].Categories && state[dsR].Categories[catR] && state[dsR].Categories[catR][clsR]; if(!itR || !itR.variants || typeof itR.variants!=='object') return; pushHistory(); delete itR.variants[vnR]; markDirty(dsR); renderEditor(); renderNav(); return; }
@@ -320,7 +646,7 @@ document.addEventListener('click', function(e){
     var cur = it3.variants[vname3] || {}; var txt = prompt('Overrides (JSON). Campos suportados: tier, value, attachments, flags, ammo_types, chamber_size, magazines', JSON.stringify(cur)); if(txt==null) return; try{ var obj=JSON.parse(txt); }catch(e2){ alert('JSON inválido'); return; } pushHistory(); it3.variants[vname3]=obj; markDirty(ds3); renderEditor(); renderNav(); return; }
   if(action==='select-item'){ var ds2=el.dataset.kind || kind; if(kind==='_all'){ state.selected['_all']={ dataset:ds2, category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant['_all'] = null; } else { state.selected[kind]={ category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant[kind] = null; } state.rightTab='attachments'; renderRightTab(); renderNav(); renderEditor(); return; }
 
-  if(action==='remove-category'){ var cat=el.dataset.category; var dsKey = el.dataset.kind || state.active; if(confirm('Remover categoria '+cat+'?')){ var names = Object.keys((state[dsKey] && state[dsKey].Categories && state[dsKey].Categories[cat])||{}); if(names.length){ axios.post('/api/trash', { classes: names }).catch(function(){}); } pushHistory(); delete state[dsKey].Categories[cat]; if(state.collapsed[dsKey]){ delete state.collapsed[dsKey][cat]; } markDirty(dsKey); if(state.active==='_all'){ if(state.selected['_all'] && state.selected['_all'].dataset===dsKey && state.selected['_all'].category===cat) state.selected['_all']=null; } else { if(state.selected[dsKey] && state.selected[dsKey].category===cat) state.selected[dsKey]=null; } renderNav(); renderEditor(); renderCategoryChips(); } return; }
+  if(action==='remove-category'){ var cat=el.dataset.category; var dsKey = el.dataset.kind || state.active; if(confirm('Remover categoria '+cat+'?')){ var names = Object.keys((state[dsKey] && state[dsKey].Categories && state[dsKey].Categories[cat])||{}); if(names.length){ axios.post('/api/trash', { classes: names }).catch(function(){}); } pushHistory(); delete state[dsKey].Categories[cat]; if(state.collapsed[dsKey]){ delete state.collapsed[dsKey][cat]; } markDirty(dsKey); if(state.active==='_all'){ if(state.selected['_all'] && state.selected['_all'].dataset===dsKey && state.selected['_all'].category===cat) state.selected['_all']=null; } else { if(state.selected[dsKey] && state.selected[dsKey].category===cat) state.selected[dsKey]=null; } renderNav(); renderEditor(); renderCategoryChips(); renderFoldersPane(); } return; }
   if(action==='add-pill'){ var field=el.dataset.field; var vn=el.dataset.variant; addArrayValue(field, vn); return; }
   if(action==='remove-pill'){ removeArrayValue(el); return; }
   if(action==='add-attachment-slot'){ var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; var name=prompt('Nome do slot:'); if(!name) return; pushHistory(); if(!item.attachments || typeof item.attachments!=='object') item.attachments={}; if(!item.attachments[name]) item.attachments[name]=[]; markDirty(ds); renderEditor(); buildPalette(); return; }
@@ -336,47 +662,251 @@ document.addEventListener('click', function(e){
   if(action==='trash-remove'){ var name=el.dataset.name; if(!name) return; var arr=state.trash.classes||[]; var idx=arr.indexOf(name); if(idx!==-1){ pushHistory(); arr.splice(idx,1); saveTrash(true).then(renderTrash); } return; }
 });
 
+// Drag & Drop helpers for robust parsing
+function _parsePlainDT(e){
+  try{
+    var s = e.dataTransfer && e.dataTransfer.getData ? (e.dataTransfer.getData('text/plain')||'') : '';
+    if(!s || s[0] !== '{') return null;
+    var obj = JSON.parse(s);
+    if(obj && obj.__type) return obj; 
+  } catch(_e){}
+  return null;
+}
+function _hasDragType(e, type){
+  try{
+    var types = e.dataTransfer && e.dataTransfer.types ? Array.from(e.dataTransfer.types) : [];
+    if(types.indexOf('text/' + type) !== -1) return true;
+    var plain = _parsePlainDT(e);
+    if(plain && plain.__type === type) return true;
+  }catch(_e){}
+  return false;
+}
+function _getDragObject(e, type){
+  try{
+    var raw = e.dataTransfer.getData('text/' + type);
+    if(raw){ try { return JSON.parse(raw); } catch(_e){ /* ignore */ } }
+  }catch(_e){}
+  var plain = _parsePlainDT(e);
+  if(plain && plain.__type === type){ return plain.data || null; }
+  return null;
+}
+
 // Drag & Drop
-document.addEventListener('dragstart', function(e){ var p=e.target.closest('.palette-item'); if(p && p.dataset.value){ e.dataTransfer.setData('text/attachment', p.dataset.value); e.dataTransfer.effectAllowed='copy'; }
-  var n=e.target.closest('.nav-item'); if(n){ e.dataTransfer.setData('text/move-item', JSON.stringify({dataset:n.dataset.kind || state.active, category:n.dataset.category, classname:n.dataset.classname})); e.dataTransfer.effectAllowed='move'; }
-  var pend=e.target.closest('.pending-item'); if(pend){
-    var selected = Object.keys(state._pendingSelection||{}).filter(function(k){ return !!state._pendingSelection[k]; });
-    if(selected.length>1){ e.dataTransfer.setData('text/pending-multi', JSON.stringify(selected)); }
-    e.dataTransfer.setData('text/pending', JSON.stringify({ name: pend.dataset.name })); e.dataTransfer.effectAllowed='copy';
+document.addEventListener('dragstart', function(e){ 
+  try{ document.body.classList.add('dnd-mode'); }catch(_e){}
+  var p=e.target.closest('.palette-item'); 
+  if(p && p.dataset.value){ 
+    e.dataTransfer.setData('text/attachment', p.dataset.value); 
+    // Plain fallback
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'attachment', data: p.dataset.value }));
+    e.dataTransfer.effectAllowed='copy'; 
   }
-  var tr=e.target.closest('.trash-item'); if(tr){ e.dataTransfer.setData('text/trash', JSON.stringify({ name: tr.dataset.name })); e.dataTransfer.effectAllowed='copy'; }
+  var n=e.target.closest('.nav-item'); 
+  if(n){ 
+    var movePayload = { dataset:n.dataset.kind || state.active, category:n.dataset.category, classname:n.dataset.classname };
+    e.dataTransfer.setData('text/move-item', JSON.stringify(movePayload)); 
+    // Plain fallback
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'move-item', data: movePayload }));
+    e.dataTransfer.effectAllowed='move'; 
+  }
+  var pend=e.target.closest('.pending-item'); 
+  if(pend){
+    var selected = Object.keys(state._pendingSelection||{}).filter(function(k){ return !!state._pendingSelection[k]; });
+    if(selected.length>1){ 
+      e.dataTransfer.setData('text/pending-multi', JSON.stringify(selected)); 
+      e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'pending-multi', data: selected }));
+    } else {
+      var pObj = { name: pend.dataset.name };
+      e.dataTransfer.setData('text/pending', JSON.stringify(pObj)); 
+      e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'pending', data: pObj }));
+    }
+    e.dataTransfer.effectAllowed='copy';
+  }
+  var tr=e.target.closest('.trash-item'); 
+  if(tr){ 
+    var tObj = { name: tr.dataset.name };
+    e.dataTransfer.setData('text/trash', JSON.stringify(tObj)); 
+    e.dataTransfer.setData('text/plain', JSON.stringify({ __type:'trash', data: tObj }));
+    e.dataTransfer.effectAllowed='copy'; 
+  }
 });
-document.addEventListener('dragover', function(e){ var t=e.target.closest('[data-drop-type]'); if(!t) return; var type=t.dataset.dropType; var types = (e.dataTransfer && e.dataTransfer.types)? Array.from(e.dataTransfer.types):[]; if(type==='attachment' && types.indexOf('text/attachment')!==-1){ e.preventDefault(); t.classList.add('drag-over'); }
-  if(type==='category' && (types.indexOf('text/move-item')!==-1 || types.indexOf('text/pending')!==-1 || types.indexOf('text/pending-multi')!==-1 || types.indexOf('text/trash')!==-1)){ e.preventDefault(); t.classList.add('drag-over'); }
-  if(type==='variants' && (types.indexOf('text/move-item')!==-1 || types.indexOf('text/pending')!==-1)){ e.preventDefault(); t.classList.add('drag-over'); }
-  if(type==='pending-target' && (types.indexOf('text/move-item')!==-1)){ e.preventDefault(); t.classList.add('drag-over'); }
+document.addEventListener('dragend', function(){ try{ document.body.classList.remove('dnd-mode'); }catch(_e){} });
+document.addEventListener('drop', function(){ try{ document.body.classList.remove('dnd-mode'); }catch(_e){} });
+document.addEventListener('dragover', function(e){ 
+  // Check for item-to-item drop (create variant) first
+  var navItem = e.target.closest('.nav-item');
+  if(navItem) {
+    e.preventDefault();
+    navItem.classList.add('drag-over-variant');
+    return; // prevent other zones from stealing hover state
+  }
+
+  // Check for drop zones
+  var t=e.target.closest('[data-drop-type]'); 
+  if(t) {
+    e.preventDefault();
+    t.classList.add('drag-over');
+  }
 });
-document.addEventListener('dragleave', function(e){ var t=e.target.closest('[data-drop-type]'); if(!t) return; t.classList.remove('drag-over'); });
-document.addEventListener('drop', function(e){ var t=e.target.closest('[data-drop-type]'); if(!t) return; var type=t.dataset.dropType; if(type==='attachment' && e.dataTransfer.getData('text/attachment')){ e.preventDefault(); t.classList.remove('drag-over'); var val=e.dataTransfer.getData('text/attachment'); var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; if(ds==='weapons'){ var slot=t.dataset.slot; if(!slot){ slot=prompt('Slot destino:'); if(!slot) return; } pushHistory(); if(!item.attachments||typeof item.attachments!=='object') item.attachments={}; if(!item.attachments[slot]) item.attachments[slot]=[]; if(item.attachments[slot].indexOf(val)===-1) item.attachments[slot].push(val); } else { pushHistory(); if(!Array.isArray(item.attachments)) item.attachments=[]; if(item.attachments.indexOf(val)===-1) item.attachments.push(val); } markDirty(ds); renderEditor(); buildPalette(); }
+document.addEventListener('dragleave', function(e){ 
+  var t=e.target.closest('[data-drop-type]'); 
+  if(t) { t.classList.remove('drag-over'); }
+  
+  var navItem = e.target.closest('.nav-item');
+  if(navItem) { navItem.classList.remove('drag-over-variant'); }
+});
+document.addEventListener('drop', function(e){ 
+  console.log('Drop event triggered on:', e.target);
+  try{ console.log('DataTransfer types:', e.dataTransfer && e.dataTransfer.types ? Array.from(e.dataTransfer.types) : []); }catch(_e){}
+  
+  // Handle item-to-item drop first (create variant) - highest priority
+  var navItem = e.target.closest('.nav-item');
+  var draggedInfo = _getDragObject(e, 'move-item');
+  if(navItem && draggedInfo) {
+    console.log('Processing item-to-item drop');
+    e.preventDefault();
+    e.stopPropagation();
+    navItem.classList.remove('drag-over-variant');
+    
+    var targetDs = navItem.dataset.kind || state.active;
+    var targetCat = navItem.dataset.category;
+    var targetCls = navItem.dataset.classname;
+    
+    // Don't allow dropping on self
+    if(draggedInfo.dataset === targetDs && draggedInfo.category === targetCat && draggedInfo.classname === targetCls) {
+      return;
+    }
+    
+    // Get target item and make dragged item a variant
+    var targetItem = state[targetDs] && state[targetDs].Categories && state[targetDs].Categories[targetCat] && state[targetDs].Categories[targetCat][targetCls];
+    if(!targetItem) return;
+    
+    ensureVariantsObject(targetItem);
+    var variantName = draggedInfo.classname;
+    
+    if(targetItem.variants[variantName]) {
+      showToast('Variante "' + variantName + '" já existe em ' + targetCls, 'warning');
+      return;
+    }
+    
+    // Check for unique classname across entire dataset (excluding the item being moved)
+    var validation = validateUniqueClassname(variantName, targetDs, targetCat, targetCls);
+    if(!validation.valid) {
+      var conflictDetails = validation.conflicts.map(function(c) {
+        if(c.type === 'item') return c.category + '/' + c.classname;
+        return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+      }).join(', ');
+      showToast('Nome "' + variantName + '" já existe em: ' + conflictDetails + '. Não é possível criar a variante com este nome.', 'error');
+      return;
+    }
+    
+    // Confirm action
+    if(confirm('Transformar "' + draggedInfo.classname + '" em variante de "' + targetCls + '"?')) {
+      pushHistory();
+      
+      // Copy source item properties as variant overrides
+      var sourceItem = state[draggedInfo.dataset] && state[draggedInfo.dataset].Categories && state[draggedInfo.dataset].Categories[draggedInfo.category] && state[draggedInfo.dataset].Categories[draggedInfo.category][draggedInfo.classname];
+      var variantOverrides = {};
+      if(sourceItem) {
+        if(sourceItem.tier !== targetItem.tier) variantOverrides.tier = sourceItem.tier;
+        if(sourceItem.value !== targetItem.value) variantOverrides.value = sourceItem.value;
+        if(sourceItem.flags && JSON.stringify(sourceItem.flags) !== JSON.stringify(targetItem.flags)) variantOverrides.flags = sourceItem.flags;
+        if(sourceItem.chamber_size !== targetItem.chamber_size) variantOverrides.chamber_size = sourceItem.chamber_size;
+        if(sourceItem.ammo_types && JSON.stringify(sourceItem.ammo_types) !== JSON.stringify(targetItem.ammo_types)) variantOverrides.ammo_types = sourceItem.ammo_types;
+        if(sourceItem.magazines && JSON.stringify(sourceItem.magazines) !== JSON.stringify(targetItem.magazines)) variantOverrides.magazines = sourceItem.magazines;
+      }
+      
+      targetItem.variants[variantName] = variantOverrides;
+      
+      // Remove source item
+      if(state[draggedInfo.dataset] && state[draggedInfo.dataset].Categories && state[draggedInfo.dataset].Categories[draggedInfo.category]) {
+        delete state[draggedInfo.dataset].Categories[draggedInfo.category][draggedInfo.classname];
+      }
+      
+      markDirty(targetDs);
+      markDirty(draggedInfo.dataset);
+      renderNav();
+      renderEditor();
+      showToast('Variante "' + variantName + '" criada em "' + targetCls + '"', 'success');
+    }
+    return;
+  }
+
+  var t=e.target.closest('[data-drop-type]'); if(!t) return; var type=t.dataset.dropType; 
+  if(type==='attachment'){
+    var attVal = _getDragObject(e,'attachment');
+    if(attVal){ e.preventDefault(); t.classList.remove('drag-over'); var val=attVal; var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; if(ds==='weapons'){ var slot=t.dataset.slot; if(!slot){ slot=prompt('Slot destino:'); if(!slot) return; } pushHistory(); if(!item.attachments||typeof item.attachments!=='object') item.attachments={}; if(!item.attachments[slot]) item.attachments[slot]=[]; if(item.attachments[slot].indexOf(val)===-1) item.attachments[slot].push(val); } else { pushHistory(); if(!Array.isArray(item.attachments)) item.attachments=[]; if(item.attachments.indexOf(val)===-1) item.attachments.push(val); } markDirty(ds); renderEditor(); buildPalette(); }
+  }
   if(type==='category'){
-    if(e.dataTransfer.getData('text/move-item')){ e.preventDefault(); t.classList.remove('drag-over'); var info=JSON.parse(e.dataTransfer.getData('text/move-item')); var targetCat=t.dataset.category; var targetDs=t.dataset.kind || info.dataset || state.active; moveItemToCategory(targetDs, info.category, info.classname, targetCat); return; }
+    var mvInfo = _getDragObject(e,'move-item');
+    if(mvInfo){ e.preventDefault(); t.classList.remove('drag-over'); var targetCat=t.dataset.category; var targetDs=t.dataset.kind || mvInfo.dataset || state.active; moveItemToCategory(targetDs, mvInfo.category, mvInfo.classname, targetCat); return; }
     var targetCat2=t.dataset.category; var targetDs2=t.dataset.kind || state.active;
-    var multi = e.dataTransfer.getData('text/pending-multi');
-    if(multi){ e.preventDefault(); t.classList.remove('drag-over'); var arr=[]; try{ arr=JSON.parse(multi)||[]; }catch(_e){}
+    var multiObj = _getDragObject(e,'pending-multi');
+    if(multiObj){ e.preventDefault(); t.classList.remove('drag-over'); var arr=Array.isArray(multiObj)? multiObj : []; 
       var one = e.dataTransfer.getData('text/pending'); if(one){ try{ var o=JSON.parse(one); if(o && o.name && arr.indexOf(o.name)===-1) arr.unshift(o.name); }catch(_e){} }
       pushHistory();
       arr.forEach(function(nm){ createItemFromPending(nm, targetCat2, targetDs2); }); state._pendingSelection={}; renderPending(); return; }
-  if(e.dataTransfer.getData('text/pending')){ e.preventDefault(); t.classList.remove('drag-over'); var pinfo=JSON.parse(e.dataTransfer.getData('text/pending')); pushHistory(); createItemFromPending(pinfo.name, targetCat2, targetDs2); return; }
-    if(e.dataTransfer.getData('text/trash')){ e.preventDefault(); t.classList.remove('drag-over'); var trInfo=JSON.parse(e.dataTransfer.getData('text/trash')); pushHistory(); restoreFromTrash(trInfo.name, targetCat2, targetDs2); return; }
+    var pObj = _getDragObject(e,'pending');
+    if(pObj){ e.preventDefault(); t.classList.remove('drag-over'); pushHistory(); createItemFromPending(pObj.name, targetCat2, targetDs2); return; }
+    var trObj = _getDragObject(e,'trash');
+    if(trObj){ e.preventDefault(); t.classList.remove('drag-over'); pushHistory(); restoreFromTrash(trObj.name, targetCat2, targetDs2); return; }
   }
   if(type==='variants'){
     var sel=getSelected(); if(!sel){ t.classList.remove('drag-over'); return; }
     var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; ensureVariantsObject(item);
     // Accept classnames dragged from nav or pending to add as variant name
-    if(e.dataTransfer.getData('text/move-item')){ e.preventDefault(); t.classList.remove('drag-over'); var info=JSON.parse(e.dataTransfer.getData('text/move-item')); var vname=info.classname; if(vname && !item.variants[vname]){ pushHistory(); item.variants[vname]={}; markDirty(ds); renderEditor(); renderNav(); } return; }
-    if(e.dataTransfer.getData('text/pending')){ e.preventDefault(); t.classList.remove('drag-over'); var pinfo=JSON.parse(e.dataTransfer.getData('text/pending')); var vname2=pinfo.name; if(vname2 && !item.variants[vname2]){ pushHistory(); item.variants[vname2]={}; markDirty(ds); renderEditor(); renderNav(); } return; }
+    var mvInfo2 = _getDragObject(e,'move-item');
+    if(mvInfo2){ e.preventDefault(); t.classList.remove('drag-over'); var vname=mvInfo2.classname;
+      if(vname && !item.variants[vname]){ 
+        var validation = validateUniqueClassname(vname, ds, sel.category, sel.classname);
+        if(!validation.valid) {
+          var conflictDetails = validation.conflicts.map(function(c) {
+            if(c.type === 'item') return c.category + '/' + c.classname;
+            return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+          }).join(', ');
+          showToast('Nome "' + vname + '" já existe em: ' + conflictDetails + '. Escolha um nome único para a variante.', 'error');
+          return;
+        }
+        pushHistory(); item.variants[vname]={}; markDirty(ds); renderEditor(); renderNav(); 
+      } return; }
+    var pinfo2 = _getDragObject(e,'pending');
+    if(pinfo2){ e.preventDefault(); t.classList.remove('drag-over'); var vname2=pinfo2.name; 
+      if(vname2 && !item.variants[vname2]){ 
+        var validation2 = validateUniqueClassname(vname2, ds, sel.category, sel.classname);
+        if(!validation2.valid) {
+          var conflictDetails2 = validation2.conflicts.map(function(c) {
+            if(c.type === 'item') return c.category + '/' + c.classname;
+            return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+          }).join(', ');
+          showToast('Nome "' + vname2 + '" já existe em: ' + conflictDetails2 + '. Escolha um nome único para a variante.', 'error');
+          return;
+        }
+        pushHistory(); item.variants[vname2]={}; markDirty(ds); renderEditor(); renderNav(); 
+      } return; }
   }
   if(type==='pending-target'){
-    if(e.dataTransfer.getData('text/move-item')){ e.preventDefault(); t.classList.remove('drag-over'); var info=JSON.parse(e.dataTransfer.getData('text/move-item')); var nm=info.classname; if(!nm) return; var set={}; (state.pending.items||[]).forEach(function(it){ var n=(typeof it==='string')? it : it.name; set[n]=true; }); set[nm]=true; pushHistory(); state.pending.items = Object.keys(set).sort().map(function(n){ return {name:n}; }); savePending(true); renderPending(); state.rightTab='pending'; renderRightTab(); }
+    var mvInfo3 = _getDragObject(e,'move-item');
+    if(mvInfo3){ e.preventDefault(); t.classList.remove('drag-over'); var nm=mvInfo3.classname; if(!nm) return; var set={}; (state.pending.items||[]).forEach(function(it){ var n=(typeof it==='string')? it : it.name; set[n]=true; }); set[nm]=true; pushHistory(); state.pending.items = Object.keys(set).sort().map(function(n){ return {name:n}; }); savePending(true); renderPending(); state.rightTab='pending'; renderRightTab(); }
   }
 });
 
-function restoreFromTrash(name, targetCategory, targetDataset){ if(!name) return; var ds = targetDataset || state.active; if(!ds || !state[ds]) return; var data=state[ds]; if(!data.Categories[targetCategory]) data.Categories[targetCategory]={}; if(data.Categories[targetCategory][name]){ alert('Já existe '+name+' em '+targetCategory); return; }
+function restoreFromTrash(name, targetCategory, targetDataset){ if(!name) return; var ds = targetDataset || state.active; if(!ds || !state[ds]) return; var data=state[ds]; if(!data.Categories[targetCategory]) data.Categories[targetCategory]={};
+  
+  // Check for unique classname across entire dataset
+  var validation = validateUniqueClassname(name, ds);
+  if(!validation.valid) {
+    var conflictDetails = validation.conflicts.map(function(c) {
+      if(c.type === 'item') return c.category + '/' + c.classname;
+      return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+    }).join(', ');
+    
+    var uniqueName = generateUniqueClassname(name, ds);
+    if(confirm('Classname "' + name + '" já existe em: ' + conflictDetails + '.\n\nDeseja restaurar como "' + uniqueName + '"?')) {
+      name = uniqueName;
+    } else {
+      return;
+    }
+  }
   var base = ds==='weapons'? { tier:null,value:null,ammo_types:[],chamber_size:1,magazines:[],variants:[],attachments:{},flags:[] } : { tier:null,value:null,variants:[],attachments:[],flags:[] };
   data.Categories[targetCategory][name]=base; markDirty(ds); renderNav(); renderEditor();
   // remove from trash list locally and persist
@@ -400,7 +930,33 @@ function removeArrayValue(el){ var pill=el.closest('.pill'); var index=parseInt(
   markDirty(ds); renderEditor(); buildPalette(); }
 function paletteAdd(value){ var sel=getSelected(); if(!sel) return alert('Selecione um item.'); var ds=sel.dataset; var item=state[ds].Categories[sel.category][sel.classname]; if(ds==='weapons'){ var slot=prompt('Slot destino:'); if(!slot) return; pushHistory(); if(!item.attachments || typeof item.attachments!=='object') item.attachments={}; if(!item.attachments[slot]) item.attachments[slot]=[]; if(item.attachments[slot].indexOf(value)===-1) item.attachments[slot].push(value); } else { pushHistory(); if(!Array.isArray(item.attachments)) item.attachments=[]; if(item.attachments.indexOf(value)===-1) item.attachments.push(value); } markDirty(ds); renderEditor(); buildPalette(); }
 
-document.addEventListener('blur', function(e){ var input=e.target; if(!input.matches('[data-field]')) return; var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var category=sel.category, oldClass=sel.classname; var item=state[ds].Categories[category][oldClass]; var field=input.dataset.field; var vn=input.dataset.variant; var selectedVariant=sel.variant; if(field==='_variant_name' && selectedVariant){ var newVariantName=input.value.trim(); if(newVariantName && newVariantName!==selectedVariant){ if(Array.isArray(item.variants)){ item.variants = item.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); } if(!item.variants || typeof item.variants!=='object') item.variants={}; if(item.variants[newVariantName]){ alert('Nome de variante já existe.'); input.value=selectedVariant; return; } pushHistory(); item.variants[newVariantName]=item.variants[selectedVariant]||{}; delete item.variants[selectedVariant]; state.selectedVariant[state.active] = newVariantName; markDirty(ds); renderNav(); renderEditor(); return; } } else if(field==='_classname'){ var newName=input.value.trim(); if(newName && newName!==oldClass){ if(state[ds].Categories[category][newName]){ alert('Classname já existe.'); input.value=oldClass; return; } pushHistory(); state[ds].Categories[category][newName]=item; delete state[ds].Categories[category][oldClass]; if(state.active==='_all'){ state.selected['_all']={ dataset:ds, category:category, classname:newName }; } else { state.selected[ds]={category:category, classname:newName}; }
+document.addEventListener('blur', function(e){ var input=e.target; if(!input.matches('[data-field]')) return; var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var category=sel.category, oldClass=sel.classname; var item=state[ds].Categories[category][oldClass]; var field=input.dataset.field; var vn=input.dataset.variant; var selectedVariant=sel.variant; if(field==='_variant_name' && selectedVariant){ var newVariantName=input.value.trim(); if(newVariantName && newVariantName!==selectedVariant){ if(Array.isArray(item.variants)){ item.variants = item.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); } if(!item.variants || typeof item.variants!=='object') item.variants={};
+      
+      // Check for unique variant name across entire dataset (excluding current variant)
+      var validation = validateUniqueClassname(newVariantName, ds, category, oldClass);
+      if(!validation.valid) {
+        var conflictDetails = validation.conflicts.map(function(c) {
+          if(c.type === 'item') return c.category + '/' + c.classname;
+          return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+        }).join(', ');
+        alert('Nome "' + newVariantName + '" já existe em: ' + conflictDetails + '.\n\nEscolha um nome único para a variante.');
+        input.value = selectedVariant;
+        return;
+      }
+      
+      if(item.variants[newVariantName]){ alert('Nome de variante já existe neste item.'); input.value=selectedVariant; return; } pushHistory(); item.variants[newVariantName]=item.variants[selectedVariant]||{}; delete item.variants[selectedVariant]; state.selectedVariant[state.active] = newVariantName; markDirty(ds); renderNav(); renderEditor(); return; } } else if(field==='_classname'){ var newName=input.value.trim(); if(newName && newName!==oldClass){ 
+      // Check for unique classname across entire dataset (excluding current item)
+      var validation = validateUniqueClassname(newName, ds, category, oldClass);
+      if(!validation.valid) {
+        var conflictDetails = validation.conflicts.map(function(c) {
+          if(c.type === 'item') return c.category + '/' + c.classname;
+          return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+        }).join(', ');
+        alert('Classname "' + newName + '" já existe em: ' + conflictDetails + '.\n\nEscolha um nome único.');
+        input.value = oldClass;
+        return;
+      }
+      pushHistory(); state[ds].Categories[category][newName]=item; delete state[ds].Categories[category][oldClass]; if(state.active==='_all'){ state.selected['_all']={ dataset:ds, category:category, classname:newName }; } else { state.selected[ds]={category:category, classname:newName}; }
       }
     } else {
       pushHistory();
@@ -431,6 +987,11 @@ document.getElementById('btn-add-category').addEventListener('click', function()
   // Repurpose: create a NEW dataset (.json) instead of a category
   createDatasetFlow();
 });
+// Find Variants button wiring
+var btnFindVar = document.getElementById('btn-find-variants');
+if(btnFindVar){
+  btnFindVar.addEventListener('click', function(){ openFindVariantsModal(); });
+}
 // Top bar: + Novo .json
 var btnAddDs = document.getElementById('btn-add-dataset');
 if(btnAddDs){
@@ -459,7 +1020,23 @@ function findAndFocusVariant(name){ // simple search by exact classname across d
     }
   alert('Não encontrado: '+name);
 }
-function createItemFromPending(name, targetCategory, targetDataset){ var ds = targetDataset || (state.active==='_all'? (prompt('Dataset destino ('+state._datasets.join(', ')+'):', (state._datasets.indexOf('weapons')!==-1?'weapons':state._datasets[0]||''))||'').trim().toLowerCase() : state.active); if(!ds||!state[ds]) return; var data=state[ds]; if(!data.Categories[targetCategory]) data.Categories[targetCategory]={}; if(data.Categories[targetCategory][name]){ alert('Já existe um item '+name+' em '+targetCategory); return; }
+function createItemFromPending(name, targetCategory, targetDataset){ var ds = targetDataset || (state.active==='_all'? (prompt('Dataset destino ('+state._datasets.join(', ')+'):', (state._datasets.indexOf('weapons')!==-1?'weapons':state._datasets[0]||''))||'').trim().toLowerCase() : state.active); if(!ds||!state[ds]) return; var data=state[ds]; if(!data.Categories[targetCategory]) data.Categories[targetCategory]={};
+  
+  // Check for unique classname across entire dataset
+  var validation = validateUniqueClassname(name, ds);
+  if(!validation.valid) {
+    var conflictDetails = validation.conflicts.map(function(c) {
+      if(c.type === 'item') return c.category + '/' + c.classname;
+      return c.category + '/' + c.classname + ' (variante: ' + c.variant + ')';
+    }).join(', ');
+    
+    var uniqueName = generateUniqueClassname(name, ds);
+    if(confirm('Classname "' + name + '" já existe em: ' + conflictDetails + '.\n\nDeseja usar "' + uniqueName + '" no lugar?')) {
+      name = uniqueName;
+    } else {
+      return;
+    }
+  }
   var base = ds==='weapons'? { tier:null,value:null,ammo_types:[],chamber_size:1,magazines:[],variants:[],attachments:{},flags:[] } : { tier:null,value:null,variants:[],attachments:[],flags:[] };
   data.Categories[targetCategory][name]=base; markDirty(ds); renderNav(); renderEditor(); // remove from pending list
   var idx = (state.pending.items||[]).findIndex(function(it){ return (typeof it==='string'?it:it.name)===name; }); if(idx!==-1){ state.pending.items.splice(idx,1); savePending(true); renderPending(); }
@@ -504,6 +1081,51 @@ function renderDatasetChips(){ var host=document.getElementById('dataset-chips')
   host.innerHTML=html || '<div class="text-xs text-gray-500">Nenhum dataset encontrado</div>';
 }
 
+// Leftmost Folders (Categories) Pane
+function renderFoldersPane(){
+  var pane = document.getElementById('folders-pane');
+  var listEl = document.getElementById('folders-list');
+  if(!pane || !listEl){ return; }
+  // Only show for a concrete dataset (not _all)
+  if(state.active==='_all' || !state[state.active]){ listEl.innerHTML = '<div class="text-xs text-gray-500">Selecione um dataset</div>'; return; }
+  var ds = state[state.active];
+  var cats = Object.keys(ds.Categories||{}).sort();
+  var html = '';
+  cats.forEach(function(cat){
+    var checked = !!state.multiCategory[cat];
+    html += '<label class="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 droppable" data-drop-type="category" data-kind="'+state.active+'" data-category="'+cat+'">'
+      + '<input type="checkbox" class="folder-check" data-category="'+cat+'" '+(checked?'checked':'')+'>'
+      + '<span class="text-sm flex-1">'+cat+'</span>'
+      + '</label>';
+  });
+  listEl.innerHTML = html || '<div class="text-xs text-gray-500">Sem categorias</div>';
+}
+
+// Folders toolbar buttons
+document.addEventListener('click', function(e){
+  if(e.target && e.target.id==='folders-select-all'){
+    if(state.active==='_all' || !state[state.active]) return;
+    var ds = state[state.active]; var cats = Object.keys(ds.Categories||{});
+    state.multiCategory = {}; cats.forEach(function(c){ state.multiCategory[c]=true; });
+    renderFoldersPane(); renderNav();
+    return;
+  }
+  if(e.target && e.target.id==='folders-clear'){
+    state.multiCategory = {}; renderFoldersPane(); renderNav(); return;
+  }
+});
+
+// Checkbox toggles inside folders list
+document.addEventListener('change', function(e){
+  var chk = e.target;
+  if(chk && chk.classList && chk.classList.contains('folder-check')){
+    var cat = chk.dataset.category;
+    if(!cat) return;
+    if(chk.checked){ state.multiCategory[cat] = true; } else { delete state.multiCategory[cat]; }
+    renderNav();
+  }
+});
+
 function deepMerge(target, src){ if(Array.isArray(src)) return src.slice(); if(src && typeof src==='object'){ var out = (target && typeof target==='object')? JSON.parse(JSON.stringify(target)) : {}; Object.keys(src).forEach(function(k){ out[k]=deepMerge(out[k], src[k]); }); return out; } return src; }
 function promoteVariant(dsName, category, currentName, newName){ var ds=state[dsName]; var items=ds.Categories[category]; var item=items[currentName]; if(!item) return;
   pushHistory();
@@ -544,7 +1166,7 @@ function createDatasetFlow(){
     var ds = (res.data && res.data.dataset) ? String(res.data.dataset).toLowerCase() : (name.replace(/\s+/g,'')||name).toLowerCase();
     return refreshAll().then(function(){
       if(state._datasets.indexOf(ds)!==-1){ state.active = ds; }
-      renderDatasetChips(); renderNav(); renderEditor(); buildPalette();
+      renderDatasetChips(); renderFoldersPane(); renderNav(); renderEditor(); buildPalette();
       alert('Criado dataset: '+ds);
     });
   }).catch(function(err){
@@ -639,3 +1261,113 @@ document.addEventListener('keydown', function(e){
 // Floating FAB for adding new category to current dataset
 var fab = document.getElementById('btn-add-category-fab');
 if(fab){ fab.addEventListener('click', function(){ var ds = state.active==='_all' ? null : state.active; if(!ds || !state[ds]){ alert('Selecione um dataset para adicionar categoria.'); return; } var name = (prompt('Nome da nova categoria:')||'').trim(); if(!name) return; var data=state[ds]; if(!data.Categories[name]){ pushHistory(); data.Categories[name]={}; } else { alert('Categoria já existe.'); return; } markDirty(ds); renderNav(); renderCategoryChips(); }); }
+
+// ========================
+// Find Variants Modal Logic
+// ========================
+function openFindVariantsModal(){
+  if(state.active==='_all' || !state[state.active]){ alert('Abra um dataset específico para usar esta função.'); return; }
+  var ds = state[state.active];
+  var select = document.getElementById('fv-category');
+  var summary = document.getElementById('fv-summary');
+  var modal = document.getElementById('fv-modal');
+  if(!select || !summary || !modal) return;
+  // Fill categories
+  select.innerHTML = Object.keys(ds.Categories||{}).sort().map(function(c){ return '<option value="'+c+'">'+c+'</option>'; }).join('');
+  // Preselect current filter or first
+  var pre = state.filters.category && ds.Categories[state.filters.category] ? state.filters.category : (Object.keys(ds.Categories||{})[0]||'');
+  if(pre) select.value = pre;
+  // Analyze and render preview
+  var plan = analyzeCategoryForVariants(state.active, select.value);
+  state._fvPlan = plan;
+  renderFindVariantsPreview(plan);
+  // Show modal
+  modal.classList.remove('hidden'); modal.classList.add('flex');
+}
+
+function analyzeCategoryForVariants(dataset, category){
+  var ds = state[dataset]; var items = (ds && ds.Categories && ds.Categories[category])? ds.Categories[category] : {};
+  // Group by base=substring before last underscore. Names without underscore remain alone.
+  var groups = {};
+  Object.keys(items).forEach(function(name){
+    var idx = name.lastIndexOf('_');
+    var base = idx>0 ? name.slice(0, idx) : name;
+    if(!groups[base]) groups[base]=[];
+    groups[base].push(name);
+  });
+  // Build actions: for each group with more than 1 item, choose a principal and variants
+  var actions = [];
+  Object.keys(groups).forEach(function(base){
+    var names = groups[base].slice().sort();
+    if(names.length<=1) return;
+    // Heuristic: pick name equal to base if exists, else shortest, else lexicographically first
+    var principal = names.indexOf(base)!==-1 ? base : names.reduce(function(a,b){ return a.length<=b.length? a:b; });
+    var variants = names.filter(function(n){ return n!==principal; }).map(function(n){ return { variant: n, overrides: {} }; });
+    actions.push({ dataset: dataset, category: category, principal: principal, variants: variants });
+  });
+  return { dataset: dataset, category: category, actions: actions };
+}
+
+function renderFindVariantsPreview(plan){
+  var summary = document.getElementById('fv-summary');
+  if(!summary) return;
+  if(!plan || !plan.actions || plan.actions.length===0){ summary.innerHTML = '<div class="text-xs text-gray-400">Nada a agrupar nesta categoria.</div>'; return; }
+  var html = '';
+  plan.actions.forEach(function(act){
+    html += '<div class="mb-2 p-2 rounded bg-gray-700">'
+      + '<div class="text-sm">Principal: <span class="text-green-300">'+act.principal+'</span></div>'
+      + '<div class="text-xs text-gray-300">Variantes: '+act.variants.map(function(v){ return v.variant; }).join(', ')+'</div>'
+      + '</div>';
+  });
+  summary.innerHTML = html;
+}
+
+function applyFindVariants(){
+  var plan = state._fvPlan; if(!plan || !plan.actions || plan.actions.length===0) return;
+  var ds = plan.dataset; var cat = plan.category; var data = state[ds]; if(!data || !data.Categories || !data.Categories[cat]) return;
+  pushHistory();
+  plan.actions.forEach(function(act){
+    var items = data.Categories[cat];
+    var target = items[act.principal];
+    if(!target) return;
+    ensureVariantsObject(target);
+    act.variants.forEach(function(v){
+      var vname = v.variant;
+      if(!items[vname]) return; // only handle if exists as item
+      // Ensure unique across dataset (excluding target principal itself)
+      var validation = validateUniqueClassname(vname, ds, cat, act.principal);
+      if(!validation.valid){
+        var newName = generateUniqueClassname(vname, ds);
+        showToast('Renomeando variante conflitante "'+vname+'" para "'+newName+'"', 'warning');
+        vname = newName;
+      }
+      if(!target.variants[vname]) target.variants[vname] = v.overrides || {};
+      // Remove the original item that became a variant
+      delete items[vname];
+    });
+  });
+  markDirty(ds);
+  renderNav(); renderEditor();
+  // Close modal
+  var modal = document.getElementById('fv-modal'); if(modal){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
+  showToast('Agrupamento de variantes aplicado', 'success');
+}
+
+// Modal controls
+document.addEventListener('click', function(e){
+  if(e.target && (e.target.id==='fv-close' || e.target.id==='fv-cancel')){
+    var modal = document.getElementById('fv-modal'); if(modal){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
+    return;
+  }
+  if(e.target && e.target.id==='fv-apply'){
+    applyFindVariants();
+    return;
+  }
+});
+
+document.addEventListener('change', function(e){
+  if(e.target && e.target.id==='fv-category'){
+    var plan = analyzeCategoryForVariants(state.active, e.target.value);
+    state._fvPlan = plan; renderFindVariantsPreview(plan);
+  }
+});

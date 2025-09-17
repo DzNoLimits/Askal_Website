@@ -13,43 +13,11 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "BarrelHoles_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BarrelHoles_Red": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BarrelHoles_Yellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "BarrelHoles_Green": {},
+                    "BarrelHoles_Red": {},
+                    "BarrelHoles_Yellow": {}
+                }
             },
             "Candle": {
                 "flags": [

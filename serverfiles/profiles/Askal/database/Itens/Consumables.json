@@ -799,66 +799,6 @@
                 "value": 240,
                 "variants": {}
             },
-            "Chemlight_Blue": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_Red": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_White": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chemlight_Yellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
             "CowPelt": {
                 "flags": [
                     "Market",
@@ -1253,19 +1193,9 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "Spraycan_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "Spraycan_Green": {}
+                }
             },
             "Stone": {
                 "flags": [
@@ -1340,6 +1270,68 @@
                 "variants": {}
             },
             "WoodenPlank": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        },
+        "Lights": {
+            "Chemlight_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Chemlight_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Chemlight_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Chemlight_White": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Chemlight_Yellow": {
                 "flags": [
                     "Market",
                     "Secure",

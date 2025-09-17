@@ -111,78 +111,6 @@
                 "value": 240,
                 "variants": {}
             },
-            "Plant_Cannabis": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plant_Pepper": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plant_Potato": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plant_Pumpkin": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plant_Tomato": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plant_Zucchini": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
             "PotatoSeed": {
                 "flags": [
                     "Market",
@@ -256,6 +184,80 @@
                 "variants": {}
             },
             "ZucchiniSeedsPack": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        },
+        "Plants": {
+            "Plant_Cannabis": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Pepper": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Potato": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Pumpkin": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Tomato": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Zucchini": {
                 "flags": [
                     "Market",
                     "Secure",

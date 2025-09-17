@@ -2,7 +2,7 @@
     "database_version": "0.2",
     "last_updated": "2024-01-15",
     "Categories": {
-        "Optics": {
+        "Backpacks": {
             "AliceBag_Black": {
                 "flags": [
                     "Market",
@@ -13,55 +13,10 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "AliceBag_Camo": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AliceBag_FarBubble": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AliceBag_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AliceBag_NearBubble": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "AliceBag_Camo": {},
+                    "AliceBag_Green": {}
+                }
             },
             "ArmyPouch_Beige": {
                 "flags": [
@@ -73,43 +28,11 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "ArmyPouch_Black": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ArmyPouch_Camo": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ArmyPouch_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "ArmyPouch_Black": {},
+                    "ArmyPouch_Camo": {},
+                    "ArmyPouch_Green": {}
+                }
             },
             "AssaultBag_Black": {
                 "flags": [
@@ -121,43 +44,11 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "AssaultBag_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AssaultBag_Ttsko": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AssaultBag_Winter": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "AssaultBag_Green": {},
+                    "AssaultBag_Ttsko": {},
+                    "AssaultBag_Winter": {}
+                }
             },
             "CanvasBag_Medical": {
                 "flags": [
@@ -169,19 +60,9 @@
                 ],
                 "tier": 4,
                 "value": 240,
-                "variants": {}
-            },
-            "CanvasBag_Olive": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
+                "variants": {
+                    "CanvasBag_Olive": {}
+                }
             },
             "ChildBag_Blue": {
                 "flags": [
@@ -843,6 +724,8 @@
                 "value": 240,
                 "variants": {}
             }
-        }
+        },
+        "Mochilas Militares": {},
+        "Camuflagem": {}
     }
 }
