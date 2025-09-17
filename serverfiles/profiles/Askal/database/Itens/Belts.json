@@ -1,0 +1,164 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "BELTS": {
+            "CivilianBelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HipPack_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HipPack_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HipPack_Medical": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HipPack_Party": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherBelt_Beige": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherBelt_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherBelt_Brown": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherBelt_Natural": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherKnifeSheath": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MilitaryBelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "NylonKnifeSheath": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "RopeBelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            }
+        }
+    }
+}

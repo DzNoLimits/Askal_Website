@@ -1,0 +1,224 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Crafting": {
+            "BurlapSack": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "ChickenFeather": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "GasMask_Filter_Improvised": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "GorkaHelmetVisor": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "HandDrillKit": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "LongTorch": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "LongWoodenStick": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "MetalWire": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "MetalWireLocked": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "Rope": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "RopeLocked": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "SharpWoodenStick": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "Spear": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "SpearBone": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "SpearStone": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "Torch": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "Torch_Video": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            },
+            "WoodenStick": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 1,
+                "value": 100,
+                "variants": []
+            }
+        }
+    }
+}

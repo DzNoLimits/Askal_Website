@@ -1,0 +1,80 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Navigation": {
+            "ChernarusMap": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ChernarusMap_Open": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ChernarusMap_Open_Test": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Compass": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GPSReceiver": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "OrienteeringCompass": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            }
+        }
+    }
+}

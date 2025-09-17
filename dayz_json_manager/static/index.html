@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Askal Database Manager</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <style>
+    .pill{display:inline-flex;align-items:center;background:#3a3a3a;border-radius:4px;padding:2px 6px;font-size:11px;margin:0 4px 4px 0}
+    .pill button{margin-left:4px;color:#dc2626;line-height:1}
+    .pill button:hover{color:#b91c1c}
+    .nav-item{cursor:pointer;padding:4px 8px;border-radius:4px;font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:6px}
+    .nav-item.active{background:#2563eb;color:#fff}
+    .nav-category{font-weight:600;padding:6px 6px 4px;font-size:12px;color:#374151}
+    .dirty-dot{width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block;margin-left:4px}
+    .editor-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#374151}
+    .editor-box{background:#1f1f1f;border-radius:6px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+    .palette-item{font-size:11px;background:#f3f4f6;padding:4px 6px;border-radius:4px;cursor:grab;display:flex;justify-content:space-between;align-items:center}
+    .palette-item:hover{background:#e5e7eb}
+    .chip{padding:4px 10px;border-radius:16px;background:#e5e7eb;cursor:pointer;font-size:12px;white-space:nowrap}
+    .chip.active{background:#2563eb;color:#fff}
+    .droppable{outline:2px dashed transparent}
+    .droppable.drag-over{outline-color:#2563eb}
+    /* Themes */
+    .theme-dark{background:#111827;color:#e5e7eb}
+    .theme-dark .bg-white{background:#1f2937 !important;color:#e5e7eb}
+    .theme-dark .bg-gray-50{background:#111827 !important}
+    .theme-dark .border{border-color:#374151 !important}
+    .theme-dark input, .theme-dark select{background:#111827;color:#e5e7eb;border-color:#374151}
+    .theme-dark .nav-item.active{background:#3b82f6;color:#fff}
+    .theme-dark .palette-item{background:#374151;color:#e5e7eb}
+    .theme-dark .palette-item:hover{background:#4b5563}
+    .theme-dark .chip{background:#374151;color:#e5e7eb}
+    .theme-dark .chip.active{background:#3b82f6;color:#fff}
+    .theme-contrast{filter:contrast(1.35) saturate(1.2)}
+    /* Minimal dark scrollbars */
+    * { scrollbar-width: thin; scrollbar-color: #4b5563 #1f2937; }
+    *::-webkit-scrollbar{ width:8px; height:8px }
+    *::-webkit-scrollbar-track{ background:#1f2937 }
+    *::-webkit-scrollbar-thumb{ background:#4b5563; border-radius:6px }
+    *::-webkit-scrollbar-thumb:hover{ background:#6b7280 }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen theme-dark">
+  <div class="flex flex-col h-screen">
+  <header class="p-4 bg-white shadow flex flex-wrap gap-3 items-center sticky top-0 z-10">
+      <div class="flex items-center gap-4">
+        <h1 class="text-xl font-bold">Askal Economy Manager</h1>
+        <div id="dataset-dirty-indicator" class="text-xs text-gray-500"></div>
+      </div>
+      <div class="flex gap-2 ml-auto flex-wrap">
+        <button id="btn-refresh" class="px-3 py-2 bg-blue-500 text-white rounded">Recarregar</button>
+        <button id="btn-save-active" class="px-3 py-2 bg-green-600 text-white rounded">Salvar Aba</button>
+        <button id="btn-save-all" class="px-3 py-2 bg-green-700 text-white rounded">Salvar Tudo</button>
+        <button id="btn-add-item" class="px-3 py-2 bg-indigo-500 text-white rounded">Novo Item</button>
+        <button id="btn-add-category" class="px-3 py-2 bg-purple-500 text-white rounded">Nova Categoria</button>
+        <button id="btn-toggle-pending" class="px-3 py-2 bg-yellow-600 text-white rounded">Pendentes</button>
+      </div>
+    </header>
+    <div class="p-3 bg-gray-50 flex gap-3 items-center text-sm">
+      <input id="search" placeholder="Buscar classname..." class="px-3 py-2 border rounded w-64">
+      <div id="flags-chips" class="flex flex-wrap gap-2"></div>
+    </div>
+    <div class="px-3 py-2 bg-gray-50 border-t flex items-center gap-3 overflow-x-auto">
+      <div id="dataset-chips" class="flex items-center gap-2"></div>
+      <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">+ Novo .json</button>
+    </div>
+    <div class="flex flex-1 overflow-hidden">
+      <aside class="w-64 bg-white border-r overflow-y-auto" id="nav-pane"></aside>
+      <main class="flex-1 overflow-y-auto p-4" id="editor-pane">
+        <p class="text-sm text-gray-500">Selecione um item à esquerda para editar.</p>
+      </main>
+      <aside class="w-72 bg-white border-l flex flex-col" id="palette-pane">
+        <div class="p-3 border-b flex items-center justify-between">
+          <h2 id="palette-title" class="font-semibold text-sm">Attachments</h2>
+          <span id="palette-count" class="text-xs text-gray-500"></span>
+        </div>
+        <!-- Attachments tab content -->
+        <div id="attachments-pane" class="flex-1 flex flex-col">
+          <div class="p-2 border-b"><input id="palette-filter" placeholder="Filtrar attachments..." class="px-2 py-1 border rounded w-full"></div>
+          <div id="palette-list" class="p-3 space-y-2 overflow-y-auto flex-1"></div>
+          <div class="p-3 text-xs text-gray-500 border-t">Arraste e solte no editor ou clique para adicionar.</div>
+        </div>
+        <!-- Pending tab content -->
+        <div id="pending-pane" class="flex-1 flex-col hidden relative">
+          <div id="pending-list" class="p-2 space-y-2 overflow-y-auto" style="max-height: calc(100vh - 220px);"></div>
+          <button id="btn-pending-add" class="absolute bottom-3 right-3 px-2 py-1 bg-indigo-600 text-white text-xs rounded shadow">+ Adicionar</button>
+          <div class="p-2 text-xs text-gray-500 border-t">Arraste para uma categoria à esquerda para criar o item.</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <!-- Modal for adding pending items -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white theme-dark rounded shadow-lg w-full max-w-xl p-4">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-semibold">Adicionar pendências</h3>
+        <button id="modal-close" class="px-2 py-1">✕</button>
+      </div>
+      <div class="mb-2 text-sm">Cole várias linhas (uma por item):</div>
+      <textarea id="modal-text" class="w-full h-40 border rounded p-2" placeholder="Ex:\nAKM\nSkorpion\nM4A1"></textarea>
+      <div class="mt-3 flex justify-end gap-2">
+        <button id="modal-cancel" class="px-3 py-1 rounded border">Cancelar</button>
+        <button id="modal-apply" class="px-3 py-1 rounded bg-green-600 text-white">Aplicar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!-- Credits:
+ <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Ilham Fitrotul Hayat - Flaticon</a>
+
+
+
+-->

@@ -1,0 +1,176 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Cookings": {
+            "BarrelHoles_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BarrelHoles_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BarrelHoles_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BarrelHoles_Yellow": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Candle": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Cauldron": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CookingStand": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Fireplace": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "FryingPan": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PetrolLighter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PortableGasLamp": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PortableGasStove": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Pot": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Tripod": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            }
+        }
+    }
+}

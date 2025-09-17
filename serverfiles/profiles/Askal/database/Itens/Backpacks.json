@@ -1,0 +1,848 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Optics": {
+            "AliceBag_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AliceBag_Camo": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AliceBag_FarBubble": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AliceBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AliceBag_NearBubble": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ArmyPouch_Beige": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ArmyPouch_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ArmyPouch_Camo": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ArmyPouch_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AssaultBag_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AssaultBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AssaultBag_Ttsko": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "AssaultBag_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CanvasBag_Medical": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CanvasBag_Olive": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ChildBag_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ChildBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ChildBag_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CourierBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CoyoteBag_Brown": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CoyoteBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CoyoteBag_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Orange": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DryBag_Yellow": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DrysackBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DrysackBag_Orange": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DrysackBag_Yellow": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DuffelBagSmall_Camo": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DuffelBagSmall_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DuffelBagSmall_Medical": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "FurCourierBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "FurImprovisedBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieBushrag_Mossy": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieBushrag_Tan": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieBushrag_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieBushrag_Woodland": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieSuit_Mossy": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieSuit_Tan": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieSuit_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieSuit_Woodland": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieTop_Mossy": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieTop_Tan": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieTop_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GhillieTop_Woodland": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HuntingBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "HuntingBag_Hannah": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ImprovisedBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LargeTentBackPack": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherSack_Beige": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherSack_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherSack_Brown": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LeatherSack_Natural": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MountainBag_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MountainBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MountainBag_Orange": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MountainBag_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SlingBag_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SlingBag_Brown": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SlingBag_Gray": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SmershBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TaloonBag_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TaloonBag_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TaloonBag_Orange": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TaloonBag_Violet": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TortillaBag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TortillaBag_Winter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            }
+        }
+    }
+}

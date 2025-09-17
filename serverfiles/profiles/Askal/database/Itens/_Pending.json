@@ -1,0 +1,58 @@
+{
+    "items": [
+        {
+            "name": "BallisticHelmet_BDU"
+        },
+        {
+            "name": "BallisticHelmet_Black"
+        },
+        {
+            "name": "BallisticHelmet_Green"
+        },
+        {
+            "name": "BallisticHelmet_Navy"
+        },
+        {
+            "name": "BallisticHelmet_UN"
+        },
+        {
+            "name": "BallisticHelmet_Winter"
+        },
+        {
+            "name": "BallisticHelmet_Woodland"
+        },
+        {
+            "name": "BaseballCap_Beige"
+        },
+        {
+            "name": "BaseballCap_Black"
+        },
+        {
+            "name": "BaseballCap_Blue"
+        },
+        {
+            "name": "BaseballCap_CMMG_Black"
+        },
+        {
+            "name": "BaseballCap_CMMG_Pink"
+        },
+        {
+            "name": "BaseballCap_Camo"
+        },
+        {
+            "name": "BaseballCap_ColorBase"
+        },
+        {
+            "name": "BaseballCap_Olive"
+        },
+        {
+            "name": "BaseballCap_Pink"
+        },
+        {
+            "name": "BaseballCap_Red"
+        },
+        {
+            "name": "HeadCover_Improvised"
+        }
+    ]
+}
