@@ -51,410 +51,418 @@ function showToast(message, type) {
     // Fallback
     console.log('[toast]', type || 'info', message);
   }
-}
 
-// --- Global helpers used across editor and DnD ---
-function ensureVariantsObject(it) { if (!it) return {}; if (Array.isArray(it.variants)) { var obj = {}; it.variants.forEach(function (n) { obj[n] = {}; }); it.variants = obj; } else if (!it.variants || typeof it.variants !== 'object') { it.variants = {}; } return it.variants; }
-function validateUniqueClassname(classname, dataset, excludeCategory, excludeClass) {
-  if (!classname || !dataset || !state[dataset] || !state[dataset].Categories) return { valid: true };
-  var cats = state[dataset].Categories; var conflicts = [];
-  Object.keys(cats).forEach(function (catName) {
-    if (excludeCategory === catName && excludeClass) return; var items = cats[catName]; Object.keys(items).forEach(function (itemName) {
-      if (excludeCategory === catName && excludeClass === itemName) return; if (itemName === classname) { conflicts.push({ type: 'item', category: catName, classname: itemName }); }
-      var item = items[itemName]; if (item.variants && typeof item.variants === 'object') { Object.keys(item.variants).forEach(function (variantName) { if (variantName === classname) { conflicts.push({ type: 'variant', category: catName, classname: itemName, variant: variantName }); } }); }
-    });
-  });
-  return { valid: conflicts.length === 0, conflicts: conflicts };
-}
-function generateUniqueClassname(baseName, dataset) { var counter = 1; var testName = baseName; while (!validateUniqueClassname(testName, dataset).valid) { counter++; testName = baseName + '_' + counter; } return testName; }
-
-// Validate dataset integrity and report conflicts
-function validateDatasetIntegrity(dataset) {
-  if (!state[dataset] || !state[dataset].Categories) return;
-
-  var allNames = {};
-  var conflicts = [];
-  var categories = state[dataset].Categories;
-
-  // Collect all classnames and variant names
-  Object.keys(categories).forEach(function (catName) {
-    var items = categories[catName];
-    Object.keys(items).forEach(function (itemName) {
-      // Check main item name
-      if (allNames[itemName]) {
-        conflicts.push({
-          name: itemName,
-          existing: allNames[itemName],
-          new: { type: 'item', category: catName, classname: itemName }
-        });
-      } else {
-        allNames[itemName] = { type: 'item', category: catName, classname: itemName };
-      }
-
-      // Check variants
-      var item = items[itemName];
-      if (item.variants && typeof item.variants === 'object') {
-        Object.keys(item.variants).forEach(function (variantName) {
-          if (allNames[variantName]) {
-            conflicts.push({
-              name: variantName,
-              existing: allNames[variantName],
-              new: { type: 'variant', category: catName, classname: itemName, variant: variantName }
-            });
-          } else {
-            allNames[variantName] = { type: 'variant', category: catName, classname: itemName, variant: variantName };
-          }
-        });
-      }
-    });
-  });
-
-  // Report conflicts if any
-  if (conflicts.length > 0) {
-    console.warn('🚨 Conflitos de classnames detectados em ' + dataset + ':');
-    conflicts.forEach(function (conflict) {
-      var existingDesc = conflict.existing.type === 'item'
-        ? conflict.existing.category + '/' + conflict.existing.classname
-        : conflict.existing.category + '/' + conflict.existing.classname + ' (variante: ' + conflict.existing.variant + ')';
-      var newDesc = conflict.new.type === 'item'
-        ? conflict.new.category + '/' + conflict.new.classname
-        : conflict.new.category + '/' + conflict.new.classname + ' (variante: ' + conflict.new.variant + ')';
-      console.warn('  ⚠️  "' + conflict.name + '": ' + existingDesc + ' ↔ ' + newDesc);
-    });
-
-    // Show user notification
-    if (conflicts.length < 10) {
-      var message = 'Detectados ' + conflicts.length + ' conflitos de nomes em ' + dataset + ':\n\n';
-      conflicts.slice(0, 5).forEach(function (c) {
-        message += '• "' + c.name + '"\n';
+  // --- Global helpers used across editor and DnD ---
+  function ensureVariantsObject(it) { if (!it) return {}; if (Array.isArray(it.variants)) { var obj = {}; it.variants.forEach(function (n) { obj[n] = {}; }); it.variants = obj; } else if (!it.variants || typeof it.variants !== 'object') { it.variants = {}; } return it.variants; }
+  function validateUniqueClassname(classname, dataset, excludeCategory, excludeClass) {
+    if (!classname || !dataset || !state[dataset] || !state[dataset].Categories) return { valid: true };
+    var cats = state[dataset].Categories; var conflicts = [];
+    Object.keys(cats).forEach(function (catName) {
+      if (excludeCategory === catName && excludeClass) return; var items = cats[catName]; Object.keys(items).forEach(function (itemName) {
+        if (excludeCategory === catName && excludeClass === itemName) return; if (itemName === classname) { conflicts.push({ type: 'item', category: catName, classname: itemName }); }
+        var item = items[itemName]; if (item.variants && typeof item.variants === 'object') { Object.keys(item.variants).forEach(function (variantName) { if (variantName === classname) { conflicts.push({ type: 'variant', category: catName, classname: itemName, variant: variantName }); } }); }
       });
-      if (conflicts.length > 5) message += '• ... e mais ' + (conflicts.length - 5) + ' conflitos\n';
-      message += '\nVerifique o console do navegador para detalhes.';
-      alert(message);
-    }
-  } else {
-    console.log('✅ Dataset ' + dataset + ' carregado sem conflitos de nomes');
-  }
-}
-function refreshAll() {
-  return axios.get('/api/datasets').then(function (res) {
-    var list = Array.isArray(res.data) ? res.data : [];
-    state._datasets = list;
-    // Load all datasets in parallel
-    return Promise.all(list.map(function (k) { return load(k); }));
-  }).then(function () {
-    // Load pending store and trash in parallel
-    return Promise.all([
-      axios.get('/api/pending').then(function (r) { state.pending = r.data || { items: [] }; }).catch(function () { state.pending = { items: [] }; }),
-      axios.get('/api/trash').then(function (r) { state.trash = r.data || { classes: [] }; }).catch(function () { state.trash = { classes: [] }; })
-    ]);
-  }).then(function () {
-    // Ensure there is an active dataset selected
-    if (!state.active || state._datasets.indexOf(state.active) === -1) {
-      state.active = (state._datasets.indexOf('weapons') !== -1) ? 'weapons' : (state._datasets[0] || '');
-    }
-    
-    renderDatasetChips(); 
-    renderCategoryChips(); 
-    renderFlagsChips(); 
-    buildPalette(); 
-    renderPending(); 
-    renderTrash(); 
-    renderRightTab(); 
-    
-    // NOVO: Usar a nova função de pastas
-    forceRenderFolders(); 
-    
-    renderNav(); 
-    renderEditor(); 
-    updateDirtyIndicator(); 
-    applyTheme('dark');
-  }).catch(function (err) { 
-    console.error('Falha ao carregar datasets', err); 
-  });
-}
-
-function setActive(tab) {
-  console.log('=== SETACTIVE CALLED ===', tab);
-  
-  state.active = tab;
-  state.filters = { category: '', flags: [] };
-  state.multiCategory = {}; // Reset completo
-  
-  // Limpar seleções do dataset anterior
-  if (state.selected[tab]) {
-    state.selected[tab] = null;
-  }
-  state.selectedVariant[tab] = null;
-  
-  // Renderizar na ordem correta
-  renderDatasetChips();
-  renderCategoryChips();
-  renderFlagsChips();
-  
-  // NOVO: Renderizar pastas de forma independente e forçada
-  forceRenderFolders();
-  
-  renderNav();
-  renderEditor();
-  buildPalette();
-  
-  console.log('=== SETACTIVE COMPLETE ===');
-}
-
-// NOVA função independente para renderizar pastas
-function forceRenderFolders() {
-  console.log('=== FORCE RENDER FOLDERS ===', state.active);
-  
-  var listEl = document.getElementById('folders-list');
-  if (!listEl) {
-    console.error('folders-list element not found');
-    return;
-  }
-  
-  // Limpar completamente
-  listEl.innerHTML = '';
-  
-  // Verificar se temos um dataset válido
-  if (state.active === '_all') {
-    listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Modo "All" - selecione um dataset específico</div>';
-    return;
-  }
-  
-  if (!state.active || !state[state.active]) {
-    listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Dataset não carregado</div>';
-    return;
-  }
-  
-  var currentDataset = state[state.active];
-  if (!currentDataset.Categories) {
-    listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Dataset sem categorias</div>';
-    return;
-  }
-  
-  var categories = Object.keys(currentDataset.Categories).sort();
-  
-  if (categories.length === 0) {
-    listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Nenhuma categoria encontrada</div>';
-    return;
-  }
-  
-  console.log('Rendering categories:', categories);
-  
-  // Construir HTML das categorias
-  var html = '';
-  categories.forEach(function(categoryName) {
-    var itemCount = Object.keys(currentDataset.Categories[categoryName] || {}).length;
-    var isSelected = !!state.multiCategory[categoryName];
-    
-    html += '<div class="folder-row flex items-center justify-between px-2 py-1.5 rounded cursor-pointer ' + 
-            (isSelected ? 'bg-blue-600 bg-opacity-20 border border-blue-500' : 'hover:bg-gray-200') + '" ' +
-            'data-category="' + categoryName + '" data-kind="' + state.active + '">' +
-            '<div class="flex items-center gap-2">' +
-            '<span class="text-sm font-medium">' + categoryName + '</span>' +
-            '<span class="text-xs text-gray-500 bg-gray-200 px-1.5 py-0.5 rounded-full">' + itemCount + '</span>' +
-            '</div>' +
-            '<div class="text-xs">' + (isSelected ? '●' : '') + '</div>' +
-            '</div>';
-  });
-  
-  listEl.innerHTML = html;
-  console.log('Folders HTML updated, categories count:', categories.length);
-}
-
-// Substituir completamente a função renderFoldersPane
-function renderFoldersPane() {
-  // Simplesmente chama a nova função
-  forceRenderFolders();
-}
-
-// NOVO: Handler simplificado para cliques nas pastas
-document.addEventListener('click', function (e) {
-  // ...existing code...
-  
-  // NOVO: Handler específico para folder-row
-  var folderRow = e.target.closest('.folder-row');
-  if (folderRow && folderRow.parentElement && folderRow.parentElement.id === 'folders-list') {
-    console.log('Folder row clicked');
-    
-    var categoryName = folderRow.dataset.category;
-    if (!categoryName) return;
-    
-    // Toggle da categoria
-    if (state.multiCategory[categoryName]) {
-      delete state.multiCategory[categoryName];
-    } else {
-      state.multiCategory[categoryName] = true;
-    }
-    
-    console.log('MultiCategory state:', state.multiCategory);
-    
-    // Re-renderizar apenas as pastas e navegação
-    forceRenderFolders();
-    renderNav();
-    return;
-  }
-  
-  // ...existing code...
-  
-  if (el.classList.contains('chip')) {
-    if (el.dataset.type === 'category') {
-      state.filters.category = (state.filters.category === el.dataset.category ? '' : el.dataset.category);
-      renderCategoryChips(); renderNav();
-    } else if (el.dataset.type === 'category-all') {
-      state.filters.category = ''; state.multiCategory = {}; forceRenderFolders(); renderCategoryChips(); renderNav();
-    } else if (el.dataset.type === 'flag') {
-      var flag = el.dataset.flag; var idx = state.filters.flags.indexOf(flag); if (idx === -1) state.filters.flags.push(flag); else state.filters.flags.splice(idx, 1); renderFlagsChips(); renderNav();
-    } else if (el.dataset.type === 'dataset') {
-      // CORREÇÃO: Simplificar completamente a troca de dataset
-      var newDataset = el.dataset.dataset;
-      console.log('Dataset chip clicked:', newDataset);
-      
-      // Apenas chamar setActive - ele já faz tudo
-      setActive(newDataset);
-    }
-    return;
-  }
-  
-  // ...existing code...
-});
-
-// CORREÇÃO: Simplificar botões das pastas
-document.addEventListener('click', function (e) {
-  if (e.target && e.target.id === 'folders-select-all') {
-    console.log('Select all folders');
-    if (state.active === '_all' || !state[state.active]) return;
-    
-    var ds = state[state.active];
-    var cats = Object.keys(ds.Categories || {});
-    
-    // Selecionar todas as categorias
-    state.multiCategory = {};
-    cats.forEach(function (c) { 
-      state.multiCategory[c] = true; 
     });
-    
-    forceRenderFolders();
-    renderNav();
-    return;
+    return { valid: conflicts.length === 0, conflicts: conflicts };
   }
-  
-  if (e.target && e.target.id === 'folders-clear') {
-    console.log('Clear all folders');
-    state.multiCategory = {};
-    forceRenderFolders();
-    renderNav();
-    return;
+  function generateUniqueClassname(baseName, dataset) { var counter = 1; var testName = baseName; while (!validateUniqueClassname(testName, dataset).valid) { counter++; testName = baseName + '_' + counter; } return testName; }
+
+  // Validate dataset integrity and report conflicts
+  function validateDatasetIntegrity(dataset) {
+    if (!state[dataset] || !state[dataset].Categories) return;
+
+    var allNames = {};
+    var conflicts = [];
+    var categories = state[dataset].Categories;
+
+    // Collect all classnames and variant names
+    Object.keys(categories).forEach(function (catName) {
+      var items = categories[catName];
+      Object.keys(items).forEach(function (itemName) {
+        // Check main item name
+        if (allNames[itemName]) {
+          conflicts.push({
+            name: itemName,
+            existing: allNames[itemName],
+            new: { type: 'item', category: catName, classname: itemName }
+          });
+        } else {
+          allNames[itemName] = { type: 'item', category: catName, classname: itemName };
+        }
+
+        // Check variants
+        var item = items[itemName];
+        if (item.variants && typeof item.variants === 'object') {
+          Object.keys(item.variants).forEach(function (variantName) {
+            if (allNames[variantName]) {
+              conflicts.push({
+                name: variantName,
+                existing: allNames[variantName],
+                new: { type: 'variant', category: catName, classname: itemName, variant: variantName }
+              });
+            } else {
+              allNames[variantName] = { type: 'variant', category: catName, classname: itemName, variant: variantName };
+            }
+          });
+        }
+      });
+    });
+
+    // Report conflicts if any
+    if (conflicts.length > 0) {
+      console.warn('🚨 Conflitos de classnames detectados em ' + dataset + ':');
+      conflicts.forEach(function (conflict) {
+        var existingDesc = conflict.existing.type === 'item'
+          ? conflict.existing.category + '/' + conflict.existing.classname
+          : conflict.existing.category + '/' + conflict.existing.classname + ' (variante: ' + conflict.existing.variant + ')';
+        var newDesc = conflict.new.type === 'item'
+          ? conflict.new.category + '/' + conflict.new.classname
+          : conflict.new.category + '/' + conflict.new.classname + ' (variante: ' + conflict.new.variant + ')';
+        console.warn('  ⚠️  "' + conflict.name + '": ' + existingDesc + ' ↔ ' + newDesc);
+      });
+
+      // Show user notification
+      if (conflicts.length < 10) {
+        var message = 'Detectados ' + conflicts.length + ' conflitos de nomes em ' + dataset + ':\n\n';
+        conflicts.slice(0, 5).forEach(function (c) {
+          message += '• "' + c.name + '"\n';
+        });
+        if (conflicts.length > 5) message += '• ... e mais ' + (conflicts.length - 5) + ' conflitos\n';
+        message += '\nVerifique o console do navegador para detalhes.';
+        alert(message);
+      }
+    } else {
+      console.log('✅ Dataset ' + dataset + ' carregado sem conflitos de nomes');
+    }
   }
-  
-  if (e.target && e.target.dataset && e.target.dataset.action === 'add-folder') {
-    if (state.active === '_all' || !state[state.active]) { 
-      alert('Selecione um dataset específico primeiro.'); 
-      return; 
+  function refreshAll() {
+    return axios.get('/api/datasets').then(function (res) {
+      var list = Array.isArray(res.data) ? res.data : [];
+      state._datasets = list;
+      // Load all datasets in parallel
+      return Promise.all(list.map(function (k) { return load(k); }));
+    }).then(function () {
+      // Load pending store and trash in parallel
+      return Promise.all([
+        axios.get('/api/pending').then(function (r) { state.pending = r.data || { items: [] }; }).catch(function () { state.pending = { items: [] }; }),
+        axios.get('/api/trash').then(function (r) { state.trash = r.data || { classes: [] }; }).catch(function () { state.trash = { classes: [] }; })
+      ]);
+    }).then(function () {
+      // Ensure there is an active dataset selected
+      if (!state.active || state._datasets.indexOf(state.active) === -1) {
+        state.active = (state._datasets.indexOf('weapons') !== -1) ? 'weapons' : (state._datasets[0] || '');
+      }
+
+      renderDatasetChips();
+      renderCategoryChips();
+      renderFlagsChips();
+      buildPalette();
+      renderPending();
+      renderTrash();
+      renderRightTab();
+
+      // NOVO: Usar a nova função de pastas
+      forceRenderFolders();
+
+      renderNav();
+      renderEditor();
+      updateDirtyIndicator();
+      applyTheme('dark');
+    }).catch(function (err) {
+      console.error('Falha ao carregar datasets', err);
+    });
+  }
+
+  function setActive(tab) {
+    console.log('=== SETACTIVE CALLED ===', tab);
+
+    state.active = tab;
+    state.filters = { category: '', flags: [] };
+    state.multiCategory = {}; // Reset completo
+
+    // Limpar seleções do dataset anterior
+    if (state.selected[tab]) {
+      state.selected[tab] = null;
     }
-    
-    var ds = state[state.active];
-    var name = (prompt('Nome da nova pasta:') || '').trim();
-    if (!name) return;
-    if (ds.Categories[name]) { 
-      alert('Já existe uma pasta com esse nome.'); 
-      return; 
+    state.selectedVariant[tab] = null;
+
+    // Renderizar na ordem correta
+    renderDatasetChips();
+    renderCategoryChips();
+    renderFlagsChips();
+
+    // NOVO: Renderizar pastas de forma independente e forçada
+    forceRenderFolders();
+
+    renderNav();
+    renderEditor();
+    buildPalette();
+
+    console.log('=== SETACTIVE COMPLETE ===');
+  }
+
+  // NOVA função independente para renderizar pastas
+  function forceRenderFolders() {
+    console.log('=== FORCE RENDER FOLDERS ===', state.active);
+
+    var listEl = document.getElementById('folders-list');
+    if (!listEl) {
+      console.error('folders-list element not found');
+      return;
     }
-    
+
+    // Limpar completamente
+    listEl.innerHTML = '';
+
+    // Verificar se temos um dataset válido
+    if (state.active === '_all') {
+      listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Modo "All" - selecione um dataset específico</div>';
+      return;
+    }
+
+    if (!state.active || !state[state.active]) {
+      listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Dataset não carregado</div>';
+      return;
+    }
+
+    var currentDataset = state[state.active];
+    if (!currentDataset.Categories) {
+      listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Dataset sem categorias</div>';
+      return;
+    }
+
+    var categories = Object.keys(currentDataset.Categories).sort();
+
+    if (categories.length === 0) {
+      listEl.innerHTML = '<div class="text-xs text-gray-500 p-2">Nenhuma categoria encontrada</div>';
+      return;
+    }
+
+    console.log('Rendering categories:', categories);
+
+    // Construir HTML das categorias
+    var html = '';
+    categories.forEach(function (categoryName) {
+      var itemCount = Object.keys(currentDataset.Categories[categoryName] || {}).length;
+      var isSelected = !!state.multiCategory[categoryName];
+
+      html += '<div class="folder-row flex items-center justify-between px-2 py-1.5 rounded cursor-pointer ' +
+        (isSelected ? 'bg-blue-600 bg-opacity-20 border border-blue-500' : 'hover:bg-gray-200') + '" ' +
+        'data-category="' + categoryName + '" data-kind="' + state.active + '">' +
+        '<div class="flex items-center gap-2">' +
+        '<span class="text-sm font-medium">' + categoryName + '</span>' +
+        '<span class="text-xs text-gray-500 bg-gray-200 px-1.5 py-0.5 rounded-full">' + itemCount + '</span>' +
+        '</div>' +
+        '<div class="text-xs">' + (isSelected ? '●' : '') + '</div>' +
+        '</div>';
+    });
+
+    listEl.innerHTML = html;
+    console.log('Folders HTML updated, categories count:', categories.length);
+  }
+
+  // Substituir completamente a função renderFoldersPane
+  function renderFoldersPane() {
+    // Simplesmente chama a nova função
+    forceRenderFolders();
+  }
+
+  // NOVO: Handler simplificado para cliques nas pastas
+  document.addEventListener('click', function (e) {
+    // ...existing code...
+
+    // NOVO: Handler específico para folder-row
+    var folderRow = e.target.closest('.folder-row');
+    if (folderRow && folderRow.parentElement && folderRow.parentElement.id === 'folders-list') {
+      console.log('Folder row clicked');
+
+      var categoryName = folderRow.dataset.category;
+      if (!categoryName) return;
+
+      // Toggle da categoria
+      if (state.multiCategory[categoryName]) {
+        delete state.multiCategory[categoryName];
+      } else {
+        state.multiCategory[categoryName] = true;
+      }
+
+      console.log('MultiCategory state:', state.multiCategory);
+
+      // Re-renderizar apenas as pastas e navegação
+      forceRenderFolders();
+      renderNav();
+      return;
+    }
+
+    // ...existing code...
+
+    if (el.classList.contains('chip')) {
+      if (el.dataset.type === 'category') {
+        state.filters.category = (state.filters.category === el.dataset.category ? '' : el.dataset.category);
+        renderCategoryChips(); renderNav();
+      } else if (el.dataset.type === 'category-all') {
+        state.filters.category = ''; state.multiCategory = {}; forceRenderFolders(); renderCategoryChips(); renderNav();
+      } else if (el.dataset.type === 'flag') {
+        var flag = el.dataset.flag; var idx = state.filters.flags.indexOf(flag); if (idx === -1) state.filters.flags.push(flag); else state.filters.flags.splice(idx, 1); renderFlagsChips(); renderNav();
+      } else if (el.dataset.type === 'dataset') {
+        // CORREÇÃO: Simplificar completamente a troca de dataset
+        var newDataset = el.dataset.dataset;
+        console.log('Dataset chip clicked:', newDataset);
+
+        // Apenas chamar setActive - ele já faz tudo
+        setActive(newDataset);
+      }
+      return;
+    }
+
+    // ...existing code...
+  });
+
+  // CORREÇÃO: Simplificar botões das pastas
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'folders-select-all') {
+      console.log('Select all folders');
+      if (state.active === '_all' || !state[state.active]) return;
+
+      var ds = state[state.active];
+      var cats = Object.keys(ds.Categories || {});
+
+      // Selecionar todas as categorias
+      state.multiCategory = {};
+      cats.forEach(function (c) {
+        state.multiCategory[c] = true;
+      });
+
+      forceRenderFolders();
+      renderNav();
+      return;
+    }
+
+    if (e.target && e.target.id === 'folders-clear') {
+      console.log('Clear all folders');
+      state.multiCategory = {};
+      forceRenderFolders();
+      renderNav();
+      return;
+    }
+
+    if (e.target && e.target.dataset && e.target.dataset.action === 'add-folder') {
+      if (state.active === '_all' || !state[state.active]) {
+        alert('Selecione um dataset específico primeiro.');
+        return;
+      }
+
+      var ds = state[state.active];
+      var name = (prompt('Nome da nova pasta:') || '').trim();
+      if (!name) return;
+      if (ds.Categories[name]) {
+        alert('Já existe uma pasta com esse nome.');
+        return;
+      }
+
+      pushHistory();
+      ds.Categories[name] = {};
+      markDirty(state.active);
+      state.multiCategory[name] = true; // auto-select
+
+      forceRenderFolders();
+      renderCategoryChips();
+      renderNav();
+      showToast('Pasta criada: ' + name, 'success');
+      return;
+    }
+  });
+
+  // Row-click toggles inside folders list
+  document.addEventListener('click', function (e) {
+    var row = e.target && e.target.closest('.folder-row');
+    if (row && row.parentElement && row.parentElement.id === 'folders-list') {
+      // Ignore clicks on action buttons inside the row
+      if (e.target.closest('button[data-action]')) return;
+      var cat = row.dataset.category;
+      if (!cat) return;
+      if (state.multiCategory[cat]) { delete state.multiCategory[cat]; }
+      else { state.multiCategory[cat] = true; }
+      renderFoldersPane();
+      renderNav();
+    }
+  });
+
+  // Double-click folder row to open category editor
+  document.addEventListener('dblclick', function (e) {
+    var row = e.target && e.target.closest('.folder-row');
+    if (row && row.parentElement && row.parentElement.id === 'folders-list') {
+      var dsK = state.active; var cat = row.dataset.category; var data = state[dsK];
+      if (!data || !data.Categories || !data.Categories[cat]) return;
+      state.selected[dsK] = { category: cat, classname: '_CATEGORY_' };
+      state.selectedVariant[dsK] = null;
+      state.rightTab = 'attachments'; renderRightTab(); renderNav(); renderEditor();
+    }
+  });
+
+  function deepMerge(target, src) { if (Array.isArray(src)) return src.slice(); if (src && typeof src === 'object') { var out = (target && typeof target === 'object') ? JSON.parse(JSON.stringify(target)) : {}; Object.keys(src).forEach(function (k) { out[k] = deepMerge(out[k], src[k]); }); return out; } return src; }
+  function promoteVariant(dsName, category, currentName, newName) {
+    var ds = state[dsName]; var items = ds.Categories[category]; var item = items[currentName]; if (!item) return;
     pushHistory();
-    ds.Categories[name] = {};
-    markDirty(state.active);
-    state.multiCategory[name] = true; // auto-select
-    
-    forceRenderFolders();
+    // Ensure variants is object mapping name -> overrides
+    if (Array.isArray(item.variants)) { var mapping = {}; item.variants.forEach(function (n) { mapping[n] = {}; }); item.variants = mapping; }
+    var overrides = (item.variants && item.variants[newName]) ? item.variants[newName] : {};
+    // Create clone with overrides applied
+    var clone = JSON.parse(JSON.stringify(item));
+    // Do not carry the full variants map to the clone; compute new variants for the rename
+    delete clone.variants;
+    // Apply overrides on clone
+    clone = deepMerge(clone, overrides);
+    // New item's variants: remove the promoted name and include old name as a variant (empty overrides), preserving rest
+    var newVariants = {}; var keys = (item.variants && typeof item.variants === 'object') ? Object.keys(item.variants) : [];
+    keys.forEach(function (vn) { if (vn !== newName) { newVariants[vn] = item.variants[vn]; } });
+    // Old name becomes a variant of newName with empty or swapped overrides
+    newVariants[currentName] = newVariants[currentName] || {};
+    // Move key
+    items[newName] = clone; delete items[currentName]; items[newName].variants = newVariants;
+    if (state.active === '_all') { state.selected['_all'] = { dataset: dsName, category: category, classname: newName }; } else { state.selected[dsName] = { category: category, classname: newName }; }
+    markDirty(dsName); renderNav();
+  }
+
+  function clearVariantSelection() { var k = state.active; state.selectedVariant[k] = null; renderNav(); renderEditor(); }
+
+  // Make clearVariantSelection available globally
+  window.clearVariantSelection = clearVariantSelection;
+
+  function moveItemToCategory(dsName, fromCategory, classname, toCategory) {
+    if (fromCategory === toCategory) return; var ds = state[dsName]; if (!ds) return; if (!ds.Categories[toCategory]) ds.Categories[toCategory] = {}; var items = ds.Categories; if (items[toCategory][classname]) { alert('Já existe item com este classname na categoria destino.'); return; } pushHistory(); items[toCategory][classname] = items[fromCategory][classname]; delete items[fromCategory][classname]; if (state.active === '_all') { if (state.selected['_all'] && state.selected['_all'].classname === classname) { state.selected['_all'] = { dataset: dsName, category: toCategory, classname: classname }; } } else if (state.active === dsName) { if (state.selected[dsName] && state.selected[dsName].classname === classname) { state.selected[dsName] = { category: toCategory, classname: classname }; } }
+    // If user is filtering by multiCategory and destination isn't visible, include it so moved item remains visible
+    var activeFilters = Object.keys(state.multiCategory || {}).filter(function (c) { return !!state.multiCategory[c]; });
+    if (activeFilters.length > 0 && !state.multiCategory[toCategory]) { state.multiCategory[toCategory] = true; renderFoldersPane(); }
+    markDirty(dsName);
+    renderFoldersPane(); // NOVO
     renderCategoryChips();
     renderNav();
-    showToast('Pasta criada: ' + name, 'success');
-    return;
   }
-});
 
-// Row-click toggles inside folders list
-document.addEventListener('click', function (e) {
-  var row = e.target && e.target.closest('.folder-row');
-  if (row && row.parentElement && row.parentElement.id === 'folders-list') {
-    // Ignore clicks on action buttons inside the row
-    if (e.target.closest('button[data-action]')) return;
-    var cat = row.dataset.category;
-    if (!cat) return;
-    if (state.multiCategory[cat]) { delete state.multiCategory[cat]; }
-    else { state.multiCategory[cat] = true; }
-    renderFoldersPane();
-    renderNav();
+  // --- Debug and development tools ---
+  function dumpState() {
+    console.log('--- Estado atual ---');
+    console.log(JSON.stringify(state, null, 2));
+    console.log('-------------------');
   }
-});
-
-// Double-click folder row to open category editor
-document.addEventListener('dblclick', function (e) {
-  var row = e.target && e.target.closest('.folder-row');
-  if (row && row.parentElement && row.parentElement.id === 'folders-list') {
-    var dsK = state.active; var cat = row.dataset.category; var data = state[dsK];
-    if (!data || !data.Categories || !data.Categories[cat]) return;
-    state.selected[dsK] = { category: cat, classname: '_CATEGORY_' };
-    state.selectedVariant[dsK] = null;
-    state.rightTab = 'attachments'; renderRightTab(); renderNav(); renderEditor();
+  function loadState(snap) {
+    if (!snap) return;
+    state = JSON.parse(JSON.stringify(snap));
+    // Re-render everything to reflect restored state
+    renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); buildPalette(); renderPending(); renderTrash(); renderRightTab(); renderNav(); renderEditor(); updateDirtyIndicator();
   }
-});
+  // window.dumpState = dumpState;
+  // window.loadState = loadState;
 
-function deepMerge(target, src) { if (Array.isArray(src)) return src.slice(); if (src && typeof src === 'object') { var out = (target && typeof target === 'object') ? JSON.parse(JSON.stringify(target)) : {}; Object.keys(src).forEach(function (k) { out[k] = deepMerge(out[k], src[k]); }); return out; } return src; }
-function promoteVariant(dsName, category, currentName, newName) {
-  var ds = state[dsName]; var items = ds.Categories[category]; var item = items[currentName]; if (!item) return;
-  pushHistory();
-  // Ensure variants is object mapping name -> overrides
-  if (Array.isArray(item.variants)) { var mapping = {}; item.variants.forEach(function (n) { mapping[n] = {}; }); item.variants = mapping; }
-  var overrides = (item.variants && item.variants[newName]) ? item.variants[newName] : {};
-  // Create clone with overrides applied
-  var clone = JSON.parse(JSON.stringify(item));
-  // Do not carry the full variants map to the clone; compute new variants for the rename
-  delete clone.variants;
-  // Apply overrides on clone
-  clone = deepMerge(clone, overrides);
-  // New item's variants: remove the promoted name and include old name as a variant (empty overrides), preserving rest
-  var newVariants = {}; var keys = (item.variants && typeof item.variants === 'object') ? Object.keys(item.variants) : [];
-  keys.forEach(function (vn) { if (vn !== newName) { newVariants[vn] = item.variants[vn]; } });
-  // Old name becomes a variant of newName with empty or swapped overrides
-  newVariants[currentName] = newVariants[currentName] || {};
-  // Move key
-  items[newName] = clone; delete items[currentName]; items[newName].variants = newVariants;
-  if (state.active === '_all') { state.selected['_all'] = { dataset: dsName, category: category, classname: newName }; } else { state.selected[dsName] = { category: category, classname: newName }; }
-  markDirty(dsName); renderNav();
-}
-
-function clearVariantSelection() { var k = state.active; state.selectedVariant[k] = null; renderNav(); renderEditor(); }
-
-// Make clearVariantSelection available globally
-window.clearVariantSelection = clearVariantSelection;
-
-function moveItemToCategory(dsName, fromCategory, classname, toCategory) {
-  if (fromCategory === toCategory) return; var ds = state[dsName]; if (!ds) return; if (!ds.Categories[toCategory]) ds.Categories[toCategory] = {}; var items = ds.Categories; if (items[toCategory][classname]) { alert('Já existe item com este classname na categoria destino.'); return; } pushHistory(); items[toCategory][classname] = items[fromCategory][classname]; delete items[fromCategory][classname]; if (state.active === '_all') { if (state.selected['_all'] && state.selected['_all'].classname === classname) { state.selected['_all'] = { dataset: dsName, category: toCategory, classname: classname }; } } else if (state.active === dsName) { if (state.selected[dsName] && state.selected[dsName].classname === classname) { state.selected[dsName] = { category: toCategory, classname: classname }; } }
-  // If user is filtering by multiCategory and destination isn't visible, include it so moved item remains visible
-  var activeFilters = Object.keys(state.multiCategory || {}).filter(function (c) { return !!state.multiCategory[c]; });
-  if (activeFilters.length > 0 && !state.multiCategory[toCategory]) { state.multiCategory[toCategory] = true; renderFoldersPane(); }
-  markDirty(dsName);
-  renderFoldersPane(); // NOVO
-  renderCategoryChips();
-  renderNav();
-}
-
-// --- Debug and development tools ---
-function dumpState() {
-  console.log('--- Estado atual ---');
-  console.log(JSON.stringify(state, null, 2));
-  console.log('-------------------');
-}
-function loadState(snap) {
-  if (!snap) return;
-  state = JSON.parse(JSON.stringify(snap));
-  // Re-render everything to reflect restored state
-  renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); buildPalette(); renderPending(); renderTrash(); renderRightTab(); renderNav(); renderEditor(); updateDirtyIndicator();
-}
-// window.dumpState = dumpState;
-// window.loadState = loadState;
+  function lifetimeSlider(val) {
+    var presets = state.globalLists && state.globalLists.lifetimePresets ? state.globalLists.lifetimePresets : [
+      { label: "0", seconds: 0 }, { label: "5m", seconds: 300 }, { label: "30m", seconds: 1800 },
+      { label: "1h", seconds: 3600 }, { label: "2h", seconds: 7200 }, { label: "4h", seconds: 14400 },
+      { label: "1d", seconds: 86400 }, { label: "3d", seconds: 259200 }, { label: "7d", seconds: 604800 }
+    ];
+    var idx = presets.findIndex(function (p) { return p.seconds == val; });
+    if (idx === -1) idx = 0;
     var labels = presets.map(function (p) { return '<span>' + p.label + '</span>'; }).join('');
     return '<div><label class="editor-label">Lifetime</label>' +
       '<div class="flex items-center gap-2 mt-1">' +
@@ -782,14 +790,14 @@ document.addEventListener('click', function (e) {
       // CORREÇÃO: Melhorar a troca de dataset
       var newDataset = el.dataset.dataset;
       console.log('Switching to dataset:', newDataset);
-      
+
       // Forçar reset completo do estado visual
       state.multiCategory = {};
-      
+
       setActive(newDataset);
-      
+
       // NOVO: Garantir que a interface seja completamente atualizada
-      setTimeout(function() {
+      setTimeout(function () {
         renderFoldersPane();
         renderNav();
       }, 100);
@@ -1458,28 +1466,28 @@ function renderFoldersPane() {
   var pane = document.getElementById('folders-pane');
   var listEl = document.getElementById('folders-list');
   if (!pane || !listEl) { return; }
-  
+
   // Only show for a concrete dataset (not _all)
   if (state.active === '_all' || !state[state.active]) {
     listEl.innerHTML = '<div class="text-xs text-gray-500">Selecione um dataset</div>';
     return;
   }
-  
+
   var ds = state[state.active];
   if (!ds || !ds.Categories) {
     listEl.innerHTML = '<div class="text-xs text-gray-500">Dataset vazio ou sem categorias</div>';
     return;
   }
-  
+
   var cats = Object.keys(ds.Categories || {}).sort();
   var html = '';
-  
+
   // CORREÇÃO: Verificar se há categorias antes de renderizar
   if (cats.length === 0) {
     listEl.innerHTML = '<div class="text-xs text-gray-500">Sem categorias neste dataset</div>';
     return;
   }
-  
+
   cats.forEach(function (cat) {
     var selected = !!state.multiCategory[cat];
     html += '<div class="folder-row flex items-center gap-2 px-2 py-1 rounded ' + (selected ? 'bg-blue-900 bg-opacity-30' : 'hover:bg-gray-100') + ' droppable" data-drop-type="category" data-kind="' + state.active + '" data-category="' + cat + '">'
@@ -1491,9 +1499,9 @@ function renderFoldersPane() {
       + '</div>'
       + '</div>';
   });
-  
+
   listEl.innerHTML = html;
-  
+
   // NOVO: Debug logging para troubleshooting
   console.log('Folders rendered for dataset:', state.active, 'Categories:', cats.length);
 }
