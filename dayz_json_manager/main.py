@@ -5,7 +5,6 @@ from pathlib import Path
 # Paths to JSON files in the workspace
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = Path(r"d:/Dayz/Askal_Website/serverfiles/profiles/Askal/database/Itens")
-ECONOMY_FILE = Path(r"d:/Dayz/Askal_Website/serverfiles/profiles/Askal/database/itens.json")
 WEAPONS_PATH = DATA_DIR / "Weapons.json"
 CL0THINGS_PATH = DATA_DIR / "Clothings.json"  # kept for compatibility, see dynamic routes below
 ICONS_DIR = Path(r"d:/Dayz/Askal_Website/data/icons")
@@ -183,35 +182,6 @@ def list_datasets():
     mp = dataset_map()
     # Return sorted list of dataset names
     return jsonify(sorted(mp.keys()))
-
-# ---------------- Economy (types.xml style JSON source) -----------------
-@app.route('/api/economy', methods=['GET'])
-def get_economy():
-    if not ECONOMY_FILE.exists():
-        # Minimal skeleton if missing
-        skeleton = {"meta": {"version": 1}, "defaults": {"restock": {"global": 1800, "byCategory": {}}, "cost": {"global": 100, "byCategory": {}}, "lifetime": 3600, "flags": {"count_in_map": 1, "deloot": 0}}, "items": {}}
-        write_json(ECONOMY_FILE, skeleton)
-        return jsonify(skeleton)
-    try:
-        data = read_json(ECONOMY_FILE)
-    except Exception as e:
-        return jsonify({'detail': f'Erro lendo itens.json: {e}'}), 500
-    return jsonify(data)
-
-@app.route('/api/economy', methods=['PUT'])
-def put_economy():
-    try:
-        payload = request.get_json() or {}
-    except Exception:
-        return jsonify({'detail': 'JSON inválido'}), 400
-    # Expect full object { meta, defaults, items }
-    if not isinstance(payload, dict) or 'items' not in payload:
-        return jsonify({'detail': 'Formato inválido: objeto com chave items requerido'}), 400
-    try:
-        write_json(ECONOMY_FILE, payload)
-    except Exception as e:
-        return jsonify({'detail': f'Erro escrevendo itens.json: {e}'}), 500
-    return jsonify({'status': 'ok'})
 
 @app.route('/api/datasets', methods=['POST'])
 def create_dataset():

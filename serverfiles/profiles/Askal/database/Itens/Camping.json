@@ -1,464 +1,1607 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Building": {
-            "AnniversaryBox": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BarbedWire": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BarbedWireLocked": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "CamoNet": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "CamoNetShelter": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "CombinationLock": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "CombinationLock4": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Fence": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "FenceKit": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "SeaChest": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "UndergroundStash": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "UndergroundStashSnow": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Watchtower": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "WatchtowerKit": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "WoodenCrate": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
-        },
-        "Tents": {
-            "CarTent": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "LargeTent": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "MediumTent": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "MediumTent_Green": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "MediumTent_Orange": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "PartyTent": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "PartyTent_Blue": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "PartyTent_Brown": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "PartyTent_Lunapark": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
-        },
-        "Tools": {
-            "BatteryCharger": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "CableReel": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Fabric": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "HescoBox": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "PowerGenerator": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Refridgerator": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterBase": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterFabric": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterKit": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterLeather": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterSite": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "ShelterStick": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Spotlight": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "TerritoryFlag": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "TerritoryFlagKit": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "XmasLights": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
-        },
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Building": {
+      "AnniversaryBox": {
         "flags": {
-            "Flag_APA": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Altis": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_BabyDeer": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Base": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Bear": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Bohemia": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_BrainZ": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_CDF": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_CHEL": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_CMC": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Cannibals": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Chedaki": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Chernarus": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Crook": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_DayZ": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_HunterZ": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Livonia": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_LivoniaArmy": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_LivoniaPolice": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_NAPA": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_NSahrani": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Pirates": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_RSTA": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Refuge": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Rex": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Rooster": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_SSahrani": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Snake": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_TEC": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_UEC": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_White": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Wolf": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Zagorky": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "Flag_Zenit": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "StaticFlagPole": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
-        }
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BarbedWire": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BarbedWireLocked": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "CamoNet": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "CamoNetShelter": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "CombinationLock": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "CombinationLock4": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Fence": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "FenceKit": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "SeaChest": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "UndergroundStash": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "UndergroundStashSnow": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Watchtower": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "WatchtowerKit": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "WoodenCrate": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
+    },
+    "Tents": {
+      "CarTent": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "LargeTent": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "MediumTent": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "MediumTent_Green": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "MediumTent_Orange": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "PartyTent": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "PartyTent_Blue": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "PartyTent_Brown": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "PartyTent_Lunapark": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
+    },
+    "Tools": {
+      "BatteryCharger": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "CableReel": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Fabric": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "HescoBox": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "PowerGenerator": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Refridgerator": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterBase": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterFabric": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterKit": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterLeather": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterSite": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "ShelterStick": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Spotlight": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "TerritoryFlag": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "TerritoryFlagKit": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "XmasLights": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
+    },
+    "flags": {
+      "Flag_APA": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Altis": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_BabyDeer": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Base": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Bear": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Bohemia": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_BrainZ": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_CDF": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_CHEL": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_CMC": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Cannibals": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Chedaki": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Chernarus": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Crook": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_DayZ": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_HunterZ": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Livonia": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_LivoniaArmy": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_LivoniaPolice": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_NAPA": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_NSahrani": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Pirates": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_RSTA": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Refuge": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Rex": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Rooster": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_SSahrani": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Snake": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_TEC": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_UEC": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_White": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Wolf": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Zagorky": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "Flag_Zenit": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "StaticFlagPole": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Building": {
+      "restock": 1800,
+      "cost": 100
+    },
+    "Tents": {
+      "restock": 1800,
+      "cost": 100
+    },
+    "Tools": {
+      "restock": 1800,
+      "cost": 100
+    },
+    "flags": {
+      "restock": 1800,
+      "cost": 100
+    }
+  }
 }

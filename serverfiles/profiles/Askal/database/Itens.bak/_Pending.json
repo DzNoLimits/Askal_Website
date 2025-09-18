@@ -1,0 +1,664 @@
+{
+    "items": [
+        {
+            "name": "BallisticHelmet_Navy"
+        },
+        {
+            "name": "BallisticHelmet_UN"
+        },
+        {
+            "name": "BallisticHelmet_Winter"
+        },
+        {
+            "name": "BallisticHelmet_Woodland"
+        },
+        {
+            "name": "Bandana_BlackPattern"
+        },
+        {
+            "name": "Bandana_Blue"
+        },
+        {
+            "name": "Bandana_CamoPattern"
+        },
+        {
+            "name": "Bandana_ColorBase"
+        },
+        {
+            "name": "Bandana_Greenpattern"
+        },
+        {
+            "name": "Bandana_Pink"
+        },
+        {
+            "name": "Bandana_PolkaPattern"
+        },
+        {
+            "name": "Bandana_RedPattern"
+        },
+        {
+            "name": "Bandana_Yellow"
+        },
+        {
+            "name": "BaseballCap_CMMG_Black"
+        },
+        {
+            "name": "BaseballCap_CMMG_Pink"
+        },
+        {
+            "name": "BaseballCap_Camo"
+        },
+        {
+            "name": "BaseballCap_ColorBase"
+        },
+        {
+            "name": "BaseballCap_Olive"
+        },
+        {
+            "name": "BaseballCap_Pink"
+        },
+        {
+            "name": "BaseballCap_Red"
+        },
+        {
+            "name": "BeanieHat_Beige"
+        },
+        {
+            "name": "BeanieHat_Black"
+        },
+        {
+            "name": "BeanieHat_Blue"
+        },
+        {
+            "name": "BeanieHat_Brown"
+        },
+        {
+            "name": "BeanieHat_ColorBase"
+        },
+        {
+            "name": "BeanieHat_Green"
+        },
+        {
+            "name": "BeanieHat_Grey"
+        },
+        {
+            "name": "BeanieHat_Pink"
+        },
+        {
+            "name": "BeanieHat_Red"
+        },
+        {
+            "name": "BoonieHat_Black"
+        },
+        {
+            "name": "BoonieHat_Blue"
+        },
+        {
+            "name": "BoonieHat_ColorBase"
+        },
+        {
+            "name": "BoonieHat_DPM"
+        },
+        {
+            "name": "BoonieHat_Dubok"
+        },
+        {
+            "name": "BoonieHat_Flecktran"
+        },
+        {
+            "name": "BoonieHat_NavyBlue"
+        },
+        {
+            "name": "BoonieHat_Olive"
+        },
+        {
+            "name": "BoonieHat_Orange"
+        },
+        {
+            "name": "BoonieHat_Red"
+        },
+        {
+            "name": "BoonieHat_Tan"
+        },
+        {
+            "name": "BoonieHat_Winter"
+        },
+        {
+            "name": "BudenovkaHat_ColorBase"
+        },
+        {
+            "name": "BudenovkaHat_Gray"
+        },
+        {
+            "name": "BurlapSackCover"
+        },
+        {
+            "name": "Chainmail_Coif"
+        },
+        {
+            "name": "ChristmasHeadband_Antlers"
+        },
+        {
+            "name": "ChristmasHeadband_ColorBase"
+        },
+        {
+            "name": "ChristmasHeadband_Gingerbread"
+        },
+        {
+            "name": "ChristmasHeadband_Trees"
+        },
+        {
+            "name": "ConstructionHelmet_Blue"
+        },
+        {
+            "name": "ConstructionHelmet_ColorBase"
+        },
+        {
+            "name": "ConstructionHelmet_Lime"
+        },
+        {
+            "name": "ConstructionHelmet_Orange"
+        },
+        {
+            "name": "ConstructionHelmet_Red"
+        },
+        {
+            "name": "ConstructionHelmet_White"
+        },
+        {
+            "name": "ConstructionHelmet_Yellow"
+        },
+        {
+            "name": "CowboyHat_Brown"
+        },
+        {
+            "name": "CowboyHat_ColorBase"
+        },
+        {
+            "name": "CowboyHat_black"
+        },
+        {
+            "name": "CowboyHat_darkBrown"
+        },
+        {
+            "name": "CowboyHat_green"
+        },
+        {
+            "name": "DarkMotoHelmet_Black"
+        },
+        {
+            "name": "DarkMotoHelmet_Blue"
+        },
+        {
+            "name": "DarkMotoHelmet_ColorBase"
+        },
+        {
+            "name": "DarkMotoHelmet_Green"
+        },
+        {
+            "name": "DarkMotoHelmet_Grey"
+        },
+        {
+            "name": "DarkMotoHelmet_Lime"
+        },
+        {
+            "name": "DarkMotoHelmet_Red"
+        },
+        {
+            "name": "DarkMotoHelmet_White"
+        },
+        {
+            "name": "DarkMotoHelmet_Yellow"
+        },
+        {
+            "name": "DarkMotoHelmet_YellowScarred"
+        },
+        {
+            "name": "DarkMotoHelmet_YellowScarred_Test"
+        },
+        {
+            "name": "DirtBikeHelmet_Black"
+        },
+        {
+            "name": "DirtBikeHelmet_Blue"
+        },
+        {
+            "name": "DirtBikeHelmet_Chernarus"
+        },
+        {
+            "name": "DirtBikeHelmet_ColorBase"
+        },
+        {
+            "name": "DirtBikeHelmet_Green"
+        },
+        {
+            "name": "DirtBikeHelmet_Khaki"
+        },
+        {
+            "name": "DirtBikeHelmet_Mouthguard"
+        },
+        {
+            "name": "DirtBikeHelmet_Police"
+        },
+        {
+            "name": "DirtBikeHelmet_Red"
+        },
+        {
+            "name": "DirtBikeHelmet_Visor"
+        },
+        {
+            "name": "FirefightersHelmet_ColorBase"
+        },
+        {
+            "name": "FirefightersHelmet_Red"
+        },
+        {
+            "name": "FirefightersHelmet_White"
+        },
+        {
+            "name": "FirefightersHelmet_Yellow"
+        },
+        {
+            "name": "FlatCap_Black"
+        },
+        {
+            "name": "FlatCap_BlackCheck"
+        },
+        {
+            "name": "FlatCap_Blue"
+        },
+        {
+            "name": "FlatCap_Brown"
+        },
+        {
+            "name": "FlatCap_BrownCheck"
+        },
+        {
+            "name": "FlatCap_ColorBase"
+        },
+        {
+            "name": "FlatCap_Grey"
+        },
+        {
+            "name": "FlatCap_GreyCheck"
+        },
+        {
+            "name": "FlatCap_Red"
+        },
+        {
+            "name": "GhillieHood_ColorBase"
+        },
+        {
+            "name": "GhillieHood_Mossy"
+        },
+        {
+            "name": "GhillieHood_Tan"
+        },
+        {
+            "name": "GhillieHood_Winter"
+        },
+        {
+            "name": "GhillieHood_Woodland"
+        },
+        {
+            "name": "GorkaHelmet"
+        },
+        {
+            "name": "GorkaHelmet_Black"
+        },
+        {
+            "name": "GorkaHelmet_Green"
+        },
+        {
+            "name": "GreatHelm"
+        },
+        {
+            "name": "HeadCover_Improvised"
+        },
+        {
+            "name": "Headdress_Colorbase"
+        },
+        {
+            "name": "Headdress_Wolf"
+        },
+        {
+            "name": "Headtorch_Black"
+        },
+        {
+            "name": "Headtorch_ColorBase"
+        },
+        {
+            "name": "Headtorch_Grey"
+        },
+        {
+            "name": "HockeyHelmet_Black"
+        },
+        {
+            "name": "HockeyHelmet_Blue"
+        },
+        {
+            "name": "HockeyHelmet_ColorBase"
+        },
+        {
+            "name": "HockeyHelmet_Red"
+        },
+        {
+            "name": "HockeyHelmet_White"
+        },
+        {
+            "name": "LeafCrown_Autumn"
+        },
+        {
+            "name": "LeafCrown_Colorbase"
+        },
+        {
+            "name": "LeafCrown_Spring"
+        },
+        {
+            "name": "LeafCrown_Summer"
+        },
+        {
+            "name": "LeafCrown_Winter"
+        },
+        {
+            "name": "LeatherHat_Beige"
+        },
+        {
+            "name": "LeatherHat_Black"
+        },
+        {
+            "name": "LeatherHat_Brown"
+        },
+        {
+            "name": "LeatherHat_ColorBase"
+        },
+        {
+            "name": "LeatherHat_Natural"
+        },
+        {
+            "name": "MedicalScrubsHat_Blue"
+        },
+        {
+            "name": "MedicalScrubsHat_ColorBase"
+        },
+        {
+            "name": "MedicalScrubsHat_Green"
+        },
+        {
+            "name": "MedicalScrubsHat_White"
+        },
+        {
+            "name": "Mich2001Helmet"
+        },
+        {
+            "name": "MilitaryBeret_CDF"
+        },
+        {
+            "name": "MilitaryBeret_ChDKZ"
+        },
+        {
+            "name": "MilitaryBeret_ColorBase"
+        },
+        {
+            "name": "MilitaryBeret_NZ"
+        },
+        {
+            "name": "MilitaryBeret_Red"
+        },
+        {
+            "name": "MilitaryBeret_UN"
+        },
+        {
+            "name": "MorozkoHat"
+        },
+        {
+            "name": "MotoHelmet_Black"
+        },
+        {
+            "name": "MotoHelmet_Blue"
+        },
+        {
+            "name": "MotoHelmet_ColorBase"
+        },
+        {
+            "name": "MotoHelmet_Green"
+        },
+        {
+            "name": "MotoHelmet_Grey"
+        },
+        {
+            "name": "MotoHelmet_Lime"
+        },
+        {
+            "name": "MotoHelmet_Red"
+        },
+        {
+            "name": "MotoHelmet_White"
+        },
+        {
+            "name": "MotoHelmet_Yellow"
+        },
+        {
+            "name": "NBCHoodBase"
+        },
+        {
+            "name": "NBCHoodGray"
+        },
+        {
+            "name": "NBCHoodWhite"
+        },
+        {
+            "name": "NBCHoodYellow"
+        },
+        {
+            "name": "NorseHelm"
+        },
+        {
+            "name": "OKZKCap_Beige"
+        },
+        {
+            "name": "OKZKCap_ColorBase"
+        },
+        {
+            "name": "OKZKCap_Green"
+        },
+        {
+            "name": "OfficerHat"
+        },
+        {
+            "name": "PetushokHat_Black"
+        },
+        {
+            "name": "PetushokHat_ColorBase"
+        },
+        {
+            "name": "PetushokHat_Green"
+        },
+        {
+            "name": "PetushokHat_Yellow"
+        },
+        {
+            "name": "PilotkaCap"
+        },
+        {
+            "name": "PoliceCap"
+        },
+        {
+            "name": "PrisonerCap"
+        },
+        {
+            "name": "PumpkinHelmet"
+        },
+        {
+            "name": "RadarCap_Black"
+        },
+        {
+            "name": "RadarCap_Blue"
+        },
+        {
+            "name": "RadarCap_Brown"
+        },
+        {
+            "name": "RadarCap_ColorBase"
+        },
+        {
+            "name": "RadarCap_Green"
+        },
+        {
+            "name": "RadarCap_Red"
+        },
+        {
+            "name": "SantasHat"
+        },
+        {
+            "name": "Shemag_Brown"
+        },
+        {
+            "name": "Shemag_ColorBase"
+        },
+        {
+            "name": "Shemag_Green"
+        },
+        {
+            "name": "Shemag_Red"
+        },
+        {
+            "name": "Shemag_White"
+        },
+        {
+            "name": "SherpaHat_Black"
+        },
+        {
+            "name": "SherpaHat_Blue"
+        },
+        {
+            "name": "SherpaHat_ColorBase"
+        },
+        {
+            "name": "SherpaHat_Red"
+        },
+        {
+            "name": "SkateHelmet_Black"
+        },
+        {
+            "name": "SkateHelmet_Blue"
+        },
+        {
+            "name": "SkateHelmet_ColorBase"
+        },
+        {
+            "name": "SkateHelmet_Gray"
+        },
+        {
+            "name": "SkateHelmet_Green"
+        },
+        {
+            "name": "SkateHelmet_Red"
+        },
+        {
+            "name": "SnowstormUshanka_Brown"
+        },
+        {
+            "name": "SnowstormUshanka_ColorBase"
+        },
+        {
+            "name": "SnowstormUshanka_Navy"
+        },
+        {
+            "name": "SnowstormUshanka_Olive"
+        },
+        {
+            "name": "SnowstormUshanka_White"
+        },
+        {
+            "name": "Ssh68Helmet"
+        },
+        {
+            "name": "TankerHelmet"
+        },
+        {
+            "name": "Ushanka_Black"
+        },
+        {
+            "name": "Ushanka_Blue"
+        },
+        {
+            "name": "Ushanka_ColorBase"
+        },
+        {
+            "name": "Ushanka_Green"
+        },
+        {
+            "name": "WeldingMask"
+        },
+        {
+            "name": "WinterCoif_Black"
+        },
+        {
+            "name": "WinterCoif_Blue"
+        },
+        {
+            "name": "WinterCoif_ColorBase"
+        },
+        {
+            "name": "WinterCoif_Green"
+        },
+        {
+            "name": "WinterCoif_Skull"
+        },
+        {
+            "name": "WitchHat"
+        },
+        {
+            "name": "WitchHoodCoif_Black"
+        },
+        {
+            "name": "WitchHoodCoif_Brown"
+        },
+        {
+            "name": "WitchHoodCoif_ColorBase"
+        },
+        {
+            "name": "WitchHoodCoif_Red"
+        },
+        {
+            "name": "WitchHood_Black"
+        },
+        {
+            "name": "WitchHood_Brown"
+        },
+        {
+            "name": "WitchHood_ColorBase"
+        },
+        {
+            "name": "WitchHood_Red"
+        },
+        {
+            "name": "ZSh3PilotHelmet"
+        },
+        {
+            "name": "ZSh3PilotHelmet_Black"
+        },
+        {
+            "name": "ZSh3PilotHelmet_Green"
+        },
+        {
+            "name": "ZmijovkaCap_Black"
+        },
+        {
+            "name": "ZmijovkaCap_Blue"
+        },
+        {
+            "name": "ZmijovkaCap_Brown"
+        },
+        {
+            "name": "ZmijovkaCap_ColorBase"
+        },
+        {
+            "name": "ZmijovkaCap_Green"
+        },
+        {
+            "name": "ZmijovkaCap_Red"
+        }
+    ]
+}

@@ -1,1268 +1,2219 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Food": {
-            "AgaricusMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AmanitaMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Apple": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "AuriculariaMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BakedBeansCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BakedBeansCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Banana": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BearSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Bitterlings": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BoarSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BoletusMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BoxCerealCrunchin": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BrisketSpread": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "BrisketSpread_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Candycane_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Candycane_Red": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Candycane_RedGreen": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Candycane_Yellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CaninaBerry": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Cannabis": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Carp": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CarpFilletMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CatFoodCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CatFoodCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ChickenBreastMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Chips": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CowSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CrabCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CrabCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Crackers": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CraterellusMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadChicken_Brown": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadChicken_Spotted": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadChicken_White": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadFox": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadRabbit": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeadRooster": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DeerSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DogFoodCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DogFoodCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "FoxSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "GoatSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "GreenBellPepper": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Guts": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Honey": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "HumanSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Kiwi": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "LactariusMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Lard": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Lunchmeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Lunchmeat_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Mackerel": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "MackerelFilletMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "MacrolepiotaMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Marmalade": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "MouflonSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Orange": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pajka": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pajka_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pate": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pate_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PeachesCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PeachesCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pear": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PigSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PleurotusMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Plum": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PorkCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PorkCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Potato": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PowderedMilk": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PsilocybeMushroom": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pumpkin": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "RabbitLegMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "RedCaviar": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ReindeerSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Rice": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SaltySticks": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SambucusBerry": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Sardines": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SardinesCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SardinesCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SheepSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Shrimp": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SlicedPumpkin": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SmallGuts": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SpaghettiCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SpaghettiCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SteelheadTrout": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SteelheadTroutFilletMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "TacticalBaconCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "TacticalBaconCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Tomato": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "TunaCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "TunaCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "UnknownFoodCan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "UnknownFoodCan_Opened": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "WalleyePollock": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "WalleyePollockFilletMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "WolfSteakMeat": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Worm": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Zagorky": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ZagorkyChocolate": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ZagorkyPeanuts": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Zucchini": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            }
-        }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Food": {
+      "AgaricusMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "AmanitaMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Apple": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "AuriculariaMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BakedBeansCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BakedBeansCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Banana": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BearSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Bitterlings": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BoarSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BoletusMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BoxCerealCrunchin": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BrisketSpread": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "BrisketSpread_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Candycane_Green": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Candycane_Red": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Candycane_RedGreen": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Candycane_Yellow": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CaninaBerry": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Cannabis": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Carp": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CarpFilletMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CatFoodCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CatFoodCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ChickenBreastMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Chips": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CowSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CrabCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CrabCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Crackers": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CraterellusMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadChicken_Brown": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadChicken_Spotted": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadChicken_White": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadFox": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadRabbit": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeadRooster": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DeerSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DogFoodCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DogFoodCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "FoxSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "GoatSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "GreenBellPepper": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Guts": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Honey": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "HumanSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Kiwi": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "LactariusMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Lard": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Lunchmeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Lunchmeat_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Mackerel": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "MackerelFilletMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "MacrolepiotaMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Marmalade": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "MouflonSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Orange": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pajka": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pajka_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pate": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pate_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PeachesCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PeachesCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pear": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PigSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PleurotusMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Plum": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PorkCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PorkCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Potato": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PowderedMilk": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PsilocybeMushroom": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pumpkin": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "RabbitLegMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "RedCaviar": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ReindeerSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Rice": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SaltySticks": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SambucusBerry": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Sardines": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SardinesCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SardinesCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SheepSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Shrimp": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SlicedPumpkin": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SmallGuts": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SpaghettiCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SpaghettiCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SteelheadTrout": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SteelheadTroutFilletMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "TacticalBaconCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "TacticalBaconCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Tomato": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "TunaCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "TunaCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "UnknownFoodCan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "UnknownFoodCan_Opened": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "WalleyePollock": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "WalleyePollockFilletMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "WolfSteakMeat": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Worm": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Zagorky": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ZagorkyChocolate": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ZagorkyPeanuts": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Zucchini": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Food": {
+      "restock": 1800,
+      "cost": 240
+    }
+  }
 }

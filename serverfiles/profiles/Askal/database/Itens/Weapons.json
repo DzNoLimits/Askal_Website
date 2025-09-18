@@ -1,425 +1,505 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "AR's": {
-            "AK101": {
-                "ammo_types": [
-                    "Ammo_556x45",
-                    "Ammo_556x45Tracer"
-                ],
-                "attachments": {
-                    "buttstocks": [
-                        "AK_WoodBttstck",
-                        "AK_FoldingBttstck",
-                        "AK_PlasticBttstck"
-                    ],
-                    "optics": [
-                        "KashtanOptic",
-                        "PSO1Optic",
-                        "KobraOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "AK_Suppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": "",
-                "magazines": [
-                    "Mag_AK101_30Rnd",
-                    "ASK_Mag_AK101Coupled_60Rnd"
-                ],
-                "tier": 4,
-                "value": 4200,
-                "variants": {
-                    "AK101_Green": {}
-                }
-            },
-            "AKM": {
-                "ammo_types": [
-                    "Ammo_762x39",
-                    "Ammo_762x39Tracer"
-                ],
-                "attachments": {
-                    "bayonets": [
-                        "AK_Bayonet"
-                    ],
-                    "buttstocks": [
-                        "AK_WoodBttstck",
-                        "AK_FoldingBttstck",
-                        "AK_PlasticBttstck"
-                    ],
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "KashtanOptic",
-                        "PSO1Optic",
-                        "KobraOptic",
-                        "Akol_AKMount_ACOGOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "AK_Suppressor",
-                        "ASK_AK_SuppressorCovered"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_AKM_30Rnd",
-                    "Mag_AKM_Drum75Rnd",
-                    "ASK_Mag_AKMCoupled_60Rnd"
-                ],
-                "tier": 3,
-                "value": 3800,
-                "variants": {}
-            },
-            "M4A1": {
-                "ammo_types": [
-                    "Ammo_556x45",
-                    "Ammo_556x45Tracer"
-                ],
-                "attachments": {
-                    "bayonets": [
-                        "M9A1_Bayonet"
-                    ],
-                    "buttstocks": [
-                        "M4_OEBttstck",
-                        "M4_MPBttstck",
-                        "M4_CQBBttstck"
-                    ],
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "M4_CarryHandleOptic",
-                        "BUISOptic",
-                        "M68Optic",
-                        "Akol_Exps"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "M4_Suppressor",
-                        "ASK_M4_SuppressorCovered"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_STANAG_30Rnd",
-                    "Mag_STANAG_60Rnd",
-                    "Mag_CMAG_30Rnd",
-                    "ASK_Mag_CMAGCoupled_60Rnd"
-                ],
-                "tier": 34,
-                "value": 4500,
-                "variants": {
-                    "M4A1_Black": {},
-                    "M4A1_Green": {}
-                }
-            },
-            "M4A1_Black": {
-                "ammo_types": [
-                    "Ammo_556x45",
-                    "Ammo_556x45Tracer"
-                ],
-                "attachments": {
-                    "bayonets": [
-                        "M9A1_Bayonet"
-                    ],
-                    "buttstocks": [
-                        "M4_OEBttstck",
-                        "M4_MPBttstck",
-                        "M4_CQBBttstck"
-                    ],
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "M4_CarryHandleOptic",
-                        "BUISOptic",
-                        "M68Optic",
-                        "Akol_Exps"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "M4_Suppressor",
-                        "ASK_M4_SuppressorCovered"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_STANAG_30Rnd",
-                    "Mag_STANAG_60Rnd",
-                    "Mag_CMAG_30Rnd",
-                    "ASK_Mag_CMAGCoupled_60Rnd"
-                ],
-                "tier": 4,
-                "value": 5000,
-                "variants": {}
-            }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "AR's": {
+      "AK101": {
+        "ammo_types": [
+          "Ammo_556x45",
+          "Ammo_556x45Tracer"
+        ],
+        "attachments": {
+          "buttstocks": [
+            "AK_WoodBttstck",
+            "AK_FoldingBttstck",
+            "AK_PlasticBttstck"
+          ],
+          "optics": [
+            "KashtanOptic",
+            "PSO1Optic",
+            "KobraOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "AK_Suppressor"
+          ]
         },
-        "DMR's": {
-            "SVD": {
-                "ammo_types": [
-                    "Ammo_762x54",
-                    "Ammo_762x54Tracer"
-                ],
-                "attachments": {
-                    "optics": [
-                        "PSO1Optic",
-                        "KashtanOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "AK_Suppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_SVD_10Rnd",
-                    "ASK_Mag_SVDCoupled_20Rnd"
-                ],
-                "tier": 4,
-                "value": 5200,
-                "variants": {
-                    "SVD_Wooden": {}
-                }
-            }
+        "chamber_size": 1,
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Pistols": {
-            "FNX45": {
-                "ammo_types": [
-                    "Ammo_45ACP"
-                ],
-                "attachments": {
-                    "lights": [
-                        "TLRLight"
-                    ],
-                    "optics": [
-                        "FNP45_MRDSOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "PistolSuppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_FNX45_15Rnd"
-                ],
-                "tier": 2,
-                "value": 1800
-            },
-            "Glock19": {
-                "ammo_types": [
-                    "Ammo_9x19"
-                ],
-                "attachments": {
-                    "lights": [
-                        "TLRLight"
-                    ],
-                    "optics": [
-                        "FNP45_MRDSOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "PistolSuppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_Glock_15Rnd"
-                ],
-                "tier": 2,
-                "value": 1600
-            }
+        "magazines": [
+          "Mag_AK101_30Rnd",
+          "ASK_Mag_AK101Coupled_60Rnd"
+        ],
+        "tier": 4,
+        "value": 4200,
+        "variants": {
+          "AK101_Green": {}
         },
-        "SMG's": {
-            "MP5K": {
-                "ammo_types": [
-                    "Ammo_9x19"
-                ],
-                "attachments": {
-                    "buttstocks": [
-                        "MP5k_StockBttstck"
-                    ],
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "M68Optic",
-                        "Akol_Exps"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "PistolSuppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_MP5_30Rnd",
-                    "ASK_Mag_MP5Coupled_60Rnd"
-                ],
-                "tier": 3,
-                "value": 3800
-            },
-            "UMP45": {
-                "ammo_types": [
-                    "Ammo_45ACP"
-                ],
-                "attachments": {
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "M68Optic",
-                        "Akol_Exps"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "PistolSuppressor"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_UMP_25Rnd",
-                    "ASK_Mag_UMPCoupled_50Rnd"
-                ],
-                "tier": 3,
-                "value": 3500
-            }
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 4200
+      },
+      "AKM": {
+        "ammo_types": [
+          "Ammo_762x39",
+          "Ammo_762x39Tracer"
+        ],
+        "attachments": {
+          "bayonets": [
+            "AK_Bayonet"
+          ],
+          "buttstocks": [
+            "AK_WoodBttstck",
+            "AK_FoldingBttstck",
+            "AK_PlasticBttstck"
+          ],
+          "lights": [
+            "UniversalLight"
+          ],
+          "optics": [
+            "KashtanOptic",
+            "PSO1Optic",
+            "KobraOptic",
+            "Akol_AKMount_ACOGOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "AK_Suppressor",
+            "ASK_AK_SuppressorCovered"
+          ]
         },
-        "SR's": {
-            "Mosin9130": {
-                "ammo_types": [
-                    "Ammo_762x54",
-                    "Ammo_762x54Tracer"
-                ],
-                "attachments": {
-                    "bayonets": [
-                        "Mosin_Bayonet"
-                    ],
-                    "optics": [
-                        "PUScopeOptic",
-                        "Akol_MosinMount_ACOGOptic"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "ASK_Suppressor_Mosin"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [],
-                "tier": 3,
-                "value": 3200,
-                "variants": {
-                    "Mosin9130_Black": {},
-                    "Mosin9130_Camo": {},
-                    "Mosin9130_Green": {}
-                }
-            }
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Shotguns": {
-            "Saiga": {
-                "ammo_types": [
-                    "Ammo_12gaPellets",
-                    "Ammo_12gaSlug"
-                ],
-                "attachments": {
-                    "buttstocks": [
-                        "Saiga_Bttstck"
-                    ],
-                    "lights": [
-                        "UniversalLight"
-                    ],
-                    "optics": [
-                        "M68Optic",
-                        "Akol_Exps"
-                    ],
-                    "suppressors": [
-                        "ImprovisedSuppressor",
-                        "ASK_Suppressor_Saiga"
-                    ]
-                },
-                "chamber_size": 1,
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "magazines": [
-                    "Mag_Saiga_8Rnd",
-                    "Mag_Saiga_Drum20Rnd"
-                ],
-                "tier": 3,
-                "value": 4000
-            }
-        }
+        "magazines": [
+          "Mag_AKM_30Rnd",
+          "Mag_AKM_Drum75Rnd",
+          "ASK_Mag_AKMCoupled_60Rnd"
+        ],
+        "tier": 3,
+        "value": 3800,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 4200
+      },
+      "M4A1": {
+        "ammo_types": [
+          "Ammo_556x45",
+          "Ammo_556x45Tracer"
+        ],
+        "attachments": {
+          "bayonets": [
+            "M9A1_Bayonet"
+          ],
+          "buttstocks": [
+            "M4_OEBttstck",
+            "M4_MPBttstck",
+            "M4_CQBBttstck"
+          ],
+          "lights": [
+            "UniversalLight"
+          ],
+          "optics": [
+            "M4_CarryHandleOptic",
+            "BUISOptic",
+            "M68Optic",
+            "Akol_Exps"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "M4_Suppressor",
+            "ASK_M4_SuppressorCovered"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_STANAG_30Rnd",
+          "Mag_STANAG_60Rnd",
+          "Mag_CMAG_30Rnd",
+          "ASK_Mag_CMAGCoupled_60Rnd"
+        ],
+        "tier": 34,
+        "value": 4500,
+        "variants": {
+          "M4A1_Black": {},
+          "M4A1_Green": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 4200
+      }
+    },
+    "DMR's": {
+      "SVD": {
+        "ammo_types": [
+          "Ammo_762x54",
+          "Ammo_762x54Tracer"
+        ],
+        "attachments": {
+          "optics": [
+            "PSO1Optic",
+            "KashtanOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "AK_Suppressor"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_SVD_10Rnd",
+          "ASK_Mag_SVDCoupled_20Rnd"
+        ],
+        "tier": 4,
+        "value": 5200,
+        "variants": {
+          "SVD_Wooden": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 5200
+      }
+    },
+    "Pistols": {
+      "FNX45": {
+        "ammo_types": [
+          "Ammo_45ACP"
+        ],
+        "attachments": {
+          "lights": [
+            "TLRLight"
+          ],
+          "optics": [
+            "FNP45_MRDSOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "PistolSuppressor"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_FNX45_15Rnd"
+        ],
+        "tier": 2,
+        "value": 1800,
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "restock": 1800,
+        "cost": 1800
+      },
+      "Glock19": {
+        "ammo_types": [
+          "Ammo_9x19"
+        ],
+        "attachments": {
+          "lights": [
+            "TLRLight"
+          ],
+          "optics": [
+            "FNP45_MRDSOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "PistolSuppressor"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_Glock_15Rnd"
+        ],
+        "tier": 2,
+        "value": 1600,
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "restock": 1800,
+        "cost": 1800
+      }
+    },
+    "SMG's": {
+      "MP5K": {
+        "ammo_types": [
+          "Ammo_9x19"
+        ],
+        "attachments": {
+          "buttstocks": [
+            "MP5k_StockBttstck"
+          ],
+          "lights": [
+            "UniversalLight"
+          ],
+          "optics": [
+            "M68Optic",
+            "Akol_Exps"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "PistolSuppressor"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_MP5_30Rnd",
+          "ASK_Mag_MP5Coupled_60Rnd"
+        ],
+        "tier": 3,
+        "value": 3800,
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "restock": 1800,
+        "cost": 3800
+      },
+      "UMP45": {
+        "ammo_types": [
+          "Ammo_45ACP"
+        ],
+        "attachments": {
+          "lights": [
+            "UniversalLight"
+          ],
+          "optics": [
+            "M68Optic",
+            "Akol_Exps"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "PistolSuppressor"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_UMP_25Rnd",
+          "ASK_Mag_UMPCoupled_50Rnd"
+        ],
+        "tier": 3,
+        "value": 3500,
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "restock": 1800,
+        "cost": 3800
+      }
+    },
+    "SR's": {
+      "Mosin9130": {
+        "ammo_types": [
+          "Ammo_762x54",
+          "Ammo_762x54Tracer"
+        ],
+        "attachments": {
+          "bayonets": [
+            "Mosin_Bayonet"
+          ],
+          "optics": [
+            "PUScopeOptic",
+            "Akol_MosinMount_ACOGOptic"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "ASK_Suppressor_Mosin"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [],
+        "tier": 3,
+        "value": 3200,
+        "variants": {
+          "Mosin9130_Black": {},
+          "Mosin9130_Camo": {},
+          "Mosin9130_Green": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 3200
+      }
+    },
+    "Shotguns": {
+      "Saiga": {
+        "ammo_types": [
+          "Ammo_12gaPellets",
+          "Ammo_12gaSlug"
+        ],
+        "attachments": {
+          "buttstocks": [
+            "Saiga_Bttstck"
+          ],
+          "lights": [
+            "UniversalLight"
+          ],
+          "optics": [
+            "M68Optic",
+            "Akol_Exps"
+          ],
+          "suppressors": [
+            "ImprovisedSuppressor",
+            "ASK_Suppressor_Saiga"
+          ]
+        },
+        "chamber_size": 1,
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "magazines": [
+          "Mag_Saiga_8Rnd",
+          "Mag_Saiga_Drum20Rnd"
+        ],
+        "tier": 3,
+        "value": 4000,
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "restock": 1800,
+        "cost": 4000
+      }
     }
+  },
+  "CategoryDefaults": {
+    "AR's": {
+      "restock": 1800,
+      "cost": 4200
+    },
+    "DMR's": {
+      "restock": 1800,
+      "cost": 5200
+    },
+    "Pistols": {
+      "restock": 1800,
+      "cost": 1800
+    },
+    "SMG's": {
+      "restock": 1800,
+      "cost": 3800
+    },
+    "SR's": {
+      "restock": 1800,
+      "cost": 3200
+    },
+    "Shotguns": {
+      "restock": 1800,
+      "cost": 4000
+    }
+  }
 }

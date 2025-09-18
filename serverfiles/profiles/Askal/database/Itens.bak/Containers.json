@@ -1,0 +1,35 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Storage": {
+            "Barrel_Green": {
+                "flags": [
+                    "Market",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 400,
+                "variants": {
+                    "Barrel_Blue": {},
+                    "Barrel_Red": {},
+                    "Barrel_Yellow": {}
+                }
+            },
+            "Seachest": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        }
+    }
+}

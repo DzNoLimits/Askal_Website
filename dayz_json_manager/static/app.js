@@ -1,6 +1,6 @@
 // Extracted application logic
 // Dynamic datasets: state stores dataset data under state[<datasetName>]
-var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{}, multiCategory:{}, _fvPlan:null, clipboard:[] };
+var state = { active:'weapons', dirty:{}, selected:{}, selectedVariant:{}, palette:[], filters:{ category:'', flags:[] }, _datasets:[], collapsed:{}, rightTab:'attachments', pending:{ items:[] }, trash:{ classes:[] }, _pendingSelection:{}, _history:[], _redo:[], collapsedItems:{}, locked:{}, multiCategory:{}, _fvPlan:null, clipboard:[], globalLists:{} };
 // Helper to build endpoints for dynamic datasets
 function endpoint(kind){ return '/api/'+kind; }
 
@@ -154,7 +154,18 @@ function refreshAll(){
   }).catch(function(err){ console.error('Falha ao carregar datasets', err); });
 }
 
-function setActive(tab){ state.active=tab; state.filters={ category:'', flags:[] }; state.multiCategory={}; renderDatasetChips(); renderCategoryChips(); renderFlagsChips(); renderFoldersPane(); renderNav(); renderEditor(); buildPalette(); }
+function setActive(tab){ 
+  state.active=tab; 
+  state.filters={ category:'', flags:[] }; 
+  state.multiCategory={}; 
+  renderDatasetChips(); 
+  renderCategoryChips(); 
+  renderFlagsChips(); 
+  renderFoldersPane(); 
+  renderNav(); 
+  renderEditor(); 
+  buildPalette();
+}
 
 function renderNav(){
   var kind=state.active; var host=document.getElementById('nav-pane'); var search=document.getElementById('search').value.trim().toLowerCase(); var html=''; var filterCat = state.filters.category; var sel=state.selected[kind];
@@ -279,6 +290,55 @@ function renderNav(){
 
 function getSelected(){ var k=state.active; var sel=state.selected[k]; if(!sel) return null; var variant = state.selectedVariant[k] || null; if(k==='_all'){ return Object.assign({}, sel, { variant: variant }); } return { dataset:k, category:sel.category, classname:sel.classname, variant: variant }; }
 
+// Renders the dedicated Category Presets Editor panel if container provided
+function renderCategoryEditor(container, datasetKey, category){
+  // Allow calling with only category editor pane id
+  if(typeof container === 'string'){ container = document.getElementById(container); }
+  if(!container){ return; }
+  var ds = state[datasetKey]; if(!ds || !ds.Categories || !ds.Categories[category]){ container.innerHTML='<p class="text-xs text-red-400">Categoria não encontrada.</p>'; return; }
+  // Retrieve simple defaults heuristics (cost/restock) from first item or CategoryDefaults if exists
+  var catItems = ds.Categories[category];
+  var firstKey = Object.keys(catItems)[0];
+  var firstItem = firstKey? catItems[firstKey] : null;
+  var existingDefaults = (ds.CategoryDefaults && ds.CategoryDefaults[category]) || {};
+  var restockVal = existingDefaults.restock != null? existingDefaults.restock : (firstItem && firstItem.restock != null? firstItem.restock : '') ;
+  var costVal = existingDefaults.cost != null? existingDefaults.cost : (firstItem && firstItem.cost != null? firstItem.cost : '');
+  var inheritedRestock = (existingDefaults.restock == null && firstItem && firstItem.restock != null);
+  var inheritedCost = (existingDefaults.cost == null && firstItem && firstItem.cost != null);
+
+  var html = ''+
+    '<div class="space-y-4">'+
+      '<div class="flex items-center gap-3">'+
+        '<div class="flex-1">'+
+          '<label class="block text-xs font-semibold mb-1">Categoria</label>'+
+          '<div class="text-sm font-mono">'+category+'</div>'+
+        '</div>'+
+        '<div>'+ (ds.Categories[category]? '<span class="px-2 py-0.5 rounded bg-gray-700 text-xs">'+Object.keys(ds.Categories[category]).length+' itens</span>' : '') +'</div>'+
+      '</div>'+
+      '<div class="grid grid-cols-2 gap-4">'+
+        '<div>'+
+          '<label class="block text-xs font-semibold mb-1">Restock</label>'+
+          '<input type="number" data-field="restock" class="w-full px-2 py-1 rounded bg-gray-800 border border-gray-600 text-sm" value="'+(restockVal===''?'' : restockVal)+'" placeholder="(herdar)" />'+
+          (inheritedRestock? '<div class="mt-1 text-[10px] text-gray-400">Herdado do primeiro item.</div>' : '<div class="mt-1 text-[10px] text-gray-500">Definir para sobrescrever.</div>')+
+        '</div>'+
+        '<div>'+
+          '<label class="block text-xs font-semibold mb-1">Cost</label>'+
+          '<input type="number" data-field="cost" class="w-full px-2 py-1 rounded bg-gray-800 border border-gray-600 text-sm" value="'+(costVal===''?'' : costVal)+'" placeholder="(herdar)" />'+
+          (inheritedCost? '<div class="mt-1 text-[10px] text-gray-400">Herdado do primeiro item.</div>' : '<div class="mt-1 text-[10px] text-gray-500">Definir para sobrescrever.</div>')+
+        '</div>'+
+      '</div>'+
+      '<div class="flex items-center gap-2 flex-wrap">'+
+        '<button data-action="save-category-defaults" data-kind="'+datasetKey+'" data-category="'+category+'" class="px-3 py-1 rounded bg-green-600 hover:bg-green-500 text-xs">Salvar</button>'+
+        '<button data-action="apply-defaults-to-items" data-kind="'+datasetKey+'" data-category="'+category+'" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-xs">Aplicar a Todos Itens</button>'+
+        '<button data-action="clear-category-defaults" data-kind="'+datasetKey+'" data-category="'+category+'" class="px-3 py-1 rounded bg-red-700 hover:bg-red-600 text-xs">Limpar Overrides</button>'+
+      '</div>'+
+      '<div class="text-[11px] text-gray-400 leading-relaxed">Os valores definidos aqui serão usados como padrão para novos itens e podem ser aplicados em lote. Deixe vazio para herdar.</div>'+
+    '</div>';
+  var contentHost = container.querySelector('#category-editor-content');
+  if(contentHost){ contentHost.innerHTML = html; }
+  container.classList.remove('hidden');
+}
+
 function renderEditor(){ var pane=document.getElementById('editor-pane'); var sel=getSelected(); var kindActual = sel? sel.dataset : state.active; if(state.active==='_all' && !sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } if(!state[kindActual]){ pane.innerHTML='<p class="text-sm text-gray-500">Carregando...</p>'; return; } if(!sel){ pane.innerHTML='<p class="text-sm text-gray-500">Selecione um item à esquerda.</p>'; return; } var category=sel.category, classname=sel.classname, selectedVariant=sel.variant; 
   
   // Check if editing category
@@ -351,11 +411,75 @@ function renderEditor(){ var pane=document.getElementById('editor-pane'); var se
   }
   function numInput(label, field, val){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" type="number" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
   function textInput(label, field, val){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" type="text" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
-  function arrayEditor(label, field, arr){ arr = Array.isArray(arr)?arr:[]; var inner=''; for(var i=0;i<arr.length;i++){ inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; } return '<div data-array-field="'+field+'"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div></div>'; }
+  
+  function lifetimeSlider(val) {
+    var presets = state.globalLists && state.globalLists.lifetimePresets ? state.globalLists.lifetimePresets : [
+      { label: "0", seconds: 0 }, { label: "5m", seconds: 300 }, { label: "30m", seconds: 1800 },
+      { label: "1h", seconds: 3600 }, { label: "2h", seconds: 7200 }, { label: "4h", seconds: 14400 },
+      { label: "1d", seconds: 86400 }, { label: "3d", seconds: 259200 }, { label: "7d", seconds: 604800 }
+    ];
+    var idx = presets.findIndex(function(p){ return p.seconds == val; });
+    if(idx === -1) idx = 0;
+    var labels = presets.map(function(p){ return '<span>'+p.label+'</span>'; }).join('');
+    return '<div><label class="editor-label">Lifetime</label>' +
+           '<div class="flex items-center gap-2 mt-1">' +
+           '<input data-field="lifetime" type="range" min="0" max="'+(presets.length-1)+'" step="1" value="'+idx+'" class="flex-1" data-seconds="'+(presets[idx] ? presets[idx].seconds : 0)+'" onchange="var p='+JSON.stringify(presets)+'[this.value]; if(p){ this.nextElementSibling.textContent=p.label; this.dataset.seconds=p.seconds; }" />' +
+           '<span class="text-xs text-gray-300 min-w-[2rem]">'+(presets[idx] ? presets[idx].label : '0')+'</span>' +
+           '</div>' +
+           '<div class="flex justify-between mt-1 text-[10px] text-gray-400">'+labels+'</div></div>';
+  }
+  function arrayEditor(label, field, arr){ 
+    arr = Array.isArray(arr)?arr:[]; var inner=''; 
+    for(var i=0;i<arr.length;i++){ 
+      inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; 
+    }
+    // Add suggestions for certain fields based on global lists
+    var suggestions = '';
+    var globalSuggestions = [];
+    if(field==='tags' && state.globalLists && state.globalLists.tags) globalSuggestions = state.globalLists.tags;
+    else if(field==='usage' && state.globalLists && state.globalLists.usageflags) globalSuggestions = state.globalLists.usageflags;
+    else if(field==='values' && state.globalLists && state.globalLists.valueflags) globalSuggestions = state.globalLists.valueflags;
+    if(globalSuggestions.length>0){
+      suggestions = '<div class="text-[10px] text-gray-400 mt-1">Sugestões: '+globalSuggestions.slice(0,5).join(', ')+(globalSuggestions.length>5?' ...':'')+'</div>';
+    }
+    return '<div data-array-field="'+field+'"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div>'+suggestions+'</div>'; 
+  }
   // Variant-aware helpers
   function vNumInput(label, field, val, vn){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" data-variant="'+vn+'" type="number" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
   function vTextInput(label, field, val, vn){ return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" data-variant="'+vn+'" type="text" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; }
-  function vArrayEditor(label, field, arr, vn){ arr = Array.isArray(arr)?arr:[]; var inner=''; for(var i=0;i<arr.length;i++){ inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'" data-variant="'+vn+'">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; } return '<div data-array-field="'+field+'" data-variant="'+vn+'"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" data-variant="'+vn+'" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div></div>'; }
+  
+  function vLifetimeSlider(val, vn) {
+    var presets = state.globalLists && state.globalLists.lifetimePresets ? state.globalLists.lifetimePresets : [
+      { label: "0", seconds: 0 }, { label: "5m", seconds: 300 }, { label: "30m", seconds: 1800 },
+      { label: "1h", seconds: 3600 }, { label: "2h", seconds: 7200 }, { label: "4h", seconds: 14400 },
+      { label: "1d", seconds: 86400 }, { label: "3d", seconds: 259200 }, { label: "7d", seconds: 604800 }
+    ];
+    var idx = presets.findIndex(function(p){ return p.seconds == val; });
+    if(idx === -1) idx = 0;
+    var labels = presets.map(function(p){ return '<span>'+p.label+'</span>'; }).join('');
+    return '<div><label class="editor-label">Lifetime</label>' +
+           '<div class="flex items-center gap-2 mt-1">' +
+           '<input data-field="lifetime" data-variant="'+vn+'" type="range" min="0" max="'+(presets.length-1)+'" step="1" value="'+idx+'" class="flex-1" data-seconds="'+(presets[idx] ? presets[idx].seconds : 0)+'" onchange="var p='+JSON.stringify(presets)+'[this.value]; if(p){ this.nextElementSibling.textContent=p.label; this.dataset.seconds=p.seconds; }" />' +
+           '<span class="text-xs text-gray-300 min-w-[2rem]">'+(presets[idx] ? presets[idx].label : '0')+'</span>' +
+           '</div>' +
+           '<div class="flex justify-between mt-1 text-[10px] text-gray-400">'+labels+'</div></div>';
+  }
+  function vArrayEditor(label, field, arr, vn){ 
+    arr = Array.isArray(arr)?arr:[]; var inner=''; 
+    for(var i=0;i<arr.length;i++){ 
+      inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'" data-variant="'+vn+'">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; 
+    }
+    // Add suggestions for certain fields based on global lists
+    var suggestions = '';
+    var globalSuggestions = [];
+    if(field==='tags' && state.globalLists && state.globalLists.tags) globalSuggestions = state.globalLists.tags;
+    else if(field==='usage' && state.globalLists && state.globalLists.usageflags) globalSuggestions = state.globalLists.usageflags;
+    else if(field==='values' && state.globalLists && state.globalLists.valueflags) globalSuggestions = state.globalLists.valueflags;
+    if(globalSuggestions.length>0){
+      suggestions = '<div class="text-[10px] text-gray-400 mt-1">Sugestões: '+globalSuggestions.slice(0,5).join(', ')+(globalSuggestions.length>5?' ...':'')+'</div>';
+    }
+    return '<div data-array-field="'+field+'" data-variant="'+vn+'"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" data-variant="'+vn+'" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div>'+suggestions+'</div>'; 
+  }
   function variantsEditor(){ var vnames = getVariantNames(item); ensureVariantsObject(item); var html='<div data-field="variants" class="droppable" data-drop-type="variants"><label class="editor-label flex items-center justify-between">Variants <button data-action="variant-add" class="text-xs p-1 rounded hover:bg-gray-700" title="Adicionar variante">➕</button></label><div class="mt-2 space-y-3">';
     vnames.forEach(function(vn){ var ov = (item.variants && typeof item.variants==='object' && item.variants[vn])? item.variants[vn] : {}; html+='<div class="border rounded p-2">'+
       '<div class="flex items-center justify-between mb-2">'+
@@ -370,6 +494,22 @@ function renderEditor(){ var pane=document.getElementById('editor-pane'); var se
         vNumInput('Value','value', ov.value, vn)+
         (isWeapon? vNumInput('Chamber Size','chamber_size', ov.chamber_size, vn) : '')+
       '</div>'+
+      '<div class="mt-2">'+
+        '<h5 class="text-xs font-semibold mb-1 text-gray-400">CE Overrides</h5>'+
+        '<div class="grid grid-cols-3 gap-2">'+
+          vNumInput('Nominal','nominal', ov.nominal, vn)+
+          vNumInput('Min','min', ov.min, vn)+
+          vNumInput('QuantMin','quantmin', ov.quantmin, vn)+
+        '</div>'+
+        '<div class="grid grid-cols-3 gap-2 mt-1">'+
+          vNumInput('QuantMax','quantmax', ov.quantmax, vn)+
+          vNumInput('Restock','restock', ov.restock, vn)+
+          vNumInput('Cost','cost', ov.cost, vn)+
+        '</div>'+
+        '<div class="mt-1">'+
+          vLifetimeSlider(ov.lifetime, vn)+
+        '</div>'+
+      '</div>'+
       (isWeapon? (
         vArrayEditor('Ammo Types','ammo_types', ov.ammo_types, vn)+
         vArrayEditor('Magazines','magazines', ov.magazines, vn)
@@ -382,114 +522,63 @@ function renderEditor(){ var pane=document.getElementById('editor-pane'); var se
     // Editing a variant - show variant override editor
     ensureVariantsObject(item); var variant = item.variants[selectedVariant] || {}; var parts=[]; 
     parts.push('<div class="bg-blue-900 bg-opacity-30 border border-blue-600 rounded p-3 mb-4"><h3 class="text-blue-200 font-semibold mb-2">Editando Variante: '+selectedVariant+'</h3><p class="text-xs text-blue-300 mb-3">Base: '+classname+' | Categoria: '+category+' | Dataset: '+kindActual+'</p><div class="flex space-x-2 mb-2"><button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs flex items-center space-x-1" data-action="nav-variant-edit" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'" data-variant="'+selectedVariant+'" title="Editar overrides (JSON)">✏️ <span>Editar JSON</span></button><button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs flex items-center space-x-1" data-action="nav-variant-remove" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'" data-variant="'+selectedVariant+'" title="Remover variante">🗑️ <span>Remover</span></button><button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs flex items-center space-x-1" data-action="nav-variant-promote" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'" data-variant="'+selectedVariant+'" title="Promover variante">⬆️ <span>Promover</span></button><button onclick="clearVariantSelection()" class="bg-gray-600 text-white px-3 py-1 text-xs rounded hover:bg-gray-500">← Voltar ao Item Base</button></div></div>');
-    parts.push(textInput('Nome da Variante','_variant_name', selectedVariant)); parts.push(numInput('Tier Override','tier', variant.tier)); parts.push(numInput('Value Override','value', variant.value)); if(isWeapon){ parts.push(numInput('Chamber Size Override','chamber_size', variant.chamber_size)); parts.push(arrayEditor('Ammo Types Override','ammo_types', variant.ammo_types)); parts.push(arrayEditor('Magazines Override','magazines', variant.magazines)); }
+    parts.push(textInput('Nome da Variante','_variant_name', selectedVariant)); parts.push(numInput('Tier Override','tier', variant.tier)); parts.push(numInput('Value Override','value', variant.value)); parts.push(lifetimeSlider(variant.lifetime)); if(isWeapon){ parts.push(numInput('Chamber Size Override','chamber_size', variant.chamber_size)); parts.push(arrayEditor('Ammo Types Override','ammo_types', variant.ammo_types)); parts.push(arrayEditor('Magazines Override','magazines', variant.magazines)); }
     parts.push(arrayEditor('Flags Override','flags', variant.flags)); 
     if(isWeapon && variant.attachments){ parts.push('<div><label class="editor-label">Attachments Override</label><pre class="mt-1 p-2 bg-gray-800 rounded text-xs">'+JSON.stringify(variant.attachments, null, 2)+'</pre></div>'); }
     pane.innerHTML = '<div class="editor-box space-y-4" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'" data-variant="'+selectedVariant+'">'+parts.join('')+'</div>';
   } else { 
-    // Editing base item
-    var parts=[]; parts.push(textInput('Classname','_classname', classname)); parts.push(numInput('Tier','tier', item.tier)); parts.push(numInput('Value','value', item.value)); if(isWeapon){ parts.push(numInput('Chamber Size','chamber_size', item.chamber_size)); parts.push(arrayEditor('Ammo Types','ammo_types', item.ammo_types)); parts.push(arrayEditor('Magazines','magazines', item.magazines)); }
-    parts.push(variantsEditor()); parts.push(attachmentsEditor()); parts.push(arrayEditor('Flags','flags', item.flags));
+    // Editing base item with grouped / efficient layout
+    var parts=[]; 
+    // Compute inherited values first
+    var restockVal = (item.restock!=null? item.restock : (state[dataset].CategoryDefaults && state[dataset].CategoryDefaults[category] ? state[dataset].CategoryDefaults[category].restock : ''));
+    var costVal = (item.cost!=null? item.cost : (state[dataset].CategoryDefaults && state[dataset].CategoryDefaults[category] ? state[dataset].CategoryDefaults[category].cost : ''));
+
+    // INFO BLOCK
+    var infoBlock = [];
+    infoBlock.push(textInput('Classname','_classname', classname));
+    infoBlock.push(numInput('Tier','tier', item.tier));
+    infoBlock.push(numInput('Value','value', item.value));
+    parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Info</h4><div class="grid grid-cols-3 gap-2">'+infoBlock.join('')+'</div></div>');
+
+    // CE BLOCK (Central Economy)
+    var ceBlock = [];
+    ceBlock.push(numInput('Nominal','nominal', item.nominal));
+    ceBlock.push(numInput('Min','min', item.min));
+    ceBlock.push(lifetimeSlider(item.lifetime));
+    ceBlock.push(numInput('QuantMin','quantmin', item.quantmin));
+    ceBlock.push(numInput('QuantMax','quantmax', item.quantmax));
+    ceBlock.push('<div><label class="editor-label">Restock <span class="text-[10px] text-gray-400">(categoria)</span></label><input data-field="restock" type="number" value="'+(restockVal==null?'':restockVal)+'" class="mt-1 w-full border rounded px-2 py-1 bg-gray-800" readonly /></div>');
+    ceBlock.push('<div><label class="editor-label">Cost <span class="text-[10px] text-gray-400">(categoria)</span></label><input data-field="cost" type="number" value="'+(costVal==null?'':costVal)+'" class="mt-1 w-full border rounded px-2 py-1 bg-gray-800" readonly /></div>');
+    parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">CE</h4><div class="grid grid-cols-4 gap-2">'+ceBlock.join('')+'</div></div>');
+
+    // WEAPON EXTRA BLOCK
+    if(isWeapon){ 
+      var weaponBlock=[]; 
+      weaponBlock.push(numInput('Chamber Size','chamber_size', item.chamber_size));
+      weaponBlock.push(arrayEditor('Ammo Types','ammo_types', item.ammo_types));
+      weaponBlock.push(arrayEditor('Magazines','magazines', item.magazines));
+      parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Weapon</h4><div class="grid grid-cols-3 gap-2">'+weaponBlock.join('')+'</div></div>');
+    }
+
+    // FLAGS BLOCK
+    var flagKeys = Object.keys(item.flags||{}).filter(function(k){ return typeof item.flags[k] === 'boolean'; }).sort();
+    var flagButtons = flagKeys.map(function(f){ var active = item.flags[f]; return '<button data-action="toggle-flag" data-flag="'+f+'" class="px-2 py-1 text-xs rounded border '+(active? 'bg-green-600 border-green-600 text-white':'bg-gray-700 border-gray-600 text-gray-300 opacity-70 hover:opacity-100')+'">'+f+'</button>'; }).join(' ');
+    var activeFlagList = flagKeys.filter(function(f){ return item.flags[f]; });
+  parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Flags</h4><div class="flex flex-wrap gap-1" data-flags-row>'+flagButtons+'</div></div>');
+
+  // META (Tags / Usage / Values)
+  var metaBlock = [];
+  metaBlock.push(arrayEditor('Tags','tags', item.tags));
+  metaBlock.push(arrayEditor('Usage','usage', item.usage));
+  metaBlock.push(arrayEditor('Values','values', item.values));
+  parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Meta</h4><div class="grid md:grid-cols-3 gap-3">'+metaBlock.join('')+'</div></div>');
+
+    // ATTACHMENTS & VARIANTS remain separate
+    parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Attachments</h4>'+attachmentsEditor()+'</div>');
+    parts.push('<div class="border border-gray-700 rounded p-3"><h4 class="text-xs uppercase tracking-wide text-gray-400 mb-2">Variants</h4>'+variantsEditor()+'</div>');
+
     pane.innerHTML = '<div class="editor-box space-y-4" data-kind="'+kindActual+'" data-category="'+category+'" data-classname="'+classname+'">'+parts.join('')+'</div>';
   }
-}
-
-function renderCategoryEditor(pane, dataset, categoryName) {
-  var data = state[dataset];
-  if(!data || !data.Categories || !data.Categories[categoryName]) {
-    pane.innerHTML = '<p class="text-sm text-red-500">Categoria não encontrada.</p>';
-    return;
-  }
-  
-  var items = data.Categories[categoryName];
-  var itemNames = Object.keys(items);
-  var isWeapon = dataset === 'weapons';
-  
-  // Initialize category defaults if they don't exist
-  if(!data.CategoryDefaults) data.CategoryDefaults = {};
-  if(!data.CategoryDefaults[categoryName]) {
-    data.CategoryDefaults[categoryName] = isWeapon ? {
-      tier: null,
-      value: null,
-      chamber_size: 1,
-      ammo_types: [],
-      magazines: [],
-      flags: [],
-      attachments: {}
-    } : {
-      tier: null,
-      value: null,
-      flags: [],
-      attachments: []
-    };
-  }
-  
-  var defaults = data.CategoryDefaults[categoryName];
-  
-  function numInput(label, field, val) { 
-    return '<div><label class="editor-label">'+label+'</label><input data-field="'+field+'" data-category-defaults="true" type="number" value="'+(val==null?'':val)+'" class="mt-1 w-full border rounded px-2 py-1" /></div>'; 
-  }
-  function arrayEditor(label, field, arr) { 
-    arr = Array.isArray(arr)?arr:[]; var inner=''; 
-    for(var i=0;i<arr.length;i++) { 
-      inner+='<span class="pill" data-index="'+i+'" data-field="'+field+'" data-category-defaults="true">'+arr[i]+'<button data-action="remove-pill">×</button></span>'; 
-    } 
-    return '<div data-array-field="'+field+'" data-category-defaults="true"><label class="editor-label flex items-center justify-between">'+label+'<button data-action="add-pill" data-field="'+field+'" data-category-defaults="true" class="text-xs bg-green-500 text-white px-2 py-0.5 rounded">+</button></label><div class="mt-1">'+inner+'</div></div>'; 
-  }
-  
-  var parts = [];
-  
-  // Category header
-  parts.push('<div class="bg-purple-900 bg-opacity-30 border border-purple-600 rounded p-4 mb-4">');
-  parts.push('<h3 class="text-purple-200 font-semibold mb-2">📂 Editando Categoria: ' + categoryName + '</h3>');
-  parts.push('<p class="text-xs text-purple-300 mb-3">Dataset: ' + dataset + ' | ' + itemNames.length + ' itens</p>');
-  parts.push('<div class="flex space-x-2">');
-  parts.push('<button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs" data-action="sync-category-to-items" data-dataset="'+dataset+'" data-category="'+categoryName+'">↓ Sincronizar para Itens</button>');
-  parts.push('<button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs" data-action="sync-items-to-category" data-dataset="'+dataset+'" data-category="'+categoryName+'">↑ Sincronizar dos Itens</button>');
-  parts.push('</div></div>');
-  
-  // Default values section
-  parts.push('<div class="bg-gray-800 rounded p-3 mb-4">');
-  parts.push('<h4 class="text-gray-200 font-semibold mb-3">Valores Padrão da Categoria</h4>');
-  parts.push('<div class="grid grid-cols-2 gap-4">');
-  parts.push(numInput('Tier Padrão', 'tier', defaults.tier));
-  parts.push(numInput('Value Padrão', 'value', defaults.value));
-  if(isWeapon) {
-    parts.push(numInput('Chamber Size Padrão', 'chamber_size', defaults.chamber_size));
-  }
-  parts.push('</div>');
-  
-  if(isWeapon) {
-    parts.push(arrayEditor('Ammo Types Padrão', 'ammo_types', defaults.ammo_types));
-    parts.push(arrayEditor('Magazines Padrão', 'magazines', defaults.magazines));
-  }
-  parts.push(arrayEditor('Flags Padrão', 'flags', defaults.flags));
-  parts.push('</div>');
-  
-  // Items list
-  parts.push('<div class="bg-gray-800 rounded p-3">');
-  parts.push('<h4 class="text-gray-200 font-semibold mb-3">Itens na Categoria (' + itemNames.length + ')</h4>');
-  parts.push('<div class="max-h-64 overflow-y-auto space-y-2">');
-  
-  itemNames.forEach(function(itemName) {
-    var item = items[itemName];
-    var variants = item.variants && typeof item.variants === 'object' ? Object.keys(item.variants) : [];
-    parts.push('<div class="bg-gray-700 rounded p-2 text-sm">');
-    parts.push('<div class="flex justify-between items-center">');
-    parts.push('<span class="font-medium text-gray-100">' + itemName + '</span>');
-    parts.push('<div class="text-xs text-gray-400">');
-    if(item.tier) parts.push('T' + item.tier + ' ');
-    if(variants.length) parts.push(variants.length + ' var');
-    parts.push('</div></div>');
-    if(variants.length > 0) {
-      parts.push('<div class="text-xs text-gray-300 mt-1">Variantes: ' + variants.join(', ') + '</div>');
-    }
-    parts.push('</div>');
-  });
-  
-  parts.push('</div></div>');
-  
-  pane.innerHTML = '<div class="editor-box space-y-4" data-kind="'+dataset+'" data-category="'+categoryName+'" data-classname="_CATEGORY_">' + parts.join('') + '</div>';
 }
 
 function buildPalette(){ var all={}; if(state.active==='_all'){
@@ -602,6 +691,25 @@ document.addEventListener('click', function(e){
   }
   
   if(!el) return; var action=el.dataset.action; var kind=state.active;
+  // Handle flag toggle (item editor base)
+  if(action==='toggle-flag'){
+    var flagName = el.dataset.flag;
+    // Determine current selection context
+    var sel = (kind==='_all')? state.selected['_all'] : state.selected[kind];
+    if(sel && sel.category && sel.classname){
+      var dataSetName = (kind==='_all')? sel.dataset || kind : kind;
+      var ds = dataSetName;
+      if(state[ds] && state[ds].Categories && state[ds].Categories[sel.category] && state[ds].Categories[sel.category][sel.classname]){
+        var itm = state[ds].Categories[sel.category][sel.classname];
+        if(!itm.flags || typeof itm.flags!=='object') itm.flags={};
+        var current = !!itm.flags[flagName];
+        itm.flags[flagName] = !current;
+        // Re-render only the editor (not full navigation) to update button styles
+        renderEditor();
+        return; // stop further processing for this click
+      }
+    }
+  }
   if(el.classList.contains('chip')){
     if(el.dataset.type==='category'){
       state.filters.category = (state.filters.category===el.dataset.category? '' : el.dataset.category);
@@ -632,7 +740,21 @@ document.addEventListener('click', function(e){
   if(action==='toggle-category'){ var dsT = el.dataset.kind || state.active; var catT = el.dataset.category; if(!state.collapsed[dsT]) state.collapsed[dsT]={}; state.collapsed[dsT][catT] = !state.collapsed[dsT][catT]; renderNav(); return; }
   if(action==='toggle-variants'){ var dsTV=el.dataset.kind || state.active; var catTV=el.dataset.category; var clsTV=el.dataset.classname; var keyTV=dsTV+'|'+catTV+'|'+clsTV; var cur = (state.collapsedItems[keyTV]!==undefined)? !!state.collapsedItems[keyTV] : true; state.collapsedItems[keyTV] = !cur; renderNav(); return; }
   // edit-category moved to left pane (double-click on folder row)
-  if(action==='rename-category'){ var dsK = el.dataset.kind || state.active; var old = el.dataset.category; var data = state[dsK]; if(!data || !data.Categories || !data.Categories[old]) return; var nn = prompt('Renomear categoria:', old); if(!nn || nn===old) return; if(data.Categories[nn]){ alert('Categoria já existe.'); return; } pushHistory(); data.Categories[nn]=data.Categories[old]; delete data.Categories[old]; if(state.collapsed[dsK] && state.collapsed[dsK][old]!=null){ state.collapsed[dsK][nn]=state.collapsed[dsK][old]; delete state.collapsed[dsK][old]; } if(state.filters.category===old) state.filters.category=nn; markDirty(dsK); renderCategoryChips(); renderFoldersPane(); renderNav(); return; }
+  if(action==='rename-category'){ // inline rename (secondary)
+    var dsK = el.dataset.kind || state.active; var old = el.dataset.category; var data = state[dsK]; if(!data || !data.Categories || !data.Categories[old]) return; var nn = prompt('Renomear categoria:', old); if(!nn || nn===old) return; if(data.Categories[nn]){ alert('Categoria já existe.'); return; } pushHistory(); data.Categories[nn]=data.Categories[old]; delete data.Categories[old]; if(state.collapsed[dsK] && state.collapsed[dsK][old]!=null){ state.collapsed[dsK][nn]=state.collapsed[dsK][old]; delete state.collapsed[dsK][old]; } if(state.filters.category===old) state.filters.category=nn; markDirty(dsK); renderFoldersPane(); renderNav(); return; }
+  if(action==='edit-category-presets'){ // open category presets editor in right pane
+    var dsE = el.dataset.kind || state.active; var catE = el.dataset.category; if(!state[dsE] || !state[dsE].Categories || !state[dsE].Categories[catE]) return; // select first item of category to anchor editor
+    var firstItem = Object.keys(state[dsE].Categories[catE])[0]; if(firstItem){ state.selected[dsE] = { category: catE, classname: firstItem }; }
+    state.rightTab = 'attachments'; // ensure editor shows
+    renderEditor(); // existing category editor accessible via nav? we force item editor + could add a dedicated tab later
+    // Additionally inject category editor pane if layout supports a dedicated container
+    var catPane = document.getElementById('category-editor-pane'); if(catPane){ renderCategoryEditor(catPane, dsE, catE); setTimeout(function(){ catPane.scrollIntoView({behavior:'smooth', block:'start'}); }, 50);} 
+    showToast && showToast('Editando presets da categoria '+catE, 'info');
+    return; }
+  if(action==='hide-category-editor'){ var cep=document.getElementById('category-editor-pane'); if(cep){ cep.classList.add('hidden'); } return; }
+  if(action==='save-category-defaults'){ var dsS=el.dataset.kind||state.active; var catS=el.dataset.category; var cPane=document.getElementById('category-editor-pane'); if(!cPane) return; var dsObj=state[dsS]; if(!dsObj || !dsObj.Categories || !dsObj.Categories[catS]) return; var restockInput=cPane.querySelector('input[data-field="restock"]'); var costInput=cPane.querySelector('input[data-field="cost"]'); var restockVal = restockInput && restockInput.value!==''? parseInt(restockInput.value,10) : null; var costVal = costInput && costInput.value!==''? parseInt(costInput.value,10) : null; if(!dsObj.CategoryDefaults) dsObj.CategoryDefaults={}; if(!dsObj.CategoryDefaults[catS]) dsObj.CategoryDefaults[catS]={}; pushHistory(); if(restockVal==null){ delete dsObj.CategoryDefaults[catS].restock; } else { dsObj.CategoryDefaults[catS].restock=restockVal; } if(costVal==null){ delete dsObj.CategoryDefaults[catS].cost; } else { dsObj.CategoryDefaults[catS].cost=costVal; } markDirty(dsS); showToast && showToast('Presets salvos.', 'success'); renderCategoryEditor('category-editor-pane', dsS, catS); return; }
+  if(action==='clear-category-defaults'){ var dsC=el.dataset.kind||state.active; var catC=el.dataset.category; var dsObjC=state[dsC]; if(!dsObjC || !dsObjC.CategoryDefaults || !dsObjC.CategoryDefaults[catC]) return; pushHistory(); delete dsObjC.CategoryDefaults[catC]; markDirty(dsC); showToast && showToast('Overrides limpos.', 'info'); renderCategoryEditor('category-editor-pane', dsC, catC); return; }
+  if(action==='apply-defaults-to-items'){ var dsA=el.dataset.kind||state.active; var catA=el.dataset.category; var dsObjA=state[dsA]; if(!dsObjA || !dsObjA.Categories || !dsObjA.Categories[catA]) return; var defaults = (dsObjA.CategoryDefaults && dsObjA.CategoryDefaults[catA]) || {}; if(!Object.keys(defaults).length){ showToast && showToast('Nenhum preset definido para aplicar.', 'warn'); return; } if(!confirm('Aplicar presets a todos os itens da categoria? Isso sobrescreverá valores existentes.')) return; pushHistory(); Object.keys(dsObjA.Categories[catA]).forEach(function(cls){ var it=dsObjA.Categories[catA][cls]; if(defaults.restock!=null) it.restock = defaults.restock; if(defaults.cost!=null) it.cost = defaults.cost; }); markDirty(dsA); showToast && showToast('Aplicado a todos os itens.', 'success'); renderEditor(); return; }
   if(action==='variant-add'){ var sel=getSelected(); if(!sel) return; var ds=sel.dataset; var it=state[ds].Categories[sel.category][sel.classname]; var vname=prompt('Nome da variante (ex: _black):'); if(!vname) return; if(Array.isArray(it.variants)){ it.variants = it.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); }
     if(!it.variants || typeof it.variants!=='object') it.variants={};
     
@@ -659,7 +781,7 @@ document.addEventListener('click', function(e){
   if(action==='variant-remove'){ var sel2=getSelected(); if(!sel2) return; var ds2=sel2.dataset; var it2=state[ds2].Categories[sel2.category][sel2.classname]; var vname2=el.dataset.variant; if(!vname2) return; if(!it2.variants || typeof it2.variants!=='object') return; pushHistory(); delete it2.variants[vname2]; markDirty(ds2); renderEditor(); renderNav(); return; }
   if(action==='variant-edit'){ var sel3=getSelected(); if(!sel3) return; var ds3=sel3.dataset; var it3=state[ds3].Categories[sel3.category][sel3.classname]; var vname3=el.dataset.variant; if(!vname3) return; if(!it3.variants || typeof it3.variants!=='object'){ it3.variants={}; }
     var cur = it3.variants[vname3] || {}; var txt = prompt('Overrides (JSON). Campos suportados: tier, value, attachments, flags, ammo_types, chamber_size, magazines', JSON.stringify(cur)); if(txt==null) return; try{ var obj=JSON.parse(txt); }catch(e2){ alert('JSON inválido'); return; } pushHistory(); it3.variants[vname3]=obj; markDirty(ds3); renderEditor(); renderNav(); return; }
-  if(action==='select-item'){ var ds2=el.dataset.kind || kind; if(kind==='_all'){ state.selected['_all']={ dataset:ds2, category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant['_all'] = null; } else { state.selected[kind]={ category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant[kind] = null; } state.rightTab='attachments'; renderRightTab(); renderNav(); renderEditor(); return; }
+  if(action==='select-item'){ var ds2=el.dataset.kind || kind; if(kind==='_all'){ state.selected['_all']={ dataset:ds2, category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant['_all'] = null; } else { state.selected[kind]={ category:el.dataset.category, classname:el.dataset.classname }; state.selectedVariant[kind] = null; } state.rightTab='attachments'; renderRightTab(); renderNav(); renderEditor(); renderFoldersPane(); return; }
 
   if(action==='remove-category'){ var cat=el.dataset.category; var dsKey = el.dataset.kind || state.active; if(confirm('Remover categoria '+cat+'?')){ var names = Object.keys((state[dsKey] && state[dsKey].Categories && state[dsKey].Categories[cat])||{}); if(names.length){ axios.post('/api/trash', { classes: names }).catch(function(){}); } pushHistory(); delete state[dsKey].Categories[cat]; if(state.collapsed[dsKey]){ delete state.collapsed[dsKey][cat]; } markDirty(dsKey); if(state.active==='_all'){ if(state.selected['_all'] && state.selected['_all'].dataset===dsKey && state.selected['_all'].category===cat) state.selected['_all']=null; } else { if(state.selected[dsKey] && state.selected[dsKey].category===cat) state.selected[dsKey]=null; } renderNav(); renderEditor(); renderCategoryChips(); renderFoldersPane(); } return; }
   if(action==='add-pill'){ var field=el.dataset.field; var vn=el.dataset.variant; addArrayValue(field, vn); return; }
@@ -1022,14 +1144,22 @@ document.addEventListener('blur', function(e){ var input=e.target; if(!input.mat
         if(Array.isArray(item.variants)){ item.variants = item.variants.reduce(function(acc,n){ acc[n]={}; return acc; },{}); }
         if(!item.variants || typeof item.variants!=='object') item.variants={};
         var ov = item.variants[editingVariant] || (item.variants[editingVariant]={});
-        if(input.type==='number'){
+        if(input.type==='range' && field==='lifetime'){
+          // Handle lifetime slider for variants - use data-seconds attribute
+          var seconds = input.dataset.seconds ? Number(input.dataset.seconds) : 0;
+          if(seconds === item[field]){ delete ov[field]; } else { ov[field] = seconds; }
+        } else if(input.type==='number'){
           var num = input.value===''?null:Number(input.value);
           if(num===null){ delete ov[field]; } else { ov[field] = (isNaN(num)? null : num); }
         } else {
           if(input.value===''){ delete ov[field]; } else { ov[field] = input.value; }
         }
       } else {
-        if(input.type==='number'){
+        if(input.type==='range' && field==='lifetime'){
+          // Handle lifetime slider - use data-seconds attribute
+          var seconds = input.dataset.seconds ? Number(input.dataset.seconds) : 0;
+          item[field] = seconds;
+        } else if(input.type==='number'){
           var num2 = input.value===''?null:Number(input.value);
           item[field]= (isNaN(num2)? null : num2);
         } else {
@@ -1122,25 +1252,36 @@ function save(kind){ if(!state[kind]) return Promise.resolve(); return axios.put
 
 // Initialize the app when DOM is ready
 document.addEventListener('DOMContentLoaded', function(){
-  refreshAll();
+  // Load global lists first
+  axios.get('./definitions/lists.json').then(function(r){
+    state.globalLists = r.data || {};
+  }).catch(function(e){
+    console.warn('Could not load global lists:', e);
+    state.globalLists = { tags:[], usageflags:[], valueflags:[] };
+  }).finally(function(){
+    refreshAll();
+  });
+});
+
+// Delete category via Delete key when a category is selected (no modal focused)
+document.addEventListener('keydown', function(e){
+  if(e.key==='Delete' && !e.target.closest('input,textarea')){
+    var kind = state.active;
+    if(!kind || kind==='_all') return;
+    var sel = state.selected[kind];
+    if(sel && sel.category && !sel.classname){ // category row selected (assuming selection model sets classname null when category only)
+      if(confirm('Remover categoria '+sel.category+'? Itens serão perdidos deste dataset (sem enviar para Trash).')){
+        var data = state[kind]; if(data && data.Categories && data.Categories[sel.category]){
+          pushHistory(); delete data.Categories[sel.category]; markDirty(kind); state.selected[kind]=null; renderFoldersPane(); renderNav(); renderEditor();
+        }
+      }
+    }
+  }
 });
 
 // Helpers for flags and categories chips
-function renderCategoryChips(){
-  var host=document.getElementById('category-chips'); if(!host){ return; }
-  if(state.active==='_all'){ host.innerHTML=''; return; }
-  var ds=state[state.active]; if(!ds){ host.innerHTML=''; return; }
-  var cats=Object.keys(ds.Categories||{});
-  var multiSelected = Object.keys(state.multiCategory||{}).filter(function(c){ return !!state.multiCategory[c]; }).length>0;
-  var html='';
-  // All chip (shows all categories) active when no specific category filter and no multiCategory selection
-  var allActive = !state.filters.category && !multiSelected;
-  html += '<div class="chip'+(allActive?' active':'')+'" data-type="category-all" title="Mostrar todas as categorias">All</div>';
-  cats.forEach(function(c){
-    html+='<div class="chip'+(state.filters.category===c?' active':'')+' droppable" data-drop-type="category" data-type="category" data-category="'+c+'">'+c+'</div>';
-  });
-  host.innerHTML= html;
-}
+// Category chips disabled (using only folders pane for category navigation)
+function renderCategoryChips(){ var host=document.getElementById('category-chips'); if(host) host.innerHTML=''; }
 function renderFlagsChips(){ var host=document.getElementById('flags-chips'); if(!host){ return; } var set={}; if(state.active==='_all'){
     state._datasets.forEach(function(dsName){ var ds=state[dsName]; if(ds && ds.Categories){ Object.values(ds.Categories).forEach(function(items){ Object.values(items).forEach(function(item){ (item.flags||[]).forEach(function(f){ set[f]=true; }); }); }); } });
   } else {
@@ -1158,18 +1299,21 @@ function renderFoldersPane(){
   var listEl = document.getElementById('folders-list');
   if(!pane || !listEl){ return; }
   // Only show for a concrete dataset (not _all)
-  if(state.active==='_all' || !state[state.active]){ listEl.innerHTML = '<div class="text-xs text-gray-500">Selecione um dataset</div>'; return; }
+  if(state.active==='_all' || !state[state.active]){ 
+    listEl.innerHTML = '<div class="text-xs text-gray-500">Selecione um dataset</div>'; 
+    return; 
+  }
   var ds = state[state.active];
   var cats = Object.keys(ds.Categories||{}).sort();
   var html = '';
   cats.forEach(function(cat){
     var selected = !!state.multiCategory[cat];
     html += '<div class="folder-row flex items-center gap-2 px-2 py-1 rounded '+(selected?'bg-blue-900 bg-opacity-30':'hover:bg-gray-100')+' droppable" data-drop-type="category" data-kind="'+state.active+'" data-category="'+cat+'">'
-      + '<span class="text-sm flex-1">'+cat+'</span>'
+      + '<span class="text-sm flex-1 cursor-pointer" data-action="edit-category-presets" data-kind="'+state.active+'" data-category="'+cat+'" title="Editar presets da categoria">'+cat+'</span>'
       + (selected? '<span class="text-xs text-blue-300 mr-1">●</span>' : '')
       + '<div class="flex items-center gap-1">'
-      +   '<button class="text-xs text-gray-500 hover:text-gray-800" title="Renomear pasta" data-action="rename-category" data-kind="'+state.active+'" data-category="'+cat+'">✏️</button>'
-      +   '<button class="text-xs text-gray-500 hover:text-red-600" title="Remover pasta" data-action="remove-category" data-kind="'+state.active+'" data-category="'+cat+'">🗑️</button>'
+      +   '<button class="text-xs text-indigo-400 hover:text-indigo-200" title="Editar presets" data-action="edit-category-presets" data-kind="'+state.active+'" data-category="'+cat+'">⚙️</button>'
+      +   '<button class="text-xs text-gray-500 hover:text-gray-800" title="Renomear" data-action="rename-category" data-kind="'+state.active+'" data-category="'+cat+'">✏️</button>'
       + '</div>'
       + '</div>';
   });

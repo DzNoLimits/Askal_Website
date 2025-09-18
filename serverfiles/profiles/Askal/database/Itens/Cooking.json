@@ -1,144 +1,249 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Cookings": {
-            "BarrelHoles_Blue": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {
-                    "BarrelHoles_Green": {},
-                    "BarrelHoles_Red": {},
-                    "BarrelHoles_Yellow": {}
-                }
-            },
-            "Candle": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Cauldron": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "CookingStand": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Fireplace": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "FryingPan": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PetrolLighter": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PortableGasLamp": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "PortableGasStove": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Pot": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "Tripod": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            }
-        }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Cookings": {
+      "BarrelHoles_Blue": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {
+          "BarrelHoles_Green": {},
+          "BarrelHoles_Red": {},
+          "BarrelHoles_Yellow": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Candle": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Cauldron": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "CookingStand": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Fireplace": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "FryingPan": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PetrolLighter": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PortableGasLamp": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "PortableGasStove": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Pot": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "Tripod": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Cookings": {
+      "restock": 1800,
+      "cost": 240
+    }
+  }
 }

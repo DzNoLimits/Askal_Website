@@ -1,296 +1,518 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "EMPTY": {
-            "AviatorGlasses": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "DesignerGlasses": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Black": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Blue": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Christmas": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_ColorBase": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Dead": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_NewYears": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Red": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Valentines": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyeMask_Yellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "EyePatch_Improvised": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "NVGHeadstrap": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "NVGoggles": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SkiGoggles_BlackYellow": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SkiGoggles_WhiteClear": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SkiGoggles_WhiteDark": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SportGlasses_Black": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SportGlasses_Blue": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SportGlasses_Green": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "SportGlasses_Orange": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "TacticalGoggles": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ThickFramesGlasses": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            },
-            "ThinFramesGlasses": {
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 240,
-                "variants": {}
-            }
-        }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "EMPTY": {
+      "AviatorGlasses": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "DesignerGlasses": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Black": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Blue": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Christmas": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_ColorBase": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Dead": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_NewYears": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Red": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Valentines": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyeMask_Yellow": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "EyePatch_Improvised": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "NVGHeadstrap": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "NVGoggles": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SkiGoggles_BlackYellow": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SkiGoggles_WhiteClear": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SkiGoggles_WhiteDark": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SportGlasses_Black": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SportGlasses_Blue": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SportGlasses_Green": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "SportGlasses_Orange": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "TacticalGoggles": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ThickFramesGlasses": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      },
+      "ThinFramesGlasses": {
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 240,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 240
+      }
     }
+  },
+  "CategoryDefaults": {
+    "EMPTY": {
+      "restock": 1800,
+      "cost": 240
+    }
+  }
 }

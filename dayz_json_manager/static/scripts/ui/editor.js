@@ -12,7 +12,7 @@
     return fetch('definitions/lists.json').then(r=>r.json()).then(function(j){ lists=j; return j; });
   }
   function loadJson(){
-    return fetch('/api/economy').then(r=>r.json()).then(function(j){ jsonState=j; EconomyParser.loadJson(j); return j; });
+    return fetch('../../serverfiles/profiles/Askal/database/itens.json').then(r=>r.json()).then(function(j){ jsonState=j; EconomyParser.loadJson(j); return j; });
   }
 
   function formatSecondsLabel(sec){
@@ -133,7 +133,7 @@
   function bindGlobalButtons(){
     var exportBtn = $('#btn-export-types'); if(exportBtn){ exportBtn.addEventListener('click', function(){ collectForm(); var xml = EconomyParser.toTypesXml(); downloadText('types.xml', xml); }); }
     var importInput = $('#import-types-xml'); if(importInput){ importInput.addEventListener('change', function(){ var f=this.files[0]; if(!f) return; var rd=new FileReader(); rd.onload=function(){ try{ EconomyParser.fromTypesXml(rd.result); renderList(); alert('Importado.'); }catch(e){ alert(e.message); } }; rd.readAsText(f); }); }
-  var saveJsonBtn = $('#btn-save-json-economy'); if(saveJsonBtn){ saveJsonBtn.addEventListener('click', function(){ collectForm(); var data = EconomyParser.buildJson(); fetch('/api/economy', { method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data)}).then(r=>{ if(!r.ok) throw new Error('Falha ao salvar'); return r.json(); }).then(()=>{ downloadText('itens.json', JSON.stringify(data, null, 2)); alert('Economia salva (servidor + download)'); }).catch(e=>alert(e.message)); }); }
+    var saveJsonBtn = $('#btn-save-json-economy'); if(saveJsonBtn){ saveJsonBtn.addEventListener('click', function(){ collectForm(); var blob = new Blob([JSON.stringify(EconomyParser.buildJson(), null, 2)], {type:'application/json'}); downloadText('itens.json', JSON.stringify(EconomyParser.buildJson(), null, 2)); }); }
   }
 
   function downloadText(filename, text){

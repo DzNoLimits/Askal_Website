@@ -1,154 +1,255 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Backpacks": {
-            "AliceBag": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events"
-                ],
-                "tier": 3,
-                "value": 2500,
-                "variants": {
-                    "AliceBag_Black": {},
-                    "AliceBag_Camo": {},
-                    "AliceBag_Green": {}
-                }
-            }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Backpacks": {
+      "AliceBag": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": false,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Belts": {
-            "CivilianBelt": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 2,
-                "value": 250,
-                "variants": {}
-            },
-            "MilitaryBelt": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 3,
-                "value": 450,
-                "variants": {}
-            },
-            "RopeBelt": {
-                "attachments": [],
-                "flags": [
-                    "craftable",
-                    "Market",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 3,
-                "value": 30,
-                "variants": {}
-            }
+        "tier": 3,
+        "value": 2500,
+        "variants": {
+          "AliceBag_Black": {},
+          "AliceBag_Camo": {},
+          "AliceBag_Green": {}
         },
-        "Pants": {
-            "CargoPants_Beige": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 3,
-                "value": 150,
-                "variants": {
-                    "CargoPants_Black": {},
-                    "CargoPants_Blue": {},
-                    "CargoPants_Green": {},
-                    "CargoPants_Grey": {}
-                }
-            }
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 2500
+      }
+    },
+    "Belts": {
+      "CivilianBelt": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Shoes": {
-            "JungleBoots_Beige": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 250,
-                "variants": {
-                    "JungleBoots_Black": {},
-                    "JungleBoots_Brown": {},
-                    "JungleBoots_Green": {},
-                    "JungleBoots_Olive": {}
-                }
-            }
+        "tier": 2,
+        "value": 250,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 250
+      },
+      "MilitaryBelt": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Tops": {
-            "M65Jacket_Black": {
-                "attachments": [],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 4,
-                "value": 250,
-                "variants": {
-                    "M65Jacket_Khaki": {},
-                    "M65Jacket_Olive": {},
-                    "M65Jacket_Tan": {}
-                }
-            }
+        "tier": 3,
+        "value": 450,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 250
+      },
+      "RopeBelt": {
+        "attachments": [],
+        "flags": {
+          "craftable": true,
+          "Market": true,
+          "Events": true,
+          "P2P": true,
+          "Store": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "Vests": {
-            "PlateCarrierVest": {
-                "attachments": [
-                    "PlateCarrierHolster",
-                    "PlateCarrierPouches",
-                    "PlateCarrierHolster_Green",
-                    "PlateCarrierPouches_Green",
-                    "PlateCarrierHolster_Camo",
-                    "PlateCarrierPouches_Camo",
-                    "PlateCarrierHolster_Black",
-                    "PlateCarrierPouches_Black",
-                    "PlateCarrierHolster_Winter",
-                    "PlateCarrierPouches_Winter"
-                ],
-                "flags": [
-                    "Market",
-                    "Secure",
-                    "Store",
-                    "Events",
-                    "P2P"
-                ],
-                "tier": 3,
-                "value": 3800,
-                "variants": {
-                    "PlateCarrierVest_Black": {},
-                    "PlateCarrierVest_Camo": {},
-                    "PlateCarrierVest_Green": {},
-                    "PlateCarrierVest_Winter": {}
-                }
-            }
-        }
+        "tier": 3,
+        "value": 30,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 250
+      }
+    },
+    "Pants": {
+      "CargoPants_Beige": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 3,
+        "value": 150,
+        "variants": {
+          "CargoPants_Black": {},
+          "CargoPants_Blue": {},
+          "CargoPants_Green": {},
+          "CargoPants_Grey": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 150
+      }
+    },
+    "Shoes": {
+      "JungleBoots_Beige": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 250,
+        "variants": {
+          "JungleBoots_Black": {},
+          "JungleBoots_Brown": {},
+          "JungleBoots_Green": {},
+          "JungleBoots_Olive": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 250
+      }
+    },
+    "Tops": {
+      "M65Jacket_Black": {
+        "attachments": [],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 4,
+        "value": 250,
+        "variants": {
+          "M65Jacket_Khaki": {},
+          "M65Jacket_Olive": {},
+          "M65Jacket_Tan": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 250
+      }
+    },
+    "Vests": {
+      "PlateCarrierVest": {
+        "attachments": [
+          "PlateCarrierHolster",
+          "PlateCarrierPouches",
+          "PlateCarrierHolster_Green",
+          "PlateCarrierPouches_Green",
+          "PlateCarrierHolster_Camo",
+          "PlateCarrierPouches_Camo",
+          "PlateCarrierHolster_Black",
+          "PlateCarrierPouches_Black",
+          "PlateCarrierHolster_Winter",
+          "PlateCarrierPouches_Winter"
+        ],
+        "flags": {
+          "Market": true,
+          "Secure": true,
+          "Store": true,
+          "Events": true,
+          "P2P": true,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 3,
+        "value": 3800,
+        "variants": {
+          "PlateCarrierVest_Black": {},
+          "PlateCarrierVest_Camo": {},
+          "PlateCarrierVest_Green": {},
+          "PlateCarrierVest_Winter": {}
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 3800
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Backpacks": {
+      "restock": 1800,
+      "cost": 2500
+    },
+    "Belts": {
+      "restock": 1800,
+      "cost": 250
+    },
+    "Pants": {
+      "restock": 1800,
+      "cost": 150
+    },
+    "Shoes": {
+      "restock": 1800,
+      "cost": 250
+    },
+    "Tops": {
+      "restock": 1800,
+      "cost": 250
+    },
+    "Vests": {
+      "restock": 1800,
+      "cost": 3800
+    }
+  }
 }

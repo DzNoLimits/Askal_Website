@@ -1,466 +1,489 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Gloves": {
-            "Gloves": {
-                "HandsCover_Improvised": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "LeatherGloves_Beige": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "LeatherGloves_Black": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "LeatherGloves_Brown": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "LeatherGloves_Natural": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "NBCGlovesGray": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "NBCGlovesYellow": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "OMNOGloves_Brown": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "OMNOGloves_Gray": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "PaddedGloves_Beige": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "PaddedGloves_Brown": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "PaddedGloves_Threat": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SkiGloves_90s": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SkiGloves_Blue": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SkiGloves_Red": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SurgicalGloves_Blue": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SurgicalGloves_Green": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SurgicalGloves_LightBlue": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "SurgicalGloves_White": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "TacticalGloves_Beige": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "TacticalGloves_Black": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "TacticalGloves_Green": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_Black": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_ChristmasBlue": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_ChristmasRed": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_Green": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_Tan": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGlovesFingerless_White": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_Black": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_ChristmasBlue": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_ChristmasRed": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_Green": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_Tan": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WoolGloves_White": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WorkingGloves_Beige": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WorkingGloves_Black": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WorkingGloves_Brown": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                },
-                "WorkingGloves_Yellow": {
-                    "flags": [
-                        "Market",
-                        "Secure",
-                        "Store",
-                        "Events",
-                        "P2P"
-                    ],
-                    "tier": 4,
-                    "value": 240,
-                    "variants": []
-                }
-            }
-        }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Gloves": {
+      "Gloves": {
+        "HandsCover_Improvised": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "LeatherGloves_Beige": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "LeatherGloves_Black": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "LeatherGloves_Brown": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "LeatherGloves_Natural": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "NBCGlovesGray": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "NBCGlovesYellow": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "OMNOGloves_Brown": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "OMNOGloves_Gray": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "PaddedGloves_Beige": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "PaddedGloves_Brown": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "PaddedGloves_Threat": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SkiGloves_90s": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SkiGloves_Blue": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SkiGloves_Red": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SurgicalGloves_Blue": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SurgicalGloves_Green": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SurgicalGloves_LightBlue": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "SurgicalGloves_White": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "TacticalGloves_Beige": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "TacticalGloves_Black": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "TacticalGloves_Green": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_Black": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_ChristmasBlue": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_ChristmasRed": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_Green": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_Tan": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGlovesFingerless_White": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_Black": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_ChristmasBlue": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_ChristmasRed": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_Green": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_Tan": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WoolGloves_White": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WorkingGloves_Beige": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WorkingGloves_Black": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WorkingGloves_Brown": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "WorkingGloves_Yellow": {
+          "flags": [
+            "Market",
+            "Secure",
+            "Store",
+            "Events",
+            "P2P"
+          ],
+          "tier": 4,
+          "value": 240,
+          "variants": []
+        },
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "variants": {},
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "restock": 1800,
+        "cost": 100
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Gloves": {
+      "restock": 1800,
+      "cost": 100
+    }
+  }
 }

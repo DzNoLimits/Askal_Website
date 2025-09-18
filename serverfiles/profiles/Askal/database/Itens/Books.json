@@ -1,880 +1,3065 @@
 {
-    "database_version": "0.2",
-    "last_updated": "2024-01-15",
-    "Categories": {
-        "Fictional": {
-            "BookATexasMatchmaker": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookATravelerInTime": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAVoyageToArcturus": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAndersen": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAndersensFairyTales": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAroundTheWorldIn80Days": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBettyZane": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBible": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBilaNemoc": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBlackBeauty": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBlackJack": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookBuddenbrooks": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookCassidysRustlerRoundUp": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookCrimeAndPunishment": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDeadSouls": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDesertGold": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDonQuixote": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookErewhon": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookFatherGoriot": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookFlyingURanch": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookGreatExpectations": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookGulliversTravels": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookGunmansReckoning": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookHeartOfDarkness": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookHerland": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookIvanhoe": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookKidnapped": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookKingLear": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLaChartreuseDeParme": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLaDbcle": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLonesomeLand": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLordJim": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookMadameBovary": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookMobyDick": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookNaturalSelection": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookNjalsSaga": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookNostromo": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookPhilosophiaeNaturalis": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookPrideAndPrejudice": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRobinsonCrusoe": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRonickyDoone": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRussian": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRussianCheatSheet": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookSelectedStories": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookSkyrider": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookSpinifexAndSand": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookSunsetPass": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheArtOfWar": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheBarrier": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheBrothersKaramazov": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCallOfCthulhu": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCanterburyTales": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCaveOfGold": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCosmicComputer": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCountryOfTheBlind": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheDayOfTheBeast": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheDesertOfWheat": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheHeritageOfTheSioux": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheHiddenChildren": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheHoundOfTheBaskervilles": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheJungleBook": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheLastOfThePlainsmen": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheLastTrail": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheMetamorphosesOfOvid": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheMetamorphosis": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheOutlet": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookThePictureOfDorianGray": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookThePitAndThePendulum": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheQuirt": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheRaven": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheRightsOfWoman": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheShunnedHouse": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheThunderBird": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheTimeMachine": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheTrial": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheVariableMan": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheWarOfTheWorlds": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookToTheInteriorOfTheEarth": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTonyAndTheBeetles": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTrailin": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookVerwandlung": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookWealthOfNations": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookYouth": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
+  "database_version": "0.3",
+  "last_updated": "2025-09-17",
+  "Categories": {
+    "Fictional": {
+      "BookATexasMatchmaker": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
         },
-        "NonFictional": {
-            "Book20000LieuesSousLesMers": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookADollsHouse": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAPrincessOfMars": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAfterLondon": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAliceInWonderland": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookAnnaKarenina": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookCandide": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookCinqSemainesEnBallon": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDasNibelungenlied": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDeLaTerreLaLune": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDeLorigineDesEspces": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDonQuichotte": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookDracula": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookFaust": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookFaustErsterTeil": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookFrankenstein": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookGilgameshEpic": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookHinduLiterature": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookHunger": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookJapaneseLiterature": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookKingSolomonsMines": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLaComdieHumaine": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLeRougeEtLeNoir": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLenfer1Of2": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLesCorneilles": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLesTroisMousquetaires": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookLleMystrieuse": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookMiddlemarch": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookMrchenFrKinder": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRasselas": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRobinsonCrusoeAdventures": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookRomeoUndJulia": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookScaramouche": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookShe": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookSonsAndLovers": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheAeneid": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheCallOfTheWild": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheComingRace": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheDecameron": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheGiacomoLeopardi": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheHouseOfTheSevenGables": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheIslandOfDoctorMoreau": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheJustifiedSinner": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheLastMan": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheMahabharataOfKrishna": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheManWhoWasThursday": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheMonkARomance": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookThePossessed": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookThePrisonerOfZenda": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheRedBadgeOfCourage": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheScarletPimpernel": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheThreeMusketeers": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTheTurnOfTheScrew": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookThreeMenInABoat": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTranslationsOfShakuntala": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookTreasureIsland": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookUlysses": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookUncleSilas": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookVoyageAuCentreDeLaTerre": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookWarAndPeace": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookWielandOrTheTransformation": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            },
-            "BookWutheringHeights": {
-                "flags": [],
-                "tier": 1,
-                "value": 100,
-                "variants": {}
-            }
-        }
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookATravelerInTime": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAVoyageToArcturus": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAndersen": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAndersensFairyTales": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAroundTheWorldIn80Days": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBettyZane": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBible": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBilaNemoc": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBlackBeauty": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBlackJack": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookBuddenbrooks": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookCassidysRustlerRoundUp": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookCrimeAndPunishment": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDeadSouls": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDesertGold": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDonQuixote": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookErewhon": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookFatherGoriot": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookFlyingURanch": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookGreatExpectations": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookGulliversTravels": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookGunmansReckoning": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookHeartOfDarkness": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookHerland": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookIvanhoe": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookKidnapped": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookKingLear": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLaChartreuseDeParme": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLaDbcle": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLonesomeLand": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLordJim": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookMadameBovary": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookMobyDick": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookNaturalSelection": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookNjalsSaga": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookNostromo": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookPhilosophiaeNaturalis": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookPrideAndPrejudice": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRobinsonCrusoe": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRonickyDoone": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRussian": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRussianCheatSheet": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookSelectedStories": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookSkyrider": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookSpinifexAndSand": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookSunsetPass": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheArtOfWar": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheBarrier": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheBrothersKaramazov": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCallOfCthulhu": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCanterburyTales": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCaveOfGold": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCosmicComputer": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCountryOfTheBlind": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheDayOfTheBeast": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheDesertOfWheat": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheHeritageOfTheSioux": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheHiddenChildren": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheHoundOfTheBaskervilles": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheJungleBook": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheLastOfThePlainsmen": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheLastTrail": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheMetamorphosesOfOvid": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheMetamorphosis": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheOutlet": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookThePictureOfDorianGray": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookThePitAndThePendulum": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheQuirt": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheRaven": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheRightsOfWoman": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheShunnedHouse": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheThunderBird": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheTimeMachine": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheTrial": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheVariableMan": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheWarOfTheWorlds": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookToTheInteriorOfTheEarth": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTonyAndTheBeetles": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTrailin": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookVerwandlung": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookWealthOfNations": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookYouth": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
+    },
+    "NonFictional": {
+      "Book20000LieuesSousLesMers": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookADollsHouse": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAPrincessOfMars": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAfterLondon": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAliceInWonderland": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookAnnaKarenina": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookCandide": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookCinqSemainesEnBallon": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDasNibelungenlied": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDeLaTerreLaLune": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDeLorigineDesEspces": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDonQuichotte": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookDracula": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookFaust": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookFaustErsterTeil": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookFrankenstein": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookGilgameshEpic": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookHinduLiterature": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookHunger": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookJapaneseLiterature": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookKingSolomonsMines": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLaComdieHumaine": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLeRougeEtLeNoir": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLenfer1Of2": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLesCorneilles": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLesTroisMousquetaires": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookLleMystrieuse": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookMiddlemarch": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookMrchenFrKinder": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRasselas": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRobinsonCrusoeAdventures": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookRomeoUndJulia": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookScaramouche": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookShe": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookSonsAndLovers": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheAeneid": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheCallOfTheWild": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheComingRace": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheDecameron": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheGiacomoLeopardi": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheHouseOfTheSevenGables": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheIslandOfDoctorMoreau": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheJustifiedSinner": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheLastMan": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheMahabharataOfKrishna": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheManWhoWasThursday": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheMonkARomance": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookThePossessed": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookThePrisonerOfZenda": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheRedBadgeOfCourage": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheScarletPimpernel": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheThreeMusketeers": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTheTurnOfTheScrew": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookThreeMenInABoat": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTranslationsOfShakuntala": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookTreasureIsland": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookUlysses": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookUncleSilas": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookVoyageAuCentreDeLaTerre": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookWarAndPeace": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookWielandOrTheTransformation": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      },
+      "BookWutheringHeights": {
+        "flags": {
+          "Market": false,
+          "Store": false,
+          "P2P": false,
+          "Events": false,
+          "Secure": false,
+          "count_in_map": 1,
+          "deloot": 0
+        },
+        "tier": 1,
+        "value": 100,
+        "variants": {},
+        "nominal": 0,
+        "lifetime": 14400,
+        "min": 0,
+        "quantmin": -1,
+        "quantmax": -1,
+        "restock": 1800,
+        "cost": 100
+      }
     }
+  },
+  "CategoryDefaults": {
+    "Fictional": {
+      "restock": 1800,
+      "cost": 100
+    },
+    "NonFictional": {
+      "restock": 1800,
+      "cost": 100
+    }
+  }
 }

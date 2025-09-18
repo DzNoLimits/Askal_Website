@@ -1,0 +1,880 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Fictional": {
+            "BookATexasMatchmaker": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookATravelerInTime": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAVoyageToArcturus": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAndersen": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAndersensFairyTales": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAroundTheWorldIn80Days": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBettyZane": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBible": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBilaNemoc": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBlackBeauty": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBlackJack": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookBuddenbrooks": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookCassidysRustlerRoundUp": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookCrimeAndPunishment": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDeadSouls": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDesertGold": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDonQuixote": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookErewhon": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookFatherGoriot": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookFlyingURanch": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookGreatExpectations": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookGulliversTravels": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookGunmansReckoning": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookHeartOfDarkness": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookHerland": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookIvanhoe": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookKidnapped": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookKingLear": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLaChartreuseDeParme": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLaDbcle": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLonesomeLand": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLordJim": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookMadameBovary": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookMobyDick": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookNaturalSelection": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookNjalsSaga": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookNostromo": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookPhilosophiaeNaturalis": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookPrideAndPrejudice": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRobinsonCrusoe": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRonickyDoone": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRussian": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRussianCheatSheet": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookSelectedStories": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookSkyrider": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookSpinifexAndSand": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookSunsetPass": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheArtOfWar": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheBarrier": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheBrothersKaramazov": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCallOfCthulhu": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCanterburyTales": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCaveOfGold": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCosmicComputer": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCountryOfTheBlind": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheDayOfTheBeast": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheDesertOfWheat": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheHeritageOfTheSioux": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheHiddenChildren": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheHoundOfTheBaskervilles": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheJungleBook": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheLastOfThePlainsmen": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheLastTrail": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheMetamorphosesOfOvid": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheMetamorphosis": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheOutlet": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookThePictureOfDorianGray": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookThePitAndThePendulum": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheQuirt": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheRaven": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheRightsOfWoman": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheShunnedHouse": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheThunderBird": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheTimeMachine": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheTrial": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheVariableMan": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheWarOfTheWorlds": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookToTheInteriorOfTheEarth": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTonyAndTheBeetles": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTrailin": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookVerwandlung": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookWealthOfNations": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookYouth": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            }
+        },
+        "NonFictional": {
+            "Book20000LieuesSousLesMers": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookADollsHouse": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAPrincessOfMars": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAfterLondon": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAliceInWonderland": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookAnnaKarenina": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookCandide": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookCinqSemainesEnBallon": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDasNibelungenlied": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDeLaTerreLaLune": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDeLorigineDesEspces": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDonQuichotte": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookDracula": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookFaust": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookFaustErsterTeil": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookFrankenstein": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookGilgameshEpic": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookHinduLiterature": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookHunger": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookJapaneseLiterature": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookKingSolomonsMines": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLaComdieHumaine": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLeRougeEtLeNoir": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLenfer1Of2": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLesCorneilles": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLesTroisMousquetaires": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookLleMystrieuse": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookMiddlemarch": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookMrchenFrKinder": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRasselas": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRobinsonCrusoeAdventures": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookRomeoUndJulia": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookScaramouche": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookShe": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookSonsAndLovers": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheAeneid": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheCallOfTheWild": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheComingRace": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheDecameron": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheGiacomoLeopardi": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheHouseOfTheSevenGables": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheIslandOfDoctorMoreau": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheJustifiedSinner": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheLastMan": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheMahabharataOfKrishna": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheManWhoWasThursday": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheMonkARomance": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookThePossessed": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookThePrisonerOfZenda": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheRedBadgeOfCourage": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheScarletPimpernel": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheThreeMusketeers": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTheTurnOfTheScrew": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookThreeMenInABoat": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTranslationsOfShakuntala": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookTreasureIsland": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookUlysses": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookUncleSilas": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookVoyageAuCentreDeLaTerre": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookWarAndPeace": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookWielandOrTheTransformation": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            },
+            "BookWutheringHeights": {
+                "flags": [],
+                "tier": 1,
+                "value": 100,
+                "variants": {}
+            }
+        }
+    }
+}

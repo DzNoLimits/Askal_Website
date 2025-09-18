@@ -450,10 +450,6 @@
             <div id="dataset-chips" class="flex items-center gap-2"></div>
             <button id="btn-add-dataset" class="px-2 py-1 bg-purple-600 text-white text-xs rounded">NOVO</button>
         </div>
-        <!-- Category chips bar (faltava container para categorias) -->
-        <div class="px-3 py-2 bg-gray-50 border-t flex items-center gap-3 overflow-x-auto">
-            <div id="category-chips" class="flex items-center gap-2"></div>
-        </div>
         <div class="flex flex-1 overflow-hidden">
             <!-- Leftmost folders sidebar -->
             <aside class="w-44 bg-white border-r overflow-y-auto h-full" id="folders-pane">
@@ -480,21 +476,18 @@
             </div>
             <main class="flex-1 overflow-y-auto p-4" id="editor-pane">
                 <p class="text-sm text-gray-500">Selecione um item à esquerda para editar.</p>
-                <!-- Economy Editor Toggle -->
-                <div class="mt-6 p-4 border rounded bg-gray-800">
-                    <h2 class="text-sm font-semibold mb-2">Economia (types.xml)</h2>
-                    <p class="text-xs text-gray-400 mb-3">Editor experimental para parâmetros de economia DayZ.</p>
-                    <div class="flex gap-2 mb-3">
-                        <button id="btn-show-economy" class="px-2 py-1 text-xs rounded bg-blue-600 hover:bg-blue-700">Abrir Editor Economia</button>
-                        <button id="btn-export-types" class="px-2 py-1 text-xs rounded bg-green-600 hover:bg-green-700">Exportar types.xml</button>
-                        <label class="px-2 py-1 text-xs rounded bg-yellow-600 hover:bg-yellow-700 cursor-pointer">Importar types.xml<input type="file" id="import-types-xml" accept=".xml" class="hidden" /></label>
-                        <button id="btn-save-json-economy" class="px-2 py-1 text-xs rounded bg-purple-600 hover:bg-purple-700">Baixar itens.json</button>
+
+                <!-- Category Presets Editor Pane (hidden by default) -->
+                <section id="category-editor-pane" class="mt-6 p-4 border rounded bg-white theme-dark hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <h2 class="text-sm font-semibold">Presets da Categoria</h2>
+                        <div class="flex gap-2">
+                            <button data-action="hide-category-editor" class="px-2 py-1 text-xs rounded bg-gray-600 hover:bg-gray-500">Fechar</button>
+                        </div>
                     </div>
-                    <div id="economy-editor-root" class="hidden mt-4">
-                        <div class="text-xs text-gray-400 mb-2">Edite os valores e use Exportar para gerar o XML.</div>
-                        <div id="economy-items" class="space-y-4"></div>
-                    </div>
-                </div>
+                    <div class="text-xs text-gray-400 mb-3">Ajuste parâmetros padrão da categoria. Valores podem ser herdados pelos itens.</div>
+                    <div id="category-editor-content" class="space-y-4"></div>
+                </section>
             </main>
             <aside class="w-72 bg-white border-l flex flex-col" id="palette-pane">
                 <div class="p-3 border-b flex items-center justify-between">
@@ -533,12 +526,7 @@
     <script src="app.js"></script>
         <script src="scripts/parser.js"></script>
         <script src="scripts/ui/editor.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                var btn=document.getElementById('btn-show-economy');
-                if(btn){ btn.addEventListener('click', function(){ var root=document.getElementById('economy-editor-root'); if(!root) return; var hidden=root.classList.contains('hidden'); if(hidden){ root.classList.remove('hidden'); btn.textContent='Fechar Editor Economia'; } else { root.classList.add('hidden'); btn.textContent='Abrir Editor Economia'; } }); }
-            });
-        </script>
+
         <!-- Clipboard Drawer (Right) -->
             <div id="clipboard-drawer" class="fixed right-0 top-16 bottom-0 w-72 transform translate-x-full transition-transform duration-200 ease-in-out bg-white theme-dark border-l shadow-lg flex flex-col z-20" data-open="false">
                 <div class="absolute -left-6 top-0">

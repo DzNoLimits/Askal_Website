@@ -1,0 +1,154 @@
+{
+    "database_version": "0.2",
+    "last_updated": "2024-01-15",
+    "Categories": {
+        "Backpacks": {
+            "AliceBag": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events"
+                ],
+                "tier": 3,
+                "value": 2500,
+                "variants": {
+                    "AliceBag_Black": {},
+                    "AliceBag_Camo": {},
+                    "AliceBag_Green": {}
+                }
+            }
+        },
+        "Belts": {
+            "CivilianBelt": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 2,
+                "value": 250,
+                "variants": {}
+            },
+            "MilitaryBelt": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 3,
+                "value": 450,
+                "variants": {}
+            },
+            "RopeBelt": {
+                "attachments": [],
+                "flags": [
+                    "craftable",
+                    "Market",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 3,
+                "value": 30,
+                "variants": {}
+            }
+        },
+        "Pants": {
+            "CargoPants_Beige": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 3,
+                "value": 150,
+                "variants": {
+                    "CargoPants_Black": {},
+                    "CargoPants_Blue": {},
+                    "CargoPants_Green": {},
+                    "CargoPants_Grey": {}
+                }
+            }
+        },
+        "Shoes": {
+            "JungleBoots_Beige": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 250,
+                "variants": {
+                    "JungleBoots_Black": {},
+                    "JungleBoots_Brown": {},
+                    "JungleBoots_Green": {},
+                    "JungleBoots_Olive": {}
+                }
+            }
+        },
+        "Tops": {
+            "M65Jacket_Black": {
+                "attachments": [],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 250,
+                "variants": {
+                    "M65Jacket_Khaki": {},
+                    "M65Jacket_Olive": {},
+                    "M65Jacket_Tan": {}
+                }
+            }
+        },
+        "Vests": {
+            "PlateCarrierVest": {
+                "attachments": [
+                    "PlateCarrierHolster",
+                    "PlateCarrierPouches",
+                    "PlateCarrierHolster_Green",
+                    "PlateCarrierPouches_Green",
+                    "PlateCarrierHolster_Camo",
+                    "PlateCarrierPouches_Camo",
+                    "PlateCarrierHolster_Black",
+                    "PlateCarrierPouches_Black",
+                    "PlateCarrierHolster_Winter",
+                    "PlateCarrierPouches_Winter"
+                ],
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 3,
+                "value": 3800,
+                "variants": {
+                    "PlateCarrierVest_Black": {},
+                    "PlateCarrierVest_Camo": {},
+                    "PlateCarrierVest_Green": {},
+                    "PlateCarrierVest_Winter": {}
+                }
+            }
+        }
+    }
+}
