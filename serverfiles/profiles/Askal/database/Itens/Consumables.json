@@ -1,1774 +1,1774 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Consumables": {
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
     "Consumables": {
-      "Paper": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "PunchedCard": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "GiftWrapPaper": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "DuctTape": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Rag": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "BurlapStrip": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Stone": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "SmallStone": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Firewood": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Battery9V": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "LargeGasCanister": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "MediumGasCanister": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "SmallGasCanister": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "ButaneCanister": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Spraycan_Black": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Spraycan_Green": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Matchbox": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "NailBox": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Roadflare": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Chemlight_White": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Chemlight_Red": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Chemlight_Green": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Chemlight_Blue": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Chemlight_Yellow": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Pelt_Base": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "WildboarPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "RabbitPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "CowPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "PigPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "DeerPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "ReindeerPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "GoatPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "BearPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "WolfPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "SheepPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "MouflonPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "FoxPelt": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "TannedLeather": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Hook": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "BoneHook": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "WoodenHook": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Bark_Oak": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Bark_Birch": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Nail": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Bone": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Bait": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "BoneBait": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Jig": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "GardenLime": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "Netting": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "WoodenPlank": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "PileOfWoodenPlanks": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "MetalPlate": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "WoodenLog": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "EasterEgg": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      },
-      "GasMask_Filter": {
-        "flags": [
-          "Market",
-          "Secure",
-          "Store",
-          "Events",
-          "P2P"
-        ],
-        "tier": 4,
-        "value": 240,
-        "variants": []
-      }
-    }
-  },
-  "Categories": {
-    "Consumables": {
-      "Bait": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Bark_Birch": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Bark_Oak": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Battery9V": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BearPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Bone": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BoneBait": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BoneHook": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BurlapStrip": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ButaneCanister": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CowPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DeerPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DuctTape": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "EasterEgg": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Firewood": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "FoxPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GardenLime": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GasMask_Filter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GiftWrapPaper": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GoatPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Hook": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Jig": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LargeGasCanister": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Matchbox": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MediumGasCanister": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MetalPlate": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MouflonPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Nail": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "NailBox": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Netting": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Paper": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Pelt_Base": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PigPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PileOfWoodenPlanks": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PunchedCard": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "RabbitPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Rag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ReindeerPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Roadflare": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SheepPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SmallGasCanister": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SmallStone": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Spraycan_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "Spraycan_Green": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Stone": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TannedLeather": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "WildboarPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "WolfPelt": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "WoodenHook": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "WoodenLog": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "WoodenPlank": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+        "Consumables": {
+            "Paper": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PunchedCard": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GiftWrapPaper": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DuctTape": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Rag": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BurlapStrip": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Stone": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SmallStone": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Firewood": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Battery9V": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "LargeGasCanister": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MediumGasCanister": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SmallGasCanister": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ButaneCanister": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Spraycan_Black": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Spraycan_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Matchbox": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "NailBox": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Roadflare": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Chemlight_White": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Chemlight_Red": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Chemlight_Green": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Chemlight_Blue": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Chemlight_Yellow": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Pelt_Base": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "WildboarPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "RabbitPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "CowPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PigPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "DeerPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "ReindeerPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GoatPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BearPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "WolfPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "SheepPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MouflonPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "FoxPelt": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "TannedLeather": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Hook": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BoneHook": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "WoodenHook": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Bark_Oak": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Bark_Birch": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Nail": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Bone": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Bait": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "BoneBait": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Jig": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GardenLime": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "Netting": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "WoodenPlank": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "PileOfWoodenPlanks": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "MetalPlate": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "WoodenLog": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "EasterEgg": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            },
+            "GasMask_Filter": {
+                "flags": [
+                    "Market",
+                    "Secure",
+                    "Store",
+                    "Events",
+                    "P2P"
+                ],
+                "tier": 4,
+                "value": 240,
+                "variants": []
+            }
+        }
     },
-    "Lights": {
-      "Chemlight_Red": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
+    "CategoryDefaults": {
+        "Consumables": {
+            "restock": 1800,
+            "cost": 240
         },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "Chemlight_Blue": {},
-          "Chemlight_Green": {},
-          "Chemlight_White": {},
-          "Chemlight_Yellow": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
-    }
-  },
-  "CategoryDefaults": {
-    "Consumables": {
-      "restock": 1800,
-      "cost": 240
+        "Lights": {
+            "restock": 1800,
+            "cost": 240
+        }
     },
-    "Lights": {
-      "restock": 1800,
-      "cost": 240
+    "Categories": {
+        "Consumables": {
+            "Bait": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Bark_Birch": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Bark_Oak": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Battery9V": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BearPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Bone": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BoneBait": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BoneHook": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BurlapStrip": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ButaneCanister": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CowPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DeerPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DuctTape": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "EasterEgg": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Firewood": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "FoxPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GardenLime": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GasMask_Filter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GiftWrapPaper": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GoatPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Hook": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Jig": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LargeGasCanister": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Matchbox": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MediumGasCanister": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MetalPlate": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MouflonPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Nail": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "NailBox": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Netting": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Paper": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Pelt_Base": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PigPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PileOfWoodenPlanks": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PunchedCard": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "RabbitPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Rag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ReindeerPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Roadflare": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SheepPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SmallGasCanister": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SmallStone": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Spraycan_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "Spraycan_Green": {}
+                }
+            },
+            "Stone": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TannedLeather": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "WildboarPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "WolfPelt": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "WoodenHook": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "WoodenLog": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "WoodenPlank": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        },
+        "Lights": {
+            "Chemlight_Red": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "Chemlight_Blue": {},
+                    "Chemlight_Green": {},
+                    "Chemlight_White": {},
+                    "Chemlight_Yellow": {}
+                }
+            }
+        }
     }
-  }
 }

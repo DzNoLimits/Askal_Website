@@ -1,77 +1,77 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Radio": {
-      "BaseRadio": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Megaphone": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PersonalRadio": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Radio": {
+            "restock": 1800,
+            "cost": 240
+        }
+    },
+    "Categories": {
+        "Radio": {
+            "BaseRadio": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Megaphone": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PersonalRadio": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        }
     }
-  },
-  "CategoryDefaults": {
-    "Radio": {
-      "restock": 1800,
-      "cost": 240
-    }
-  }
 }

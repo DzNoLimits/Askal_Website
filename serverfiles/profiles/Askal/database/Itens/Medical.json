@@ -1,686 +1,686 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Medical": {
-      " ": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "AntiChemInjector": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BandageDressing": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BloodBagEmpty": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BloodBagFull": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BloodBagIV": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BloodSyringe": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "BloodTestKit": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CharcoalTablets": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ChelatingTablets": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CigarettePack_Chernamorka": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CigarettePack_Merkur": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CigarettePack_Partyzanka": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ClearSyringe": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Clothing": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Defibrillator": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DisinfectantAlcohol": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DisinfectantSpray": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Epinephrine": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "InjectionVial": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "IodineTincture": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Morphine": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PainkillerTablets": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PurificationTablets": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SalineBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SalineBagIV": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Splint": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "StartKitIV": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Syringe": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TetracyclineAntibiotics": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Thermometer": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "VitaminBottle": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Medical": {
+            "restock": 1800,
+            "cost": 240
+        }
+    },
+    "Categories": {
+        "Medical": {
+            " ": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "AntiChemInjector": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BandageDressing": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BloodBagEmpty": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BloodBagFull": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BloodBagIV": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BloodSyringe": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "BloodTestKit": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CharcoalTablets": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ChelatingTablets": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CigarettePack_Chernamorka": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CigarettePack_Merkur": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CigarettePack_Partyzanka": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ClearSyringe": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Clothing": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Defibrillator": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DisinfectantAlcohol": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DisinfectantSpray": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Epinephrine": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "InjectionVial": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "IodineTincture": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Morphine": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PainkillerTablets": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PurificationTablets": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SalineBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SalineBagIV": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Splint": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "StartKitIV": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Syringe": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TetracyclineAntibiotics": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Thermometer": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "VitaminBottle": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        }
     }
-  },
-  "CategoryDefaults": {
-    "Medical": {
-      "restock": 1800,
-      "cost": 240
-    }
-  }
 }

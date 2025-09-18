@@ -1,482 +1,482 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Cultivation": {
-      "AntiPestsSpray": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Cultivation": {
+            "restock": 1800,
+            "cost": 240
         },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CannabisSeeds": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CannabisSeedsPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GardenPlot": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GardenPlotGreenhouse": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GardenPlotPolytunnel": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PepperSeeds": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PepperSeedsPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PlantMaterial": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PotatoSeed": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PumpkinSeeds": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "PumpkinSeedsPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TomatoSeeds": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TomatoSeedsPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ZucchiniSeeds": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ZucchiniSeedsPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+        "Plants": {
+            "restock": 1800,
+            "cost": 240
+        }
     },
-    "Plants": {
-      "Plant_Cannabis": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
+    "Categories": {
+        "Cultivation": {
+            "AntiPestsSpray": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CannabisSeeds": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CannabisSeedsPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GardenPlot": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GardenPlotGreenhouse": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GardenPlotPolytunnel": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PepperSeeds": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PepperSeedsPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PlantMaterial": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PotatoSeed": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PumpkinSeeds": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "PumpkinSeedsPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TomatoSeeds": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TomatoSeedsPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ZucchiniSeeds": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ZucchiniSeedsPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
         },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Plant_Pepper": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Plant_Potato": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Plant_Pumpkin": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Plant_Tomato": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "Plant_Zucchini": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+        "Plants": {
+            "Plant_Cannabis": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Pepper": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Potato": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Pumpkin": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Tomato": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "Plant_Zucchini": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        }
     }
-  },
-  "CategoryDefaults": {
-    "Cultivation": {
-      "restock": 1800,
-      "cost": 240
-    },
-    "Plants": {
-      "restock": 1800,
-      "cost": 240
-    }
-  }
 }

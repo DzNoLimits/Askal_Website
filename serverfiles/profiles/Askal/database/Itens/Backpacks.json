@@ -1,1276 +1,1276 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Backpacks": {
-      "AliceBag_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Backpacks": {
+            "restock": 1800,
+            "cost": 240
         },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "AliceBag_Camo": {},
-          "AliceBag_Green": {}
+        "Camuflagem": {
+            "restock": 1800,
+            "cost": 100
         },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ArmyPouch_Beige": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "ArmyPouch_Black": {},
-          "ArmyPouch_Camo": {},
-          "ArmyPouch_Green": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "AssaultBag_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "AssaultBag_Green": {},
-          "AssaultBag_Ttsko": {},
-          "AssaultBag_Winter": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CanvasBag_Medical": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {
-          "CanvasBag_Olive": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ChildBag_Blue": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ChildBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ChildBag_Red": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CourierBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CoyoteBag_Brown": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CoyoteBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "CoyoteBag_Winter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Blue": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Orange": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Red": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DryBag_Yellow": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DrysackBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DrysackBag_Orange": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DrysackBag_Yellow": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DuffelBagSmall_Camo": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DuffelBagSmall_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "DuffelBagSmall_Medical": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "FurCourierBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "FurImprovisedBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieBushrag_Mossy": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieBushrag_Tan": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieBushrag_Winter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieBushrag_Woodland": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieSuit_Mossy": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieSuit_Tan": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieSuit_Winter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieSuit_Woodland": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieTop_Mossy": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieTop_Tan": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieTop_Winter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "GhillieTop_Woodland": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "HuntingBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "HuntingBag_Hannah": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "ImprovisedBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LargeTentBackPack": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LeatherSack_Beige": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LeatherSack_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LeatherSack_Brown": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "LeatherSack_Natural": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MountainBag_Blue": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MountainBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MountainBag_Orange": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "MountainBag_Red": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SlingBag_Black": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SlingBag_Brown": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SlingBag_Gray": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "SmershBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TaloonBag_Blue": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TaloonBag_Green": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TaloonBag_Orange": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TaloonBag_Violet": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TortillaBag": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      },
-      "TortillaBag_Winter": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 240
-      }
+        "Mochilas Militares": {
+            "restock": 1800,
+            "cost": 100
+        }
     },
-    "Camuflagem": {},
-    "Mochilas Militares": {}
-  },
-  "CategoryDefaults": {
-    "Backpacks": {
-      "restock": 1800,
-      "cost": 240
-    },
-    "Camuflagem": {
-      "restock": 1800,
-      "cost": 100
-    },
-    "Mochilas Militares": {
-      "restock": 1800,
-      "cost": 100
+    "Categories": {
+        "Backpacks": {
+            "AliceBag_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "AliceBag_Camo": {},
+                    "AliceBag_Green": {}
+                }
+            },
+            "ArmyPouch_Beige": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "ArmyPouch_Black": {},
+                    "ArmyPouch_Camo": {},
+                    "ArmyPouch_Green": {}
+                }
+            },
+            "AssaultBag_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "AssaultBag_Green": {},
+                    "AssaultBag_Ttsko": {},
+                    "AssaultBag_Winter": {}
+                }
+            },
+            "CanvasBag_Medical": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {
+                    "CanvasBag_Olive": {}
+                }
+            },
+            "ChildBag_Blue": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ChildBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ChildBag_Red": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CourierBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CoyoteBag_Brown": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CoyoteBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "CoyoteBag_Winter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Blue": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Orange": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Red": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DryBag_Yellow": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DrysackBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DrysackBag_Orange": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DrysackBag_Yellow": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DuffelBagSmall_Camo": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DuffelBagSmall_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "DuffelBagSmall_Medical": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "FurCourierBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "FurImprovisedBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieBushrag_Mossy": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieBushrag_Tan": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieBushrag_Winter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieBushrag_Woodland": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieSuit_Mossy": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieSuit_Tan": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieSuit_Winter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieSuit_Woodland": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieTop_Mossy": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieTop_Tan": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieTop_Winter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "GhillieTop_Woodland": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "HuntingBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "HuntingBag_Hannah": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "ImprovisedBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LargeTentBackPack": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LeatherSack_Beige": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LeatherSack_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LeatherSack_Brown": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "LeatherSack_Natural": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MountainBag_Blue": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MountainBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MountainBag_Orange": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "MountainBag_Red": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SlingBag_Black": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SlingBag_Brown": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SlingBag_Gray": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "SmershBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TaloonBag_Blue": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TaloonBag_Green": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TaloonBag_Orange": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TaloonBag_Violet": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TortillaBag": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            },
+            "TortillaBag_Winter": {
+                "cost": 240,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        },
+        "Camuflagem": {},
+        "Mochilas Militares": {}
     }
-  }
 }

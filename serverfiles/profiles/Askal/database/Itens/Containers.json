@@ -1,60 +1,60 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Storage": {
-      "Barrel_Green": {
-        "flags": {
-          "Market": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "Secure": false,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 400,
-        "variants": {
-          "Barrel_Blue": {},
-          "Barrel_Red": {},
-          "Barrel_Yellow": {}
-        },
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 400
-      },
-      "Seachest": {
-        "flags": {
-          "Market": true,
-          "Secure": true,
-          "Store": true,
-          "Events": true,
-          "P2P": true,
-          "count_in_map": 1,
-          "deloot": 0
-        },
-        "tier": 4,
-        "value": 240,
-        "variants": {},
-        "nominal": 0,
-        "lifetime": 14400,
-        "min": 0,
-        "quantmin": -1,
-        "quantmax": -1,
-        "restock": 1800,
-        "cost": 400
-      }
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Storage": {
+            "restock": 1800,
+            "cost": 400
+        }
+    },
+    "Categories": {
+        "Storage": {
+            "Barrel_Green": {
+                "cost": 400,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": false,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 400,
+                "variants": {
+                    "Barrel_Blue": {},
+                    "Barrel_Red": {},
+                    "Barrel_Yellow": {}
+                }
+            },
+            "Seachest": {
+                "cost": 400,
+                "flags": {
+                    "Events": true,
+                    "Market": true,
+                    "P2P": true,
+                    "Secure": true,
+                    "Store": true,
+                    "count_in_map": 1,
+                    "deloot": 0
+                },
+                "lifetime": 14400,
+                "min": 0,
+                "nominal": 0,
+                "quantmax": -1,
+                "quantmin": -1,
+                "restock": 1800,
+                "tier": 4,
+                "value": 240,
+                "variants": {}
+            }
+        }
     }
-  },
-  "CategoryDefaults": {
-    "Storage": {
-      "restock": 1800,
-      "cost": 400
-    }
-  }
 }

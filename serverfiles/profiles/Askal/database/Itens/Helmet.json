@@ -1,13 +1,13 @@
 {
-  "database_version": "0.3",
-  "last_updated": "2025-09-17",
-  "Categories": {
-    "Capacetes": {}
-  },
-  "CategoryDefaults": {
-    "Capacetes": {
-      "restock": 1800,
-      "cost": 100
+    "database_version": "0.3",
+    "last_updated": "2025-09-17",
+    "CategoryDefaults": {
+        "Capacetes": {
+            "restock": 1800,
+            "cost": 100
+        }
+    },
+    "Categories": {
+        "Capacetes": {}
     }
-  }
 }
